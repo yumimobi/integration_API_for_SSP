@@ -1,8 +1,38 @@
-## 广告请求和返回json示例
+# 广告请求和返回json示例
 
-> - 示例中可以使用 ``ssp_token(32D4FAE475B19434FFC67983F6628A28)`` 、``Android测试 app_id（1000360）``、``iOS测试 app_id（1000748）`` 作为测试token获取测试数据，供测试查看效果使用，正式上线后请切换为正式的Token及APP ID，否则将不会产生任何请求，展示，点击收益等数据。
+- [广告请求和返回json示例](#%E5%B9%BF%E5%91%8A%E8%AF%B7%E6%B1%82%E5%92%8C%E8%BF%94%E5%9B%9Ejson%E7%A4%BA%E4%BE%8B)
+	- [banner](#banner)
+		- [banner请求示例](#banner%E8%AF%B7%E6%B1%82%E7%A4%BA%E4%BE%8B)
+		- [banner图片广告返回示例](#banner%E5%9B%BE%E7%89%87%E5%B9%BF%E5%91%8A%E8%BF%94%E5%9B%9E%E7%A4%BA%E4%BE%8B)
+			- [banner广告展示示例](#banner%E5%B9%BF%E5%91%8A%E5%B1%95%E7%A4%BA%E7%A4%BA%E4%BE%8B)
+		- [banner图文广告返回示例](#banner%E5%9B%BE%E6%96%87%E5%B9%BF%E5%91%8A%E8%BF%94%E5%9B%9E%E7%A4%BA%E4%BE%8B)
+			- [测试返回广告示例](#%E6%B5%8B%E8%AF%95%E8%BF%94%E5%9B%9E%E5%B9%BF%E5%91%8A%E7%A4%BA%E4%BE%8B)
+		- [banner html返回示例](#banner-html%E8%BF%94%E5%9B%9E%E7%A4%BA%E4%BE%8B)
+			- [banner广告html返回示例](#banner%E5%B9%BF%E5%91%8Ahtml%E8%BF%94%E5%9B%9E%E7%A4%BA%E4%BE%8B)
+	- [插屏](#%E6%8F%92%E5%B1%8F)
+		- [插屏请求示例](#%E6%8F%92%E5%B1%8F%E8%AF%B7%E6%B1%82%E7%A4%BA%E4%BE%8B)
+		- [插屏图片广告返回示例](#%E6%8F%92%E5%B1%8F%E5%9B%BE%E7%89%87%E5%B9%BF%E5%91%8A%E8%BF%94%E5%9B%9E%E7%A4%BA%E4%BE%8B)
+			- [APP中插屏图片广告返回示例](#app%E4%B8%AD%E6%8F%92%E5%B1%8F%E5%9B%BE%E7%89%87%E5%B9%BF%E5%91%8A%E8%BF%94%E5%9B%9E%E7%A4%BA%E4%BE%8B)
+		- [插屏图文广告返回示例](#%E6%8F%92%E5%B1%8F%E5%9B%BE%E6%96%87%E5%B9%BF%E5%91%8A%E8%BF%94%E5%9B%9E%E7%A4%BA%E4%BE%8B)
+			- [插屏图文广告返回示例](#%E6%8F%92%E5%B1%8F%E5%9B%BE%E6%96%87%E5%B9%BF%E5%91%8A%E8%BF%94%E5%9B%9E%E7%A4%BA%E4%BE%8B)
+		- [插屏html广告返回示例](#%E6%8F%92%E5%B1%8Fhtml%E5%B9%BF%E5%91%8A%E8%BF%94%E5%9B%9E%E7%A4%BA%E4%BE%8B)
+	- [开屏](#%E5%BC%80%E5%B1%8F)
+		- [开屏请求示例](#%E5%BC%80%E5%B1%8F%E8%AF%B7%E6%B1%82%E7%A4%BA%E4%BE%8B)
+			- [开屏图片广告返回示例](#%E5%BC%80%E5%B1%8F%E5%9B%BE%E7%89%87%E5%B9%BF%E5%91%8A%E8%BF%94%E5%9B%9E%E7%A4%BA%E4%BE%8B)
+		- [开屏图文广告返回示例](#%E5%BC%80%E5%B1%8F%E5%9B%BE%E6%96%87%E5%B9%BF%E5%91%8A%E8%BF%94%E5%9B%9E%E7%A4%BA%E4%BE%8B)
+		- [开屏html广告返回示例](#%E5%BC%80%E5%B1%8Fhtml%E5%B9%BF%E5%91%8A%E8%BF%94%E5%9B%9E%E7%A4%BA%E4%BE%8B)
+	- [原生广告](#%E5%8E%9F%E7%94%9F%E5%B9%BF%E5%91%8A)
+		- [原生广告请求示例](#%E5%8E%9F%E7%94%9F%E5%B9%BF%E5%91%8A%E8%AF%B7%E6%B1%82%E7%A4%BA%E4%BE%8B)
+			- [原生广告返回示例](#%E5%8E%9F%E7%94%9F%E5%B9%BF%E5%91%8A%E8%BF%94%E5%9B%9E%E7%A4%BA%E4%BE%8B)
+	- [视频广告](#%E8%A7%86%E9%A2%91%E5%B9%BF%E5%91%8A)
+		- [视频广告请求示例](#%E8%A7%86%E9%A2%91%E5%B9%BF%E5%91%8A%E8%AF%B7%E6%B1%82%E7%A4%BA%E4%BE%8B)
+			- [视频广告返回示例](#%E8%A7%86%E9%A2%91%E5%B9%BF%E5%91%8A%E8%BF%94%E5%9B%9E%E7%A4%BA%E4%BE%8B)
+
+> - 示例中可以使用 `ssp_token(32D4FAE475B19434FFC67983F6628A28)` 、`Android测试 app_id（1000360）`、`iOS测试 app_id（1000748）` 作为测试token获取测试数据，供测试查看效果使用，正式上线后请切换为正式的Token及APP ID，否则将不会产生任何请求，展示，点击收益等数据。
 
 > - 返回信息的主要错误类型及说明：-1：参数值类型错误；-3：无广告填充；-4：该流量被屏蔽（反作弊）；-5：字段校验失败/字段非法。
+
+## banner
 
 ### banner请求示例
 
@@ -60,9 +90,9 @@
 	}
 ```
 
-#### banner图片广告返回示例
+### banner图片广告返回示例
 
-> 如果请求参数 ``inventory_types:[]`` 中包含 ``1(物料类型为图片)``，则玉米广告可以返回图片广告，返回参数中 ``inventory_type`` 也会标为 ``1``，代表此广告为图片类型的广告。
+> 如果请求参数 `inventory_types:[]` 中包含 `1(物料类型为图片)`，则玉米广告可以返回图片广告，返回参数中 `inventory_type` 也会标为 `1`，代表此广告为图片类型的广告。
 
 ```json
 
@@ -102,11 +132,11 @@
 
 #### banner广告展示示例
 
-![](/img/banner_img1.jpg)
+![banner](/img/banner_img1.jpg)
 
-#### banner图文广告返回示例
+### banner图文广告返回示例
 
-> 如果请求参数 ``inventory_types:[]`` 中包含 ``2(物料类型为图文)`` ，则玉米广告可以返回图片广告，返回参数中 ``inventory_type`` 也会标为 ``2``，代表此广告为图文类型的广告，图文广告返回的title和desc字段会有对应的标题和描述。
+> 如果请求参数 `inventory_types:[]` 中包含 `2(物料类型为图文)` ，则玉米广告可以返回图文广告，返回参数中 `inventory_type` 也会标为 `2`，代表此广告为图文类型的广告，图文广告返回的title和desc字段会有对应的标题和描述。
 
 ```json
 
@@ -146,17 +176,11 @@
 
 #### 测试返回广告示例
 
-![](/img/banner-pic-text1.jpg)
+![test2](/img/banner-pic-test2.jpg)
 
-#### 真实应用展示示例
+### banner html返回示例
 
-![](/img/banner-pic-test2.jpg)
-![](/img/banner-pic-text3.jpg)
-
-
-#### banner html返回示例
-
-> 如果请求参数 ``inventory_types:[]`` 中包含 ``4(物料类型为html)``,则表示媒体支持html广告展示，玉米广告可以返回html广告，返回参数中 ``inventory_type`` 也会标为 ``4``，代表此广告为html类型的广告，html_snippet字段中即为需要展示的html代码段。
+> 如果请求参数 `inventory_types:[]` 中包含 `4(物料类型为html)`,则表示媒体支持html广告展示，玉米广告可以返回html广告，返回参数中 `inventory_type` 也会标为 `4`，代表此广告为html类型的广告，html_snippet字段中即为需要展示的html代码段。
 
 ```json
 
@@ -191,16 +215,18 @@
 	}
 ```
 
-> 媒体看到返回的 ``invenroy为4`` 时，直接将 ``html_snippet`` 中的代码段内容在APP中渲染出来即可。html广告中 ``image_url`` 字段是空的，可以忽略。
+> 媒体看到返回的 `invenroy为4` 时，直接将 `html_snippet` 中的代码段内容在APP中渲染出来即可。html广告中 `image_url` 字段是空的，可以忽略。
 
 #### banner广告html返回示例
 
 
-![](/img/banner_html_ad.PNG)
+![banner_html](/img/banner_html_ad.PNG)
+
+## 插屏
 
 ### 插屏请求示例
 
-> 同banner广告一样，插屏广告在请求的时候也需要通过 ``inventory_types`` 标明支持的物料类型
+> 同banner广告一样，插屏广告在请求的时候也需要通过 `inventory_types` 标明支持的物料类型
 
 ```json
 
@@ -256,9 +282,9 @@
 	}
 ```
 
-#### 插屏图片广告返回示例
+### 插屏图片广告返回示例
 
-> 如果媒体请求广告时，通过 ``inventory_types`` 指明支持支持图片广告，且返回的广告中 ``invenroy_type`` 为1，则媒体将 ``img_url`` 图片展示出来即可。
+> 如果媒体请求广告时，通过 `inventory_types` 指明支持支持图片广告，且返回的广告中 `invenroy_type` 为1，则媒体将 `img_url` 图片展示出来即可。
 
 ```json
 
@@ -294,11 +320,11 @@
 
 #### APP中插屏图片广告返回示例
 
-![](/img/intersitial_pic_1.PNG)
+![interstitial_picture](/img/intersitial_pic_1.PNG)
 
-#### 插屏图文广告返回示例
+### 插屏图文广告返回示例
 
-> 如果媒体请求广告时，通过 ``inventory_types`` 指明支持支持图文广告，且返回的广告中 ``invenroy_type`` 为2，则改广告位图文广告。（图文广告通常图片为小图ICON）
+> 如果媒体请求广告时，通过 `inventory_types` 指明支持支持图文广告，且返回的广告中 `invenroy_type` 为2，则改广告位图文广告。（图文广告通常图片为小图ICON）
 
 ```json
 
@@ -334,20 +360,22 @@
 	}
 ```
 
-> 同banner的图文广告一样,不能只将 ``img_url`` 图片展示出来，需要将 ``img_url`` ``title`` ``desc`` 字段按照一定的格式排列组织好，展示出来即可，即可参照下图的示例来排列展示，也可以由媒体自己来组织展现方式。
+> 同banner的图文广告一样,不能只将 `img_url` 图片展示出来，需要将 `img_url` `title` `desc` 字段按照一定的格式排列组织好，展示出来即可，即可参照下图的示例来排列展示，也可以由媒体自己来组织展现方式。
 
 #### 插屏图文广告返回示例
 
-![](/img/intersitial_pic_text.PNG)
+![interstitial_pic_text](/img/intersitial_pic_text.PNG)
 
-#### 插屏html广告返回示例
+### 插屏html广告返回示例
 
-> 如果媒体请求广告时，通过 ``inventory_types`` 指明支持支持html广告，即包含4，且返回的广告中 ``invenroy_type`` 为4，则该广告为插屏的html广告。展示方式同banner的html广告，请参考banner html广告展示。
+> 如果媒体请求广告时，通过 `inventory_types` 指明支持支持html广告，即包含4，且返回的广告中 `invenroy_type` 为4，则该广告为插屏的html广告。展示方式同banner的html广告，请参考banner html广告展示。
 
+
+## 开屏
 
 ### 开屏请求示例
 
-> 同banner、插屏广告一样，开屏广告在请求的时候也需要通过 ``inventory_types`` 标明支持的物料类型，通常也包含图片，图文，html三种类型的广告，与插屏广告不同的是，请求参数中ad_type为2，是在应用刚开始启动的时候展示，具体展示示例可参考插屏的三种广告返回和展示示例。
+> 同banner、插屏广告一样，开屏广告在请求的时候也需要通过 `inventory_types` 标明支持的物料类型，通常也包含图片，图文，html三种类型的广告，与插屏广告不同的是，请求参数中ad_type为2，是在应用刚开始启动的时候展示，具体展示示例可参考插屏的三种广告返回和展示示例。
 
 ```json
 
@@ -405,20 +433,22 @@
 
 #### 开屏图片广告返回示例
 
-> 参考banner图片广告，展示返回广告中的 ```img_url`` 图片即可。
+> 参考banner图片广告，展示返回广告中的 `img_url` 图片即可。
 
-#### 开屏图文广告返回示例
+### 开屏图文广告返回示例
 
-> 参考插屏的图文广告返回示例，需要返回内容中的 ``img_url`` ``title`` ``desc`` 组合拼装展示。
+> 参考插屏的图文广告返回示例，需要返回内容中的 `img_url` `title` `desc` 组合拼装展示。
 
-#### 开屏html广告返回示例
+### 开屏html广告返回示例
 
-> 参考banner html广告返回示例即可，将返回的 ``html_snippet`` 中的html代码在app中展示出来即可。
+> 参考banner html广告返回示例即可，将返回的 `html_snippet` 中的html代码在app中展示出来即可。
 
+
+## 原生广告
 
 ### 原生广告请求示例
 
-> ``ad_type`` 为 ``3`` ，``invenroty_types`` 为 ``[6]`` 请求的元素为媒体根据自己展示需要定义的元素块
+> `ad_type` 为 `3` ，`invenroty_types` 为 `[6]` 请求的元素为媒体根据自己展示需要定义的元素块
 
 ```json
 
@@ -542,6 +572,8 @@
 	    "result": 0
 	}
 ```
+
+## 视频广告
 
 ### 视频广告请求示例
 
