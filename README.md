@@ -7,7 +7,7 @@
 
 ### 对接文档
 
-1. [文档更新记录]doc_in_chinese/(modification_log.md)
+1. [文档更新记录](doc_in_chinese/modification_log.md)
 2. [对接协议](doc_in_chinese/request_and_response.md)
 3. [对接后的检查清单](doc_in_chinese/check_list.md)
 
