@@ -82,7 +82,7 @@ Request 请求是广告位请求广告的入口，由 SSP 按本文档中规定 
 | is_test    | int         | 否   | 已废弃，该字段无实际含义                                                                                                           |
 | is_tail    | int         | 否   | 已废弃，该字段无实际含义                                                                                                           |
 | need_https | int         | 否   | 是否需要 https 链接的标识，默认为 0。0 标识不需要，1 标识需要。当为 1 时，指的是 SSP 要求返回的所有素材及追踪链接必须是 https 链接 |
-| sdk_ver    | string      | 否   | sdk 版本号，仅供 zplay 使用                                                                                                        |
+| sdk_ver    | string      | 否   | sdk 版本号，仅供 zplay 使用                                                                                                        |
 | app        | 对象        | 是   | app 对象信息                                                                                                                       |
 | site       | 对象        | 否   | site 对象信息                                                                                                                      |
 | device     | 对象        | 是   | 设备信息                                                                                                                           |
