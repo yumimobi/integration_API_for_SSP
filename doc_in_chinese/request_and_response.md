@@ -92,7 +92,7 @@ Request 请求是广告位请求广告的入口，由 SSP 按本文档中规定 
 
 | 字段类型  | 类型     | 必须 | 描述                                                                                                                               |
 | --------- | -------- | ---- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| id        | string   | 是   | app id，请提前将您的应用注册到玉米广告平台[https：//www.yumimobi.com](https：//www.yumimobi.com)，该ID为注册后玉米广告平台生成的ID |
+| id        | string   | 是   | app id，请提前将您的应用注册到玉米广告平台[https://www.yumimobi.com](https://www.yumimobi.com)，该ID为注册后玉米广告平台生成的ID |
 | name      | string   | 是   | app 名称                                                                                                                           |
 | app_key   | string   | 否   | app key，该字段已经废弃，不再使用。如果填写，可以填写与app id相同的值                                                              |
 | bundle    | string   | 是   | app bundle id，包名                                                                                                                |
@@ -104,7 +104,7 @@ Request 请求是广告位请求广告的入口，由 SSP 按本文档中规定 
 
 | 字段名称   | 类型     | 必须 | 描述                                                                                                                                |
 | ---------- | -------- | ---- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| id         | string   | 是   | 网站ID，请提前将您的应用注册到玉米广告平台[https：//www.yumimobi.com](https：//www.yumimobi.com) ，该ID为注册后玉米广告平台生成的ID |
+| id         | string   | 是   | 网站ID，请提前将您的应用注册到玉米广告平台[https://www.yumimobi.com](https://www.yumimobi.com)，该ID为注册后玉米广告平台生成的ID |
 | name       | string   | 否   | 网站名称                                                                                                                            |
 | domain     | string   | 否   | 网站域名                                                                                                                            |
 | page       | string   | 是   | 当前页面网址                                                                                                                        |
@@ -182,7 +182,7 @@ Request 请求是广告位请求广告的入口，由 SSP 按本文档中规定 
 | 字段名称        | 类别   | 必须 | 描述                                                                                                                                                    |
 | --------------- | ------ | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | type            | int    | 是   | 广告类型，0：横幅，1：插屏，2：开屏，3：原生，4：视频                                                                                                   |
-| place_id        | string | 是   | 广告位id，请提前将您的广告位注册到玉米广告平台[https：//www.yumimobi.com](https：//www.yumimobi.com) ，该ID为注册后玉米广告平台生成的ID                 |
+| place_id        | string | 是   | 广告位id，请提前将您的广告位注册到玉米广告平台[https://www.yumimobi.com](https://www.yumimobi.com)，该ID为注册后玉米广告平台生成的ID                 |
 | floor_price     | float  | 否   | 底价，单位为分                                                                                                                                          |
 | currency        | string | 否   | 货币单位，值为“CNY”，“USD”。当填写了floor_price后，该值为必填                                                                                       |
 | w               | int    | 是   | 广告位宽度                                                                                                                                              |
