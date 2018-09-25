@@ -188,15 +188,15 @@ The Ad Request is a request sent by the SSP to the YUMI Ads ADX to call for an a
 | w               | int    | yes       | Width of the slot                                                                                                                                                 |
 | h               | int    | yes       | Height of the slot                                                                                                                                                |
 | pos             | int    | no        | Ad position, 0:unknown，4:head，5:foot，6: sidebar，7:full screen                                                                                                 |
-| inventory_types | 数组   | no        | types of material, 1: image, 2: image and text, 3: video, 4: html5 snippet, 5: text, 6: native, 7: html5 URL. by default the value is image if this array is null |
+| inventory_types | array  | no        | types of material, 1: image, 2: image and text, 3: video, 4: html5 snippet, 5: text, 6: native, 7: html5 URL. by default the value is image if this array is null |
 | native          | object | no        | native information                                                                                                                                                |
 
 ###### Native information
 
-| parameter | type       | mandatory | description                                                                                                       |
-| --------- | ---------- | --------- | ----------------------------------------------------------------------------------------------------------------- |
-| layout    | int        | yes       | Native types，1: content wall, 2: app wall, 3:news stream， 4:chat list，5:scroll ads，6:content stream，7:matrix |
-| assets    | Asset 数组 | yes       | Native assets，currently there’re five: (title), Icon(img), Large image (img), Description (data), Rating (data)  |
+| parameter | type            | mandatory | description                                                                                                       |
+| --------- | --------------- | --------- | ----------------------------------------------------------------------------------------------------------------- |
+| layout    | int             | yes       | Native types，1: content wall, 2: app wall, 3:news stream， 4:chat list，5:scroll ads，6:content stream，7:matrix |
+| assets    | array of assets | yes       | Native assets，currently there’re five: (title), Icon(img), Large image (img), Description (data), Rating (data)  |
 
 **Asset information**
 
@@ -282,7 +282,7 @@ The Ad Request is a request sent by the SSP to the YUMI Ads ADX to call for an a
 | ssp_id             | string   | yes       | ssp id, is only used for YUMI internal platform                                                                                                                                       |
 | download_file_name | string   | no        | Download file name，required when the action type is download                                                                                                                         |
 | file_size          | int      | no        | File size when it is download file                                                                                                                                                    |
-| price              | float    | no        | Ad price, 0 if there’s no price, unit: cent                                                                                                                                           |
+| price              | float    | no        | Ad price                                                                                                                                                                              |
 | ex_param           | []string | no        | Expand parameter                                                                                                                                                                      |
 | ssp_ad_id          | string   | no        | is only used for YUMI internal platform                                                                                                                                               |
 | video              | object   | no        | video object                                                                                                                                                                          |
@@ -298,8 +298,8 @@ The Ad Request is a request sent by the SSP to the YUMI Ads ADX to call for an a
 | play_duration              | int    | no        | Video play duration， unit: second                               |
 | player_start_trackers      | array  | no        | Reporting url while video playing                                |
 | player_end_trackers        | array  | no        | Reporting url while video end playing                            |
-| target_page_show_trackers  | array  | no        | Reporting url while 目标页展示上报 url，与 imp_trackers 效果相同 |
-| target_page_click_trackers | array  | no        | 目标页点击上报 url，与 click_trackers 效果相同                   |
+| target_page_show_trackers  | array  | no        | Reporting url while presenting the target page(also can be called landing page), should be visited at backstage |
+| target_page_click_trackers | array  | no        | Reporting url while clicking the target page(also can be called landing page), should be visited at backstage. note: the jumping URL when user taps the click button is ad.target_url, this array is just tracking url when clicking. please don't fill in ad.click_trackers when this array is filled in。                   |
 
 ##### Zplay information
 
