@@ -18,7 +18,24 @@
 
     develop according above documentation and test using testing token and app ID. if the ad shows normally, the integration would be successful.
 
-    > testing token is `32D4FAE475B19434FFC67983F6628A28`, testing APP ID is `1000360(Android)` or `1000748(iOS）`.
+ 
+
+  > testing token is ``EXVTAW2VYMKUY30TBGLUZ3XPC3H2YW6NQHPWBGF6LMNVBTA6LK9YNS6PMJAUNZG=`` 
+
+> testing APP ID：
+
+OS | APP ID |Slot Format| Slot ID 
+- | :-: | :-: | :-: | :-: |
+ Android| bg76gil7 | banner | an6o1ngv 
+ Android| bg76gil7 | Interstitial| 13ohe4ze 
+ Android| bg76gil7 | Reawrd Video| dsdibu5j 
+ Android| bg76gil7 | Native|13ur17b0
+ Android| bg76gil7 | Splash| 50otuc9h
+iOS| yywtptfq | banner | 5jr45zcy 
+ iOS| yywtptfq | Interstitial| n0w2zkex 
+ iOS| yywtptfq | Reawrd Video| hmtdjpt4 
+ iOS| yywtptfq | Native|gk8cmfh8
+iOS| yywtptfq| Splash|ss03ye17
 
 5. Test with a little online inventory and confirm the statistics data
 

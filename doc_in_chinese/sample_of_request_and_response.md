@@ -28,7 +28,27 @@
 		- [视频广告请求示例](#%E8%A7%86%E9%A2%91%E5%B9%BF%E5%91%8A%E8%AF%B7%E6%B1%82%E7%A4%BA%E4%BE%8B)
 			- [视频广告返回示例](#%E8%A7%86%E9%A2%91%E5%B9%BF%E5%91%8A%E8%BF%94%E5%9B%9E%E7%A4%BA%E4%BE%8B)
 
-> - 示例中可以使用 `ssp_token(32D4FAE475B19434FFC67983F6628A28)` 、`Android测试 app_id（1000360）`、`iOS测试 app_id（1000748）` 作为测试token获取测试数据，供测试查看效果使用，正式上线后请切换为正式的Token及APP ID，否则将不会产生任何请求，展示，点击收益等数据。
+
+> - 示例中可以使用：
+> 
+> 测试Token为``EXVTAW2VYMKUY30TBGLUZ3XPC3H2YW6NQHPWBGF6LMNVBTA6LK9YNS6PMJAUNZG=`` 
+
+> 测试APP 参数：
+
+OS | APP ID |Slot Format| Slot ID 
+- | :-: | :-: | :-: | :-: |
+ Android| bg76gil7 | banner | an6o1ngv 
+ Android| bg76gil7 | Interstitial| 13ohe4ze 
+ Android| bg76gil7 | Reawrd Video| dsdibu5j 
+ Android| bg76gil7 | Native|13ur17b0
+ Android| bg76gil7 | Splash| 50otuc9h
+iOS| yywtptfq | banner | 5jr45zcy 
+ iOS| yywtptfq | Interstitial| n0w2zkex 
+ iOS| yywtptfq | Reawrd Video| hmtdjpt4 
+ iOS| yywtptfq | Native|gk8cmfh8
+iOS| yywtptfq| Splash|ss03ye17
+> 
+> 作为测试token获取测试数据，供测试查看效果使用，正式上线后请切换为正式的Token及APP ID，否则将不会产生任何请求，展示，点击收益等数据。
 
 > - 返回信息的主要错误类型及说明：-1：参数值类型错误；-3：无广告填充；-4：该流量被屏蔽（反作弊）；-5：字段校验失败/字段非法。
 

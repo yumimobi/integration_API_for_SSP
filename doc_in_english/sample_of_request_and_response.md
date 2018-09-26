@@ -28,7 +28,24 @@
     - [request of rewarded video](#request-of-rewarded-video)
     - [response of rewarded video](#response-of-rewarded-video)
 
-> - you can use `ssp_token(32D4FAE475B19434FFC67983F6628A28)`, `Android测试 app_id（1000360）`, `iOS测试 app_id（1000748）` in your testing so that you can view the result. please change to formal token and APP ID when you release the integration, or you will never get any revenue.
+> - you can use test token  in your testing so that you can view the result. please change to formal token and APP ID when you release the integration, or you will never get any revenue.
+
+>  testing token is ``EXVTAW2VYMKUY30TBGLUZ3XPC3H2YW6NQHPWBGF6LMNVBTA6LK9YNS6PMJAUNZG=`` 
+
+> testing APP ID：
+
+OS | APP ID |Slot Format| Slot ID 
+- | :-: | :-: | :-: | :-: |
+ Android| bg76gil7 | banner | an6o1ngv 
+ Android| bg76gil7 | Interstitial| 13ohe4ze 
+ Android| bg76gil7 | Reawrd Video| dsdibu5j 
+ Android| bg76gil7 | Native|13ur17b0
+ Android| bg76gil7 | Splash| 50otuc9h
+iOS| yywtptfq | banner | 5jr45zcy 
+ iOS| yywtptfq | Interstitial| n0w2zkex 
+ iOS| yywtptfq | Reawrd Video| hmtdjpt4 
+ iOS| yywtptfq | Native|gk8cmfh8
+iOS| yywtptfq| Splash|ss03ye17
 
 > - there are some main wrong values: -1：types of parameter is mistake; -3: no ad fill; -4: this traffic was banned; -5: failed to check parameters or parameters is invalid.
 
