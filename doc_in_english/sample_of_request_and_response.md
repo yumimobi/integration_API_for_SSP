@@ -35,7 +35,7 @@
 > testing APP ID：
 
 OS | APP ID |Slot Format| Slot ID 
-- | :-: | :-: | :-: | :-: |
+ | :-: | :-: | :-: | :-: |
  Android| bg76gil7 | banner | an6o1ngv 
  Android| bg76gil7 | Interstitial| 13ohe4ze 
  Android| bg76gil7 | Reawrd Video| dsdibu5j 
