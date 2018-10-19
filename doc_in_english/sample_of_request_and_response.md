@@ -103,7 +103,7 @@
 
 ### response using image of banner
 
-> if parameter `inventory_types:[]` includes `1(type of material is image)`，YUMI Adx wil return image ads and the parameter `inventory_types:[]` in response also is 1.
+> if parameter `inventory_types:[]` includes `1(type of material is image)`,YUMI Adx wil return image ads and the parameter `inventory_types:[]` in response also is 1.
 
 ```json
 {
