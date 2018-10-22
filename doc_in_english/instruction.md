@@ -2,7 +2,7 @@
 
 1. introduce your application information
 
-    include but not limit app name, app bundle ID or package name, download URL, snapshot of ad_slot, types of material(jpg, jpeg, png, gif, html and so on）, whether multi-URLS can be reported, whether caching can be allowed, whether deeplink is supported and so on, YUMI Adx evaluates the integration's priority and importance through these information.
+    include but not limit app name, app bundle ID or package name, download URL, snapshot of ad_slot, types of material(jpg, jpeg, png, gif, html and so on), whether multi-URLS can be reported, whether caching can be allowed, whether deeplink is supported and so on, YUMI Adx evaluates the integration's priority and importance through these information.
 
 2. get your account
 

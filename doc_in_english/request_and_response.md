@@ -52,7 +52,7 @@ There are three steps in RTB processing:
 
 ### URL of request
 
-When there is need to request ad，send a HTTP POST to the following address:
+When there is need to request ad, send a HTTP POST to the following address:
 `bid.adx.yumimobi.com/adx`
 
 ### Communication Mode and Encoding
@@ -64,7 +64,7 @@ The underlying communication protocol between ZPLAY Ads ADX and SSP is HTTP, POS
 | http herder information | instruction                                                                                                                                                                                                                                 |
 | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | X-Forwarded-For         | Include the real request address of the client, e.g. “8.8.8.8”. If integrated via server, please pass client address because server address will be blocked and regarded as fraud.                                                          |
-| User-Agent              | User Agent of mobile device，e.g. “Mozilla/5.0 (iPad; CPU OS 5_0 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9A334 Safari/7534.48.3”. Non-real User-Agent from server will be regarded as problematic traffic. |
+| User-Agent              | User Agent of mobile device, e.g. “Mozilla/5.0 (iPad; CPU OS 5_0 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9A334 Safari/7534.48.3”. Non-real User-Agent from server will be regarded as problematic traffic. |
 
 ### request
 
@@ -132,13 +132,13 @@ The Ad Request is a request sent by the SSP to the YUMI Ads ADX to call for an a
 | parameter       | type    | mandatory | description                                                                                                                                                                                                                                                                                                                                                                     |
 | --------------- | ------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | model           | string  | yes       | device model                                                                                                                                                                                                                                                                                                                                                                    |
-| make            | string  | no        | manufacturer，e.g. “Samsung”                                                                                                                                                                                                                                                                                                                                                    |
+| make            | string  | no        | manufacturer, e.g. “Samsung”                                                                                                                                                                                                                                                                                                                                                    |
 | brand           | string  | no        | cell brand, e.g. “MI4”                                                                                                                                                                                                                                                                                                                                                          |
 | plmn            | string  | no        | public land mobile network (PLMN), as defined in telecommunications regulation, is a network that is established and operated by an administration or by a recognized operating agency (ROA) for the specific purpose of providing land mobile telecommunications services to the public, such as "46000"                                                                       |
-| adt             | boolean | no        | If it’s allowed to target users by tracking user behavior，0:not allowed，1:allowed，default is 1                                                                                                                                                                                                                                                                               |
-| connection_type | string  | yes       | Connection type，empty means unknown，wifi, 2g, 3g, 4g, ethernet, cell_unknown                                                                                                                                                                                                                                                                                                  |
-| carrier         | int     | yes       | Carrier，0:China Mobile，1:Telecom，3:Unicom, 4:unknown                                                                                                                                                                                                                                                                                                                         |
-| orientation     | int     | yes       | Device orientation，1:portrait，3:landscape                                                                                                                                                                                                                                                                                                                                     |
+| adt             | boolean | no        | If it’s allowed to target users by tracking user behavior, 0:not allowed，1:allowed，default is 1                                                                                                                                                                                                                                                                               |
+| connection_type | string  | yes       | Connection type, empty means unknown, wifi, 2g, 3g, 4g, ethernet, cell_unknown                                                                                                                                                                                                                                                                                                  |
+| carrier         | int     | yes       | Carrier, 0:China Mobile, 1:Telecom, 3:Unicom, 4:unknown                                                                                                                                                                                                                                                                                                                         |
+| orientation     | int     | yes       | Device orientation, 1:portrait, 3:landscape                                                                                                                                                                                                                                                                                                                                     |
 | mac             | string  | no        | media access control address, is a unique identifier assigned to a network interface controller (NIC) for communications at the data link layer of a network segment. MAC addresses are used as a network address for most IEEE 802 network technologies, including Ethernet and Wi-Fi. In this context, MAC addresses are used in the medium access control protocol sublayer. |
 | imei            | string  | no        | International Mobile Equipment Identity, is a number, usually unique, to identify 3GPP and iDEN mobile phones, as well as some satellite phones. (sending meid(mobile equipment identifier) if the mobile is CDMA2000)                                                                                                                                                          |
 | imsi            | string  | no        | international mobile subscriber identity, is used to identify the user of a cellular network and is a unique identification associated with all cellular networks                                                                                                                                                                                                               |
@@ -157,9 +157,9 @@ The Ad Request is a request sent by the SSP to the YUMI Ads ADX to call for an a
 
 | parameter | type  | mandatory | description                                                                    |
 | --------- | ----- | --------- | ------------------------------------------------------------------------------ |
-| w         | int   | yes       | Landscape resolution，unit:pixel. If not passed, fill rate will be affected.   |
-| h         | int   | yes       | Portrait resolution，unit:pixel. If not passed, fill rate will be affected.    |
-| dpi       | int   | no        | Pixel density，unit:pixel numbers per inch                                     |
+| w         | int   | yes       | Landscape resolution, unit:pixel. If not passed, fill rate will be affected.   |
+| h         | int   | yes       | Portrait resolution, unit:pixel. If not passed, fill rate will be affected.    |
+| dpi       | int   | no        | Pixel density, unit:pixel numbers per inch                                     |
 | pxratio   | float | no        | Physical pixel density, e.g. 1 on iPhone 3, 2 on iPhone 4, 3 on iPhone 6s Plus |
 
 ###### Geo information
@@ -183,13 +183,13 @@ The Ad Request is a request sent by the SSP to the YUMI Ads ADX to call for an a
 
 | parameter       | type   | mandatory | description                                                                                                                                                       |
 | --------------- | ------ | --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| type            | int    | yes       | Ad type，0: banner, 1: interstitial, 2:splash, 3: native, 4:video                                                                                                 |
+| type            | int    | yes       | Ad type, 0: banner, 1: interstitial, 2:splash, 3: native, 4:video                                                                                                 |
 | place_id        | string | yes       | slot id, is generated by YUMI adx, such as "nsgh7kw2" after you registered your slot on [https://www.yumimobi.com](https://www.yumimobi.com)                      |
-| floor_price     | float  | no        | Floor price，cent as unit                                                                                                                                         |
+| floor_price     | float  | no        | Floor price, cent as unit                                                                                                                                         |
 | currency        | string | no        | currency, values are "CNY" or "USD", will be mandatory when above `floor_price` has value.                                                                        |
 | w               | int    | yes       | Width of the slot                                                                                                                                                 |
 | h               | int    | yes       | Height of the slot                                                                                                                                                |
-| pos             | int    | no        | Ad position, 0:unknown，4:head，5:foot，6: sidebar，7:full screen                                                                                                 |
+| pos             | int    | no        | Ad position, 0:unknown, 4:head, 5:foot, 6: sidebar, 7:full screen                                                                                                 |
 | inventory_types | array  | no        | types of material, 1: image, 2: image and text, 3: video, 4: html5 snippet, 5: text, 6: native, 7: html5 URL. by default the value is image if this array is null |
 | native          | object | no        | native information                                                                                                                                                |
 
@@ -197,15 +197,15 @@ The Ad Request is a request sent by the SSP to the YUMI Ads ADX to call for an a
 
 | parameter | type            | mandatory | description                                                                                                       |
 | --------- | --------------- | --------- | ----------------------------------------------------------------------------------------------------------------- |
-| layout    | int             | yes       | Native types，1: content wall, 2: app wall, 3:news stream， 4:chat list，5:scroll ads，6:content stream，7:matrix |
-| assets    | array of assets | yes       | Native assets，currently there’re five: (title), Icon(img), Large image (img), Description (data), Rating (data)  |
+| layout    | int             | yes       | Native types, 1: content wall, 2: app wall, 3:news stream, 4:chat list, 5:scroll ads, 6:content stream, 7:matrix |
+| assets    | array of assets | yes       | Native assets, currently there’re five: (title), Icon(img), Large image (img), Description (data), Rating (data)  |
 
 **Asset information**
 
 | parameter | type   | mandatory | description                                                          |
 | --------- | ------ | --------- | -------------------------------------------------------------------- |
 | id        | int    | yes       | element id                                                           |
-| required  | int    | no        | Ad element is required or not，1:required，0: optional， 0 for fraud |
+| required  | int    | no        | Ad element is required or not, 1:required, 0: optional,  0 for fraud |
 | title     | object | no        | Title element                                                        |
 | img       | object | no        | Image element                                                        |
 | data      | object | no        | Other data                                                           |
@@ -216,9 +216,9 @@ The Ad Request is a request sent by the SSP to the YUMI Ads ADX to call for an a
 
 | parameter | type | mandatory | description                                               |
 | --------- | ---- | --------- | --------------------------------------------------------- |
-| type      | int  | yes       | Image element type，1:icon，2:Logo, 3:picture             |
-| w         | int  | no        | Image width，unit: pixel. Value required for native ads.  |
-| h         | int  | no        | Image height，unit: pixel. Value required for native ads. |
+| type      | int  | yes       | Image element type, 1:icon, 2:Logo, 3:picture             |
+| w         | int  | no        | Image width, unit: pixel. Value required for native ads.  |
+| h         | int  | no        | Image height, unit: pixel. Value required for native ads. |
 
 **Title information**
 
@@ -255,7 +255,7 @@ The Ad Request is a request sent by the SSP to the YUMI Ads ADX to call for an a
 
 | parameter | type             | mandatory | description                                                       |
 | --------- | ---------------- | --------- | ----------------------------------------------------------------- |
-| result    | int              | yes       | Return result，0:success，<0: failure                             |
+| result    | int              | yes       | Return result, 0:success, <0: failure                             |
 | msg       | string           | no        | Failure message will be presented if fails, e.g.”internet error”. |
 | ad        | object           | no        | No data if it fails or no ads                                     |
 | ads       | array of objects | no        | No data if it fails or no ads                                     |
@@ -266,7 +266,7 @@ The Ad Request is a request sent by the SSP to the YUMI Ads ADX to call for an a
 | parameter          | type     | mandatory | description                                                                                                                                                                           |
 | ------------------ | -------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | id                 | string   | yes       | ad id                                                                                                                                                                                 |
-| place_id           | string   | yes       | slot id，is same with the place_id in request                                                                                                                                         |
+| place_id           | string   | yes       | slot id, is same with the place_id in request                                                                                                                                         |
 | action             | int      | yes       | types of action, 1: open the target_url within webview in-app, 2: open the target_url within system browser, 3: open map, 4: open dial, 5: play video, 6: download App, 7: arouse App |
 | html_snippet       | string   | no        | html snippet                                                                                                                                                                          |
 | image_url          | string   | no        | image URL                                                                                                                                                                             |
@@ -277,12 +277,12 @@ The Ad Request is a request sent by the SSP to the YUMI Ads ADX to call for an a
 | target_url         | string   | no        | target URL which is the jumping URL when user tap the ads                                                                                                                             |
 | click_trackers     | array    | no        | track the url list when clicking ads, should be visited at backstage                                                                                                                  |
 | imp_trackers       | array    | no        | track the url list when ads are shown, should be visited at backstage                                                                                                                 |
-| refresh_interv     | int      | yes       | Refresh the ad after the interval，do not refresh if it is 0                                                                                                                          |
+| refresh_interv     | int      | yes       | Refresh the ad after the interval, do not refresh if it is 0                                                                                                                          |
 | inventory_type     | int      | yes       | types of material, 1: image, 2: image and text, 3: video, 4: html5 snippet, 5: text, 6: native, 7: html5 URL.                                                                         |
 | title              | string   | no        | title of ads of image and text                                                                                                                                                        |
 | desc               | string   | no        | description of ads of image and text                                                                                                                                                  |
 | ssp_id             | string   | yes       | ssp id, is only used for YUMI internal platform                                                                                                                                       |
-| download_file_name | string   | no        | Download file name，required when the action type is download                                                                                                                         |
+| download_file_name | string   | no        | Download file name, required when the action type is download                                                                                                                         |
 | file_size          | int      | no        | File size when it is download file                                                                                                                                                    |
 | price              | float    | no        | Ad price                                                                                                                                                                              |
 | ex_param           | []string | no        | Expand parameter                                                                                                                                                                      |
@@ -297,11 +297,11 @@ The Ad Request is a request sent by the SSP to the YUMI Ads ADX to call for an a
 | parameter                  | type   | mandatory | description                                                      |
 | -------------------------- | ------ | --------- | ---------------------------------------------------------------- |
 | url                        | string | yes       | video url                                                        |
-| play_duration              | int    | no        | Video play duration， unit: second                               |
+| play_duration              | int    | no        | Video play duration,  unit: second                               |
 | player_start_trackers      | array  | no        | Reporting url while video playing                                |
 | player_end_trackers        | array  | no        | Reporting url while video end playing                            |
 | target_page_show_trackers  | array  | no        | Reporting url while presenting the target page(also can be called landing page), should be visited at backstage |
-| target_page_click_trackers | array  | no        | Reporting url while clicking the target page(also can be called landing page), should be visited at backstage. note: the jumping URL when user taps the click button is ad.target_url, this array is just tracking url when clicking. please don't fill in ad.click_trackers when this array is filled in。                   |
+| target_page_click_trackers | array  | no        | Reporting url while clicking the target page(also can be called landing page), should be visited at backstage. note: the jumping URL when user taps the click button is ad.target_url, this array is just tracking url when clicking. please don't fill in ad.click_trackers when this array is filled in.                   |
 
 ##### Zplay information
 
@@ -317,7 +317,7 @@ The Ad Request is a request sent by the SSP to the YUMI Ads ADX to call for an a
 
 | parameter  | type             | mandatory | description                                                                                                   |
 | ---------- | ---------------- | --------- | ------------------------------------------------------------------------------------------------------------- |
-| assets     | array of objects | yes       | Native ad list，currently supporting 5， (title), icon (img), picture (img), description (data), score (data) |
+| assets     | array of objects | yes       | Native ad list,currently supporting 5, (title), icon (img), picture (img), description (data), score (data) |
 | imptracker | array            | no        | Impression tracker address array, a 1-pixel picture needs to be returned from SSP                             |
 | link       | object           | no        | Target link, default link object, used when there is no link in Assets                                        |
 
