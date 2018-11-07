@@ -190,7 +190,7 @@ The Ad Request is a request sent by the SSP to the YUMI Ads ADX to call for an a
 | w               | int    | yes       | Width of the slot                                                                                                                                                 |
 | h               | int    | yes       | Height of the slot                                                                                                                                                |
 | pos             | int    | no        | Ad position, 0:unknown, 4:head, 5:foot, 6: sidebar, 7:full screen                                                                                                 |
-| inventory_types | array  | no        |  <br> banner& interstitial& splash types of material, 1: image, 2: image and text,  4: html5 snippet, 5: text, 7: html5 URL; <br> native types of material,6: native;  <br> video etypes of material, 3: video; <br> by default the value is image if this array is null; |
+| inventory_types | array  | no        |  <br> banner& interstitial& splash types of material, 1: image, 2: image and text,  4: html5 snippet, 5: text, 7: html5 URL; <br> native types of material,6: native;  <br> video types of material, 3: video; <br> by default the value is image if this array is null;  <br><font color="#dd0000">注：Different types support different inventory_types；</font><br />  |
 | native          | object | no        | native information                                                                                                                                                |
 
 ###### Native information
