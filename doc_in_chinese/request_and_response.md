@@ -22,10 +22,10 @@
                 - [Zplay 对象信息](#zplay-%E5%AF%B9%E8%B1%A1%E4%BF%A1%E6%81%AF)
         - [ADX 返回信息](#adx-%E8%BF%94%E5%9B%9E%E4%BF%A1%E6%81%AF)
             - [Response 字段信息](#response-%E5%AD%97%E6%AE%B5%E4%BF%A1%E6%81%AF)
-                - [Ad 对象信息](#ad-%E5%AF%B9%E8%B1%A1%E4%BF%A1%E6%81%AF)
+                - [Ad 对象信息](#ad-%E5%AF%B9%E8%B1%A1%E4%BF%A1%E6%81%AF-1)
                     - [Video 对象信息](#video-%E5%AF%B9%E8%B1%A1%E4%BF%A1%E6%81%AF)
-                - [Zplay 对象信息](#zplay-%E5%AF%B9%E8%B1%A1%E4%BF%A1%E6%81%AF)
-                    - [Native 对象信息](#native-%E5%AF%B9%E8%B1%A1%E4%BF%A1%E6%81%AF)
+                - [Zplay 对象信息](#zplay-%E5%AF%B9%E8%B1%A1%E4%BF%A1%E6%81%AF-1)
+                    - [Native 对象信息](#native-%E5%AF%B9%E8%B1%A1%E4%BF%A1%E6%81%AF-1)
         - [上报地址宏替换信息](#%E4%B8%8A%E6%8A%A5%E5%9C%B0%E5%9D%80%E5%AE%8F%E6%9B%BF%E6%8D%A2%E4%BF%A1%E6%81%AF)
 
 ## 文档说明
@@ -191,7 +191,7 @@ Request 请求是广告位请求广告的入口，由 SSP 按本文档中规定 
 | w               | int    | 是   | 广告位宽度                                                                                                                                               |
 | h               | int    | 是   | 广告位高度                                                                                                                                               |
 | pos             | int    | 否   | 广告位位置，0：未知，4：头部，5：底部,6：侧边栏，7：全屏                                                                                                 |
-| inventory_types | 数组   | 否   | 支持的广告资源类型，1：图片，2：图文，3：视频，4：html5，5：文本，6：原生，7：html5 url，即一个指向 html5 素材页面的 url。如果为空，则默认只支持 1：图片 |
+| inventory_types | 数组   | 否   |<br> banner&插屏&开屏支持的广告资源类型，1：图片，2：图文，4：html5，5：文本，7：html5 url，即一个指向 html5 素材页面的 url；               <br>视频支持的广告资源类型，3：视频；<br>原生支持的广告资源类型，6：原生；<br>如果为空，则默认只支持 1：图片 |
 | native          | 对象   | 否   | 原生广告信息                                                                                                                                             |
 
 ###### Native 对象信息
@@ -291,7 +291,8 @@ Request 请求是广告位请求广告的入口，由 SSP 按本文档中规定 
 | video              | 对象     | 否   | 视频对象                                                                                                                                       |
 | native             | 对象     | 否   | 原生广告对象                                                                                                                                   |
 | logo_url           | string   | 否   | 角标资源地址                                                                                                                                   |
-| zplay              | 对象     | 否   | 给自主返回的 zplay 对象，该字段为 zplay 保留字段，开发者（SSP）可忽略                                                                          |
+| fallback_url       | string   | 否   | 应用唤醒失败后的打开地址，允许使用[宏](supported_macros.md)，例http://www.zplay.cn/ad/{AUCTION_BID_ID}                                                                          |
+| fallback_action    | int      | 否   | fallback_url的动作类型，1：在app内webview打开目标链接，2：在系统浏览器打开目标链接，3：打开地图，4：拨打电话，5：播放视频，6：App下载，7：应用唤醒                                                                          |
 
 ###### Video 对象信息
 
@@ -360,7 +361,9 @@ Request 请求是广告位请求广告的入口，由 SSP 按本文档中规定 
 | ------------ | ------ | ---- | -------------------------------------------------------------------------------------------------------------------------------- |
 | url          | string | 是   | 目标链接                                                                                                                         |
 | clicktracker | 数组   | 否   | 点击追踪链接                                                                                                                     |
-| type         | int    | 否   | 点击动作类型，1：在 app 内 webview 打开目标链接，2：在系统浏览器打开目标链接，3：打开地图，4：拨打电话，5：播放视频，6：App 下载 |
+| type         | int    | 否   | 点击动作类型，1：在 app 内 webview 打开目标链接，2：在系统浏览器打开目标链接，3：打开地图，4：拨打电话，5：播放视频，6：App 下载，7：应用唤醒  |
+| fallback_url       | string   | 否   | 应用唤醒失败后的打开地址，允许使用[宏](supported_macros.md)，例http://www.zplay.cn/ad/{AUCTION_BID_ID}                                                                          |
+| fallback_action    | int      | 否   | fallback_url的动作类型，1：在app内webview打开目标链接，2：在系统浏览器打开目标链接，3：打开地图，4：拨打电话，5：播放视频，6：App下载，7：应用唤醒                                                                          |
 
 ### 上报地址宏替换信息
 

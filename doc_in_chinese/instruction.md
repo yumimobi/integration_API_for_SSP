@@ -21,6 +21,10 @@
 
      > 测试APP 参数：
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 355abbb10a7bc94e6c2d6914505e89d469959d27
 | OS | APP ID | Slot Format | Slot ID |
 | ----- | ----- | ----- | ----- |
 | Android | bg76gil7 | banner | an6o1ngv |
@@ -33,6 +37,10 @@
 | iOS | yywtptfq | Reawrd Video | hmtdjpt4 |
 | iOS | yywtptfq | Native | gk8cmfh8 |
 | iOS | yywtptfq | Splash | ss03ye17 |
+<<<<<<< HEAD
+=======
+
+>>>>>>> 355abbb10a7bc94e6c2d6914505e89d469959d27
 
 5. 小流量测试
 

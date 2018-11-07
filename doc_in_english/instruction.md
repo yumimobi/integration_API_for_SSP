@@ -2,7 +2,7 @@
 
 1. introduce your application information
 
-    include but not limit app name, app bundle ID or package name, download URL, snapshot of ad_slot, types of material(jpg, jpeg, png, gif, html and so on）, whether multi-URLS can be reported, whether caching can be allowed, whether deeplink is supported and so on, YUMI Adx evaluates the integration's priority and importance through these information.
+    include but not limit app name, app bundle ID or package name, download URL, snapshot of ad_slot, types of material(jpg, jpeg, png, gif, html and so on), whether multi-URLS can be reported, whether caching can be allowed, whether deeplink is supported and so on, YUMI Adx evaluates the integration's priority and importance through these information.
 
 2. get your account
 
@@ -24,6 +24,10 @@
 
 > testing APP ID：
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 355abbb10a7bc94e6c2d6914505e89d469959d27
 | OS | APP ID | Slot Format | Slot ID |
 | ----- | ----- | ----- | ----- |
 | Android | bg76gil7 | banner | an6o1ngv |
@@ -37,6 +41,10 @@
 | iOS | yywtptfq | Native | gk8cmfh8 |
 | iOS | yywtptfq | Splash | ss03ye17 |
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 355abbb10a7bc94e6c2d6914505e89d469959d27
 1. Test with a little online inventory and confirm the statistics data
 
 2. deploy the integration
