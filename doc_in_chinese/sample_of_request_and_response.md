@@ -47,12 +47,8 @@
 | iOS | yywtptfq | Native | gk8cmfh8 |
 | iOS | yywtptfq | Splash | ss03ye17 |
 
-<<<<<<< HEAD
-> - 作为测试token获取测试数据，供测试查看效果使用，正式上线后请切换为正式的Token及APP ID，否则将不会产生任何请求，展示，点击收益等数据。
-=======
-> 作为测试token获取测试数据，供测试查看效果使用，正式上线后请切换为正式的Token及APP ID，否则将不会产生任何请求，展示，点击收益等数据。
->>>>>>> 355abbb10a7bc94e6c2d6914505e89d469959d27
 
+> - 作为测试token获取测试数据，供测试查看效果使用，正式上线后请切换为正式的Token及APP ID，否则将不会产生任何请求，展示，点击收益等数据。
 > - 返回信息的主要错误类型及说明：-1：参数值类型错误；-3：无广告填充；-4：该流量被屏蔽（反作弊）；-5：字段校验失败/字段非法。
 
 ## banner
@@ -99,6 +95,7 @@
 	    "ads": [
 	        {
 	            "type": 0,
+	            "place_id": "an6o1ngv",
 	            "floor_price": 0,
 	            "w": 640,
 	            "h": 100,
@@ -291,6 +288,7 @@
 	    "ads": [
 	        {
 	            "type": 1,
+	            "place_id": "13ohe4ze",
 	            "floor_price": 0,
 	            "w": 720,
 	            "h": 1038,
@@ -440,6 +438,7 @@
 	    "ads": [
 	        {
 	            "type": 2,
+	            "place_id": "50otuc9h",
 	            "floor_price": 0,
 	            "w": 720,
 	            "h": 1038,
@@ -503,6 +502,7 @@
 	                6
 	            ],
 	            "type": 3,
+	            "place_id": "gk8cmfh8",
 	            "floor_price": 0,
 	            "native": {
 	                "layout": 3,
@@ -607,6 +607,7 @@
 	{
 	    "ads": [
 	        {
+	            "place_id": "sdbds23sd",
 	            "floor_price": 0,
 	            "h": 960,
 	            "inventory_types": [

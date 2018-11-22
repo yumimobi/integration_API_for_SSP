@@ -56,10 +56,10 @@
 ```json
 {
   "ver": "1.1",
-  "ssp_token": "ssp_token",
+  "ssp_token": "EXVTAW2VYMKUY30TBGLUZ3XPC3H2YW6NQHPWBGF6LMNVBTA6LK9YNS6PMJAUNZG=",
   "need_https": 0,
   "app": {
-    "id": "app_id",
+    "id": "bg76gil7",
     "name": "DrivingTest",
     "app_key": "app_key",
     "bundle": "cn.eclicks.drivingtest",
@@ -92,6 +92,7 @@
   "ads": [
     {
       "type": 0,
+      "place_id": "an6o1ngv",
       "floor_price": 0,
       "w": 640,
       "h": 100,
@@ -230,10 +231,10 @@
 ```json
 {
   "ver": "1.1",
-  "ssp_token": "ssp_token",
+  "ssp_token": "EXVTAW2VYMKUY30TBGLUZ3XPC3H2YW6NQHPWBGF6LMNVBTA6LK9YNS6PMJAUNZG=",
   "need_https": 0,
   "app": {
-    "id": "app_id",
+    "id": "bg76gil7",
     "name": "DrivingTest",
     "app_key": "app_key",
     "bundle": "cn.eclicks.drivingtest",
@@ -266,6 +267,7 @@
   "ads": [
     {
       "type": 1,
+      "place_id": "13ohe4ze",
       "floor_price": 0,
       "w": 720,
       "h": 1038,
@@ -368,10 +370,10 @@
 ```json
 {
   "ver": "1.1",
-  "ssp_token": "ssp_token",
+  "ssp_token": "EXVTAW2VYMKUY30TBGLUZ3XPC3H2YW6NQHPWBGF6LMNVBTA6LK9YNS6PMJAUNZG=",
   "need_https": 0,
   "app": {
-    "id": "app_id",
+    "id": "bg76gil7",
     "name": "DrivingTest",
     "app_key": "app_key",
     "bundle": "cn.eclicks.drivingtest",
@@ -404,6 +406,7 @@
   "ads": [
     {
       "type": 2,
+      "place_id": "50otuc9h",
       "floor_price": 0,
       "w": 720,
       "h": 1038,
@@ -434,9 +437,9 @@
 ```json
 {
   "ver": "1.1",
-  "ssp_token": "ssp_token",
+  "ssp_token": "EXVTAW2VYMKUY30TBGLUZ3XPC3H2YW6NQHPWBGF6LMNVBTA6LK9YNS6PMJAUNZG=",
   "app": {
-    "id": "app_id",
+    "id": "yywtptfq",
     "name": "app name",
     "app_key": "app_key",
     "bundle": "bundle.com"
@@ -456,6 +459,7 @@
   },
   "ads": [
     {
+      "place_id": "gk8cmfh8",
       "inventory_types": [6],
       "type": 3,
       "floor_price": 0,
@@ -554,6 +558,7 @@
 {
   "ads": [
     {
+      "place_id": "dsdibu5j",
       "floor_price": 0,
       "h": 960,
       "inventory_types": [3],
@@ -567,7 +572,7 @@
   "app": {
     "app_key": "app_key",
     "bundle": "",
-    "id": "app_id",
+    "id": "bg76gil7",
     "name": "app name",
     "ver": "5.0.0"
   },
@@ -600,7 +605,7 @@
   "is_tail": 0,
   "is_test": 0,
   "sdk_ver": "androidmedia1.2.1.2",
-  "ssp_token": "10000",
+  "ssp_token": "EXVTAW2VYMKUY30TBGLUZ3XPC3H2YW6NQHPWBGF6LMNVBTA6LK9YNS6PMJAUNZG=",
   "user": {
     "age": 0,
     "gender": 0
