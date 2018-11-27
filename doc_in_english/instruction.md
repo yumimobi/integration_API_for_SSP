@@ -24,10 +24,6 @@
 
 > testing APP ID：
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 355abbb10a7bc94e6c2d6914505e89d469959d27
 | OS | APP ID | Slot Format | Slot ID |
 | ----- | ----- | ----- | ----- |
 | Android | bg76gil7 | banner | an6o1ngv |
@@ -41,10 +37,7 @@
 | iOS | yywtptfq | Native | gk8cmfh8 |
 | iOS | yywtptfq | Splash | ss03ye17 |
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 355abbb10a7bc94e6c2d6914505e89d469959d27
 1. Test with a little online inventory and confirm the statistics data
 
 2. deploy the integration
