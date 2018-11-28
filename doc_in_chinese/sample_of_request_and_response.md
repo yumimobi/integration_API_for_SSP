@@ -97,7 +97,8 @@
 	        {
 	            "type": 0,
 	            "place_id": "an6o1ngv",
-	            "floor_price": 0,
+	            "floor_price": 100,
+	            "currency": "CNY",
 	            "w": 640,
 	            "h": 100,
 	            "inventory_types": [
@@ -290,7 +291,8 @@
 	        {
 	            "type": 1,
 	            "place_id": "13ohe4ze",
-	            "floor_price": 0,
+	            "floor_price": 100,
+	            "currency": "CNY",
 	            "w": 720,
 	            "h": 1038,
 	            "inventory_types": [
@@ -440,7 +442,8 @@
 	        {
 	            "type": 2,
 	            "place_id": "50otuc9h",
-	            "floor_price": 0,
+	            "floor_price": 100,
+	            "currency": "CNY",
 	            "w": 720,
 	            "h": 1038,
 	            "inventory_types": [
@@ -609,7 +612,8 @@
 	    "ads": [
 	        {
 	            "place_id": "sdbds23sd",
-	            "floor_price": 0,
+	            "floor_price": 100,
+	            "currency": "CNY",
 	            "h": 960,
 	            "inventory_types": [
 	                3

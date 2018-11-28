@@ -187,7 +187,7 @@ Request 请求是广告位请求广告的入口，由 SSP 按本文档中规定 
 | type            | int    | 是   | 广告类型，0：横幅，1：插屏，2：开屏，3：原生，4：视频                                                                                                    |
 | place_id        | string | 是   | 广告位 id，请提前将您的广告位注册到玉米广告平台[https://www.yumimobi.com](https://www.yumimobi.com)，该 ID 为注册后玉米广告平台生成的 Slot ID                 |
 | floor_price     | float  | 否   | 底价，单位为分                                                                                                                                           |
-| currency        | string | 否   | 货币单位，值为“CNY”，“USD”。当填写了 floor_price 后，该值为必填                                                                                          |
+| currency        | string | 否   | 货币单位，值为“CNY”，“USD”。当填写了 floor_price 后，该值为必填。底价币种请保持与结算币种一致，否则将无法获取广告。                                                                                          |
 | w               | int    | 是   | 广告位宽度                                                                                                                                               |
 | h               | int    | 是   | 广告位高度                                                                                                                                               |
 | pos             | int    | 否   | 广告位位置，0：未知，4：头部，5：底部,6：侧边栏，7：全屏                                                                                                 |
