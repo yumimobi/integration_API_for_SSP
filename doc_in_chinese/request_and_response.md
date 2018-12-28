@@ -24,8 +24,8 @@
             - [Response 字段信息](#response-%E5%AD%97%E6%AE%B5%E4%BF%A1%E6%81%AF)
                 - [Ad 对象信息](#ad-%E5%AF%B9%E8%B1%A1%E4%BF%A1%E6%81%AF-1)
                     - [Video 对象信息](#video-%E5%AF%B9%E8%B1%A1%E4%BF%A1%E6%81%AF)
-                - [Zplay 对象信息](#zplay-%E5%AF%B9%E8%B1%A1%E4%BF%A1%E6%81%AF-1)
                     - [Native 对象信息](#native-%E5%AF%B9%E8%B1%A1%E4%BF%A1%E6%81%AF-1)
+                - [Zplay 对象信息](#zplay-%E5%AF%B9%E8%B1%A1%E4%BF%A1%E6%81%AF-1)
         - [上报地址宏替换信息](#%E4%B8%8A%E6%8A%A5%E5%9C%B0%E5%9D%80%E5%AE%8F%E6%9B%BF%E6%8D%A2%E4%BF%A1%E6%81%AF)
 
 ## 文档说明
@@ -191,7 +191,7 @@ Request 请求是广告位请求广告的入口，由 SSP 按本文档中规定 
 | w               | int    | 是   | 广告位宽度                                                                                                                                               |
 | h               | int    | 是   | 广告位高度                                                                                                                                               |
 | pos             | int    | 否   | 广告位位置，0：未知，4：头部，5：底部,6：侧边栏，7：全屏                                                                                                 |
-| inventory_types | 数组   | 否   |<br> banner&插屏&开屏广告类型支持的广告资源类型，1：图片，2：图文，4：html5，5：文本，7：html5 url，即一个指向 html5 素材页面的 url；               <br>视频广告类型支持的广告资源类型，3：视频；<br>原生广告类型支持的广告资源类型，6：原生；<br>如果为空，则默认只支持 1：图片 <br><font color="#dd0000">注：不同type支持inventory_types不同；</font><br /> |
+| inventory_types | 数组   | 否   |<br> banner&开屏广告类型支持的广告资源类型，1：图片，2：图文，4：html5，5：文本，7：html5 url，即一个指向 html5 素材页面的 url；<br> 插屏广告类型支持的广告资源类型，1：图片，2：图文，3：视频，4：html5，5：文本，7：html5 url，即一个指向 html5 素材页面的 url, 10：可玩广告；<br>视频广告类型支持的广告资源类型，3：视频, 10：可玩广告；<br>原生广告类型支持的广告资源类型，6：原生；<br>如果为空，则默认只支持 1：图片 <br><font color="#dd0000">注：不同type支持inventory_types不同；</font><br /> |
 | native          | 对象   | 否   | 原生广告信息                                                                                                                                             |
 
 ###### Native 对象信息
@@ -279,7 +279,7 @@ Request 请求是广告位请求广告的入口，由 SSP 按本文档中规定 
 | click_trackers     | array    | 否   | 当点击广告时被上报的监控 URL 列表，应在后台访问                                                                                                      |
 | imp_trackers       | array    | 否   | 当广告被展示时被上报的监控 URL 列表，应在后台访问                                                                                                    |
 | refresh_interv     | int      | 是   | 广告应该在这个间隔后刷新，若为 0 则不刷 新                                                                                                     |
-| inventory_type     | int      | 是   | 广告资源类型，1：图片，2：图文，3：视频，4：html5，5：文本，6：原生，7：html5 url，即一个指向 html5 素材页面的 url                             |
+| inventory_type     | int      | 是   | 广告资源类型，1：图片，2：图文，3：视频，4：html5，5：文本，6：原生，7：html5 url，即一个指向 html5 素材页面的 url，10：可玩广告                        |
 | title              | string   | 否   | 广告标题，图文广告时需要                                                                                                                       |
 | desc               | string   | 否   | 广告描述，图文广告时需要                                                                                                                       |
 | ssp_id             | string   | 是   | ssp id，该字段为玉米交易平台（ADX）保留字段，开发者（SSP）可忽略                                                                               |
