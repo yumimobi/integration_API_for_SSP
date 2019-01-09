@@ -274,6 +274,7 @@ Request 请求是广告位请求广告的入口，由 SSP 按本文档中规定 
 | w                  | int      | 是   | 广告宽度                                                                                                                                       |
 | h                  | int      | 是   | 广告高度                                                                                                                                       |
 | app_bundle         | string   | 否   | 对于 Android，是应用的 packageName；对于 iOS，是 Bundle identifier                                                                             |
+| store_bundle       | string   | 否   | 应用市场包名(只针对安卓应用)                                                                             |
 | app_ver            | string   | 否   | 应用版本号                                                                                                                                     |
 | target_url         | string   | 否   | 目标地址                                                                                                                                       |
 | click_trackers     | array    | 否   | 当点击广告时被上报的监控 URL 列表，应在后台访问                                                                                                      |
@@ -368,14 +369,17 @@ Request 请求是广告位请求广告的入口，由 SSP 按本文档中规定 
 
 ### 上报地址宏替换信息
 
-> 客户端在触发上报信息时，必须将点击追踪链接、点击跳转地址中的宏变量替换上报（如有），单位为像素。需要替换的宏坐标如下：
+> 客户端在触发上报信息时，必须将点击追踪链接、点击跳转地址、点击关闭、播放开始、播放完成，展示中的宏变量替换上报（如有），单位为像素。需要替换的宏坐标如下：
 
 | 宏变量                      | 类型  | 说明            |
 | --------------------------- | ----- | --------------- |
-| YUMI_ADSERVICE_CLICK_DOWN_X | int32 | 点击落下 X 坐标 |
-| YUMI_ADSERVICE_CLICK_DOWN_Y | int32 | 点击落下 Y 坐标 |
-| YUMI_ADSERVICE_CLICK_UP_X   | int32 | 点击离开 X 坐标 |
-| YUMI_ADSERVICE_CLICK_UP_Y   | int32 | 点击离开 Y 坐标 |
+| YUMI_ADSERVICE_CLICK_DOWN_X | int32 | 点击追踪链接、点击跳转地址中的点击落下X坐标 |
+| YUMI_ADSERVICE_CLICK_DOWN_Y | int32 | 点击追踪链接、点击跳转地址中的点击落下Y坐标 |
+| YUMI_ADSERVICE_CLICK_UP_X   | int32 | 点击追踪链接、点击跳转地址中的点击离开X坐标 |
+| YUMI_ADSERVICE_CLICK_UP_Y   | int32 | 点击追踪链接、点击跳转地址中的点击离开Y坐标 |
+| YUMI_ADSERVICE_UNIX_ORIGIN_TIME   | int32 | 播放开始、播放完成、展示、点击、关闭广告中的事件发生 unix 时间戳(毫秒) |
+| YUMI_ADSERVICE_CUR_TIME    | int32 | 关闭激励视频时当前播放的进度（秒）|
+| YUMI_ADSERVICE_START_TIME  | int32 | 关闭激励视频后再次开始播放时的进度（秒）|
 
 > 广告展示内容方向与屏幕方向一致时，广告位左上角为坐标（0，0）点，见下方示例。如果无法获取上述字段，需要将值替换为-999。
 
