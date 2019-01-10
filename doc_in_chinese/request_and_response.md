@@ -305,7 +305,8 @@ Request 请求是广告位请求广告的入口，由 SSP 按本文档中规定 
 | player_start_trackers      | array  | 否   | 播放时上报 url                                 |
 | player_end_trackers        | array  | 否   | 播放完成时上报 url                             |
 | target_page_show_trackers  | array  | 否   | 落地页展示上报 url，当落地页被展示时上报的监控 URL 列表，应在后台访问   |
-| target_page_click_trackers | array  | 否   | 落地页点击上报 url，当落地页被点击时上报的监控 URL 列表，应在后台访问，点击时的跳转地址为ad.target_url。注意：当填写此数组时，请勿再次填写ad.click_trackers数组。 |
+| target_page_click_trackers | array  | 否   | 落地页点击上报 url，当落地页被点击时上报的监控 URL 列表，应在后台访问，点击时的跳转地址为ad.target_url。 |
+| target_page_close_trackers | array  | 否   | 广告关闭 url，当广告被关闭时上报的监控 URL 列表，应在后台访问。注意：当填写此数组时，请勿再次填写ad.click_trackers数组。
 
 ##### Zplay 对象信息
 

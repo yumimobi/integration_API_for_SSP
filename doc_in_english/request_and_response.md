@@ -303,7 +303,9 @@ The Ad Request is a request sent by the SSP to the YUMI Ads ADX to call for an a
 | player_start_trackers      | array  | no        | Reporting url while video playing                                |
 | player_end_trackers        | array  | no        | Reporting url while video end playing                            |
 | target_page_show_trackers  | array  | no        | Reporting url while presenting the target page(also can be called landing page), should be visited at backstage |
-| target_page_click_trackers | array  | no        | Reporting url while clicking the target page(also can be called landing page), should be visited at backstage. note: the jumping URL when user taps the click button is ad.target_url, this array is just tracking url when clicking. please don't fill in ad.click_trackers when this array is filled in.                   |
+| target_page_click_trackers | array  | no        | Reporting url while clicking the target page(also can be called landing page), should be visited at backstage.                |
+| target_page_close_trackers | array  | no        | Reporting url while ads closed ,should be visited at backstage. note: the jumping URL when user taps the click button is ad.target_url, this array is just tracking url when clicking. please don't fill in ad.click_trackers when this array is filled in.           |
+
 
 ##### Zplay information
 
@@ -367,7 +369,7 @@ The Ad Request is a request sent by the SSP to the YUMI Ads ADX to call for an a
 
 ### Report click-macro information
 
-> When Ad has been Start_play,end_play，display，clicked, targetClose，client shall substitute macro variables of  click_tracking url ， target_url and Video information_url when reporting (if macro variable is existed) in pixels. The variables which need to be substituted are as follows:
+> When Ad has been Start_play,end_play，display，clicked, Closed，client shall substitute macro variables of  click_tracking url ， target_url and Video information_url when reporting (if macro variable is existed) in pixels. The variables which need to be substituted are as follows:
 
 | macros                      | type  | description                     |
 | --------------------------- | ----- | ------------------------------- |
@@ -375,8 +377,8 @@ The Ad Request is a request sent by the SSP to the YUMI Ads ADX to call for an a
 | YUMI_ADSERVICE_CLICK_DOWN_Y | int32 | y-coordinate of finger pressing in the click_tracking url and target_url |
 | YUMI_ADSERVICE_CLICK_UP_X   | int32 | x-coordinate of finger rising in the click_tracking url and target_url|
 | YUMI_ADSERVICE_CLICK_UP_Y   | int32 | y-coordinate of finger rising  in the click_tracking url and target_url |
-| YUMI_ADSERVICE_UNIX_ORIGIN_TIME   | int32 | Event occurs unix timestamp (ms)  in the  player_start_trackers url, player_end_trackers url,  target_page_show_trackers  url  ,target_page_click_trackers url and  CloseTrackers url  |
-| YUMI_ADSERVICE_CUR_TIME     | int32 | The current playback progress (seconds) when the video is Closeed |
+| YUMI_ADSERVICE_UNIX_ORIGIN_TIME   | int32 | Event occurs unix timestamp (ms)  in the  player_start_trackers url, player_end_trackers url,  target_page_show_trackers  url  ,target_page_click_trackers url and target_page_close_trackers  |
+| YUMI_ADSERVICE_CUR_TIME     | int32 | The current playback progress (seconds) when the video is Closed |
 | YUMI_ADSERVICE_START_TIME   | int32 | The progress (seconds) when playback starts again after the video is turned off |
 
 > When ad display orientation conforms to device screen, the upper left corner of ad unit locates at (0,0), as below. If it is not available, please substitute it to -999.
