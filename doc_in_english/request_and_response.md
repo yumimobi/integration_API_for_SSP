@@ -267,16 +267,18 @@ The Ad Request is a request sent by the SSP to the YUMI Ads ADX to call for an a
 | ------------------ | -------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | id                 | string   | yes       | ad id                                                                                                                                                                                 |
 | place_id           | string   | yes       | slot id, is same with the place_id in request                                                                                                                                         |
-| action             | int      | yes       | types of action, 1: open the target_url within webview in-app, 2: open the target_url within system browser, 3: open map, 4: open dial, 5: play video, 6: download App, 7: arouse App |
+| action             | int      | yes       | types of action, 1: open the target_url within webview in-app, 2: open the target_url within system browser, 3: open map, 4: open dial, 5: play video, 6: download App, 7: arouse App, 8：open application market, make sure to open App Store or Google Play in the app |
 | html_snippet       | string   | no        | html snippet                                                                                                                                                                          |
 | image_url          | string   | no        | image URL                                                                                                                                                                             |
 | w                  | int      | yes       | material width                                                                                                                                                                        |
 | h                  | int      | yes       | material height                                                                                                                                                                       |
 | app_bundle         | string   | no        | App packageName for Android, Bundle identifier for iOS, e.g.: “com.zplay.demo”, app promotion requires                                                                                |
+| store_bundle       | string   | no        | appStorePackageName （Only for Android app）                                                                           |
 | app_ver            | string   | no        | application version                                                                                                                                                                   |
 | target_url         | string   | no        | target URL which is the jumping URL when user tap the ads                                                                                                                             |
 | click_trackers     | array    | no        | track the url list when clicking ads, should be visited at backstage                                                                                                                  |
 | imp_trackers       | array    | no        | track the url list when ads are shown, should be visited at backstage                                                                                                                 |
+| close_trackers     | array    | no        | track the url list when close ads, should be visited at backstage                                                                                                                 |
 | refresh_interv     | int      | yes       | Refresh the ad after the interval, do not refresh if it is 0                                                                                                                          |
 | inventory_type     | int      | yes       | types of material, 1: image, 2: image and text, 3: video, 4: html5 snippet, 5: text, 6: native, 7: html5 URL, 10: playable                                                                       |
 | title              | string   | no        | title of ads of image and text                                                                                                                                                        |
@@ -365,14 +367,17 @@ The Ad Request is a request sent by the SSP to the YUMI Ads ADX to call for an a
 
 ### Report click-macro information
 
-> When Ad has been clicked, client shall substitute macro variables of click_tracking url and target_url when reporting (if macro variable is existed) in pixels. The variables which need to be substituted are as follows:
+> When Ad has been Start_play,end_play，display，clicked, targetClose，client shall substitute macro variables of  click_tracking url ， target_url and Video information_url when reporting (if macro variable is existed) in pixels. The variables which need to be substituted are as follows:
 
 | macros                      | type  | description                     |
 | --------------------------- | ----- | ------------------------------- |
-| YUMI_ADSERVICE_CLICK_DOWN_X | int32 | x-coordinate of finger pressing |
-| YUMI_ADSERVICE_CLICK_DOWN_Y | int32 | y-coordinate of finger pressing |
-| YUMI_ADSERVICE_CLICK_UP_X   | int32 | x-coordinate of finger rising   |
-| YUMI_ADSERVICE_CLICK_UP_Y   | int32 | y-coordinate of finger rising   |
+| YUMI_ADSERVICE_CLICK_DOWN_X | int32 | x-coordinate of finger pressing in the click_tracking url and target_url |
+| YUMI_ADSERVICE_CLICK_DOWN_Y | int32 | y-coordinate of finger pressing in the click_tracking url and target_url |
+| YUMI_ADSERVICE_CLICK_UP_X   | int32 | x-coordinate of finger rising in the click_tracking url and target_url|
+| YUMI_ADSERVICE_CLICK_UP_Y   | int32 | y-coordinate of finger rising  in the click_tracking url and target_url |
+| YUMI_ADSERVICE_UNIX_ORIGIN_TIME   | int32 | Event occurs unix timestamp (ms)  in the  player_start_trackers url, player_end_trackers url,  target_page_show_trackers  url  ,target_page_click_trackers url and  CloseTrackers url  |
+| YUMI_ADSERVICE_CUR_TIME     | int32 | The current playback progress (seconds) when the video is Closeed |
+| YUMI_ADSERVICE_START_TIME   | int32 | The progress (seconds) when playback starts again after the video is turned off |
 
 > When ad display orientation conforms to device screen, the upper left corner of ad unit locates at (0,0), as below. If it is not available, please substitute it to -999.
 

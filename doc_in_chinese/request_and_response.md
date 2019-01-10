@@ -268,16 +268,18 @@ Request 请求是广告位请求广告的入口，由 SSP 按本文档中规定 
 | ------------------ | -------- | ---- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
 | id                 | string   | 是   | 广告 id                                                                                                                                        |
 | place_id           | string   | 是   | 广告位 id，与 request 中的 place_id 对应                                                                                                       |
-| action             | int      | 是   | 广告动作类型，1：在 app 内 webview 打开目标链接，2：在系统浏览器打开目标链接，3：打开地图，4：拨打电话，5：播放视频，6：App 下载， 7：应用唤醒 |
+| action             | int      | 是   | 广告动作类型，1：在 app 内 webview 打开目标链接，2：在系统浏览器打开目标链接，3：打开地图，4：拨打电话，5：播放视频，6：App 下载， 7：应用唤醒， 8：打开应用市场，请确保在应用内打开 APP Store 或者 Google Play |
 | html_snippet       | string   | 否   | html 广告代码                                                                                                                                  |
 | image_url          | string   | 否   | 图片地址                                                                                                                                       |
 | w                  | int      | 是   | 广告宽度                                                                                                                                       |
 | h                  | int      | 是   | 广告高度                                                                                                                                       |
 | app_bundle         | string   | 否   | 对于 Android，是应用的 packageName；对于 iOS，是 Bundle identifier                                                                             |
+| store_bundle       | string   | 否   | 应用市场包名(只针对安卓应用)                                                                             |
 | app_ver            | string   | 否   | 应用版本号                                                                                                                                     |
 | target_url         | string   | 否   | 目标地址                                                                                                                                       |
 | click_trackers     | array    | 否   | 当点击广告时被上报的监控 URL 列表，应在后台访问                                                                                                      |
 | imp_trackers       | array    | 否   | 当广告被展示时被上报的监控 URL 列表，应在后台访问                                                                                                    |
+| close_trackers     | array    | 否   | 当广告被关闭时被上报的监控 URL 列表，应在后台访问                                                                                                    |
 | refresh_interv     | int      | 是   | 广告应该在这个间隔后刷新，若为 0 则不刷 新                                                                                                     |
 | inventory_type     | int      | 是   | 广告资源类型，1：图片，2：图文，3：视频，4：html5，5：文本，6：原生，7：html5 url，即一个指向 html5 素材页面的 url，10：可玩广告                        |
 | title              | string   | 否   | 广告标题，图文广告时需要                                                                                                                       |
@@ -367,14 +369,17 @@ Request 请求是广告位请求广告的入口，由 SSP 按本文档中规定 
 
 ### 上报地址宏替换信息
 
-> 客户端在触发上报信息时，必须将点击追踪链接、点击跳转地址中的宏变量替换上报（如有），单位为像素。需要替换的宏坐标如下：
+> 客户端在触发上报信息时，必须将点击追踪链接、点击跳转地址、点击关闭、播放开始、播放完成，展示中的宏变量替换上报（如有），单位为像素。需要替换的宏坐标如下：
 
 | 宏变量                      | 类型  | 说明            |
 | --------------------------- | ----- | --------------- |
-| YUMI_ADSERVICE_CLICK_DOWN_X | int32 | 点击落下 X 坐标 |
-| YUMI_ADSERVICE_CLICK_DOWN_Y | int32 | 点击落下 Y 坐标 |
-| YUMI_ADSERVICE_CLICK_UP_X   | int32 | 点击离开 X 坐标 |
-| YUMI_ADSERVICE_CLICK_UP_Y   | int32 | 点击离开 Y 坐标 |
+| YUMI_ADSERVICE_CLICK_DOWN_X | int32 | 点击追踪链接、点击跳转地址中的点击落下X坐标 |
+| YUMI_ADSERVICE_CLICK_DOWN_Y | int32 | 点击追踪链接、点击跳转地址中的点击落下Y坐标 |
+| YUMI_ADSERVICE_CLICK_UP_X   | int32 | 点击追踪链接、点击跳转地址中的点击离开X坐标 |
+| YUMI_ADSERVICE_CLICK_UP_Y   | int32 | 点击追踪链接、点击跳转地址中的点击离开Y坐标 |
+| YUMI_ADSERVICE_UNIX_ORIGIN_TIME   | int32 | 播放开始、播放完成、展示、点击、关闭广告中的事件发生 unix 时间戳(毫秒) |
+| YUMI_ADSERVICE_CUR_TIME    | int32 | 关闭激励视频时当前播放的进度（秒）|
+| YUMI_ADSERVICE_START_TIME  | int32 | 关闭激励视频后再次开始播放时的进度（秒）|
 
 > 广告展示内容方向与屏幕方向一致时，广告位左上角为坐标（0，0）点，见下方示例。如果无法获取上述字段，需要将值替换为-999。
 
