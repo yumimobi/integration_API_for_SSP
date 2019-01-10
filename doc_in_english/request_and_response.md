@@ -24,8 +24,8 @@
             - [Response field](#response-field)
                 - [Ad information](#ad-information-1)
                     - [Video information](#video-information)
-                - [Zplay information](#zplay-information-1)
                     - [Native information](#native-information-1)
+                - [Zplay information](#zplay-information-1)
         - [Report click-macro information](#report-click-macro-information)
 
 ## introduction of document
@@ -190,7 +190,7 @@ The Ad Request is a request sent by the SSP to the YUMI Ads ADX to call for an a
 | w               | int    | yes       | Width of the slot                                                                                                                                                 |
 | h               | int    | yes       | Height of the slot                                                                                                                                                |
 | pos             | int    | no        | Ad position, 0:unknown, 4:head, 5:foot, 6: sidebar, 7:full screen                                                                                                 |
-| inventory_types | array  | no        |  <br> banner& interstitial& splash types of material, 1: image, 2: image and text,  4: html5 snippet, 5: text, 7: html5 URL; <br> native types of material,6: native;  <br> video types of material, 3: video; <br> by default the value is image if this array is null;  <br><font color="#dd0000">注：Different types support different inventory_types；</font><br />  |
+| inventory_types | array  | no        |  <br> banner& splash types of material, 1: image, 2: image and text, 4: html5 snippet, 5: text, 7: html5 URL;<br>interstitial types of material, 1: image, 2: image and text,3: video, 4: html5 snippet, 5: text, 7: html5 URL, 10: playable; <br> native types of material,6: native;  <br> video types of material, 3: video, 10: playable; <br> by default the value is image if this array is null;  <br><font color="#dd0000">注：Different types support different inventory_types；</font><br />  |
 | native          | object | no        | native information                                                                                                                                                |
 
 ###### Native information
@@ -278,7 +278,7 @@ The Ad Request is a request sent by the SSP to the YUMI Ads ADX to call for an a
 | click_trackers     | array    | no        | track the url list when clicking ads, should be visited at backstage                                                                                                                  |
 | imp_trackers       | array    | no        | track the url list when ads are shown, should be visited at backstage                                                                                                                 |
 | refresh_interv     | int      | yes       | Refresh the ad after the interval, do not refresh if it is 0                                                                                                                          |
-| inventory_type     | int      | yes       | types of material, 1: image, 2: image and text, 3: video, 4: html5 snippet, 5: text, 6: native, 7: html5 URL.                                                                         |
+| inventory_type     | int      | yes       | types of material, 1: image, 2: image and text, 3: video, 4: html5 snippet, 5: text, 6: native, 7: html5 URL, 10: playable                                                                       |
 | title              | string   | no        | title of ads of image and text                                                                                                                                                        |
 | desc               | string   | no        | description of ads of image and text                                                                                                                                                  |
 | ssp_id             | string   | yes       | ssp id, is only used for YUMI internal platform                                                                                                                                       |
