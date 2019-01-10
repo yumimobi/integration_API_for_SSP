@@ -369,7 +369,7 @@ The Ad Request is a request sent by the SSP to the YUMI Ads ADX to call for an a
 
 ### Report click-macro information
 
-> When Ad has been Start_play,end_play，display，clicked, Closed，client shall substitute macro variables of  click_tracking url ， target_url and Video information_url when reporting (if macro variable is existed) in pixels. The variables which need to be substituted are as follows:
+> When Ad has been Start_play,end_play，show，clicked, Closed，client shall substitute macro variables of  click_tracking url ， target_url and Video information_url when reporting (if macro variable is existed) in pixels. The variables which need to be substituted are as follows:
 
 | macros                      | type  | description                     |
 | --------------------------- | ----- | ------------------------------- |
