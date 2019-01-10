@@ -1,32 +1,32 @@
 # API OF INTEGRATION
 
 - [API OF INTEGRATION](#api-of-integration)
-    - [introduction of document](#introduction-of-document)
-    - [Preparation before integration](#preparation-before-integration)
-    - [steps of request/response](#steps-of-requestresponse)
-    - [instruction](#instruction)
-        - [URL of request](#url-of-request)
-        - [Communication Mode and Encoding](#communication-mode-and-encoding)
-        - [request header](#request-header)
-        - [request](#request)
-            - [Request field](#request-field)
-                - [app information](#app-information)
-                - [website information](#website-information)
-                    - [Publisher information](#publisher-information)
-                - [Device information](#device-information)
-                    - [Screen information](#screen-information)
-                    - [Geo information](#geo-information)
-                - [User information](#user-information)
-                - [Ad information](#ad-information)
-                    - [Native information](#native-information)
-                - [Zplay information](#zplay-information)
-        - [response](#response)
-            - [Response field](#response-field)
-                - [Ad information](#ad-information-1)
-                    - [Video information](#video-information)
-                    - [Native information](#native-information-1)
-                - [Zplay information](#zplay-information-1)
-        - [Report click-macro information](#report-click-macro-information)
+  - [introduction of document](#introduction-of-document)
+  - [Preparation before integration](#preparation-before-integration)
+  - [steps of request/response](#steps-of-requestresponse)
+  - [instruction](#instruction)
+    - [URL of request](#url-of-request)
+    - [Communication Mode and Encoding](#communication-mode-and-encoding)
+    - [request header](#request-header)
+    - [request](#request)
+      - [Request field](#request-field)
+        - [app information](#app-information)
+        - [website information](#website-information)
+          - [Publisher information](#publisher-information)
+        - [Device information](#device-information)
+          - [Screen information](#screen-information)
+          - [Geo information](#geo-information)
+        - [User information](#user-information)
+        - [Ad information](#ad-information)
+          - [Native information](#native-information)
+        - [Zplay information](#zplay-information)
+    - [response](#response)
+      - [Response field](#response-field)
+        - [Ad information](#ad-information-1)
+          - [Video information](#video-information)
+        - [Zplay information](#zplay-information-1)
+          - [Native information](#native-information-1)
+    - [Report click-macro information](#report-click-macro-information)
 
 ## introduction of document
 
@@ -132,7 +132,7 @@ The Ad Request is a request sent by the SSP to the YUMI Ads ADX to call for an a
 | parameter       | type    | mandatory | description                                                                                                                                                                                                                                                                                                                                                                     |
 | --------------- | ------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | model           | string  | yes       | device model                                                                                                                                                                                                                                                                                                                                                                    |
-| make            | string  | no        | manufacturer, e.g. “Samsung”                                                                                                                                                                                                                                                                                                                                                    |
+| make            | string  |  yes          | manufacturer, e.g. “Samsung”                                                                                                                                                                                                                                                                                                                                                    |
 | brand           | string  | no        | cell brand, e.g. “MI4”                                                                                                                                                                                                                                                                                                                                                          |
 | plmn            | string  | no        | public land mobile network (PLMN), as defined in telecommunications regulation, is a network that is established and operated by an administration or by a recognized operating agency (ROA) for the specific purpose of providing land mobile telecommunications services to the public, such as "46000"                                                                       |
 | adt             | boolean | no        | If it’s allowed to target users by tracking user behavior, 0:not allowed，1:allowed，default is 1                                                                                                                                                                                                                                                                               |

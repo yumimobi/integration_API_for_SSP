@@ -16,3 +16,4 @@
 | v2.7    | Zhen   | 2017.12.28 | add some macros                                                                                       |
 | v2.8    | Zhen   | 2018.03.14 | modify description of is_test and is_tail                                                             |
 | v2.9    | niu    | 2018.09.10 | modify some mistakes and add some descriptions                                                        |
+| v3.0 | Lu | 2019.01.10 | 1. Add interstitial video and playable ads  2.  add types of action :open application market, make sure to open App Store or Google Play in the app  3. Add close_trackers 4.   Event occurs unix timestamp (ms)  in the  player_start_trackers url, player_end_trackers url,  target_page_show_trackers  url  ,target_page_click_trackers url and  CloseTrackers url                                                          |
