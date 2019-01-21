@@ -294,7 +294,7 @@ Request 请求是广告位请求广告的入口，由 SSP 按本文档中规定 
 | native             | 对象     | 否   | 原生广告对象                                                                                                                                   |
 | logo_url           | string   | 否   | 角标资源地址                                                                                                                                   |
 | fallback_url       | string   | 否   | 应用唤醒失败后的打开地址，允许使用[宏](supported_macros.md)，例http://www.zplay.cn/ad/{AUCTION_BID_ID}                                                                          |
-| fallback_action    | int      | 否   | fallback_url的动作类型，1：在app内webview打开目标链接，2：在系统浏览器打开目标链接，3：打开地图，4：拨打电话，5：播放视频，6：App下载，7：应用唤醒                                                                          |
+| fallback_action    | int      | 否   | fallback_url的动作类型，1：在app内webview打开目标链接，2：在系统浏览器打开目标链接，3：打开地图，4：拨打电话，5：播放视频，6：App下载，7：应用唤醒，8：打开应用市场，请确保在应用内打开 APP Store 或者 Google Play  |
 
 ###### Video 对象信息
 
@@ -364,9 +364,9 @@ Request 请求是广告位请求广告的入口，由 SSP 按本文档中规定 
 | ------------ | ------ | ---- | -------------------------------------------------------------------------------------------------------------------------------- |
 | url          | string | 是   | 目标链接                                                                                                                         |
 | clicktracker | 数组   | 否   | 点击追踪链接                                                                                                                     |
-| type         | int    | 否   | 点击动作类型，1：在 app 内 webview 打开目标链接，2：在系统浏览器打开目标链接，3：打开地图，4：拨打电话，5：播放视频，6：App 下载，7：应用唤醒  |
+| type         | int    | 否   | 点击动作类型，1：在 app 内 webview 打开目标链接，2：在系统浏览器打开目标链接，3：打开地图，4：拨打电话，5：播放视频，6：App 下载，7：应用唤醒，8：打开应用市场，请确保在应用内打开 APP Store 或者 Google Play   |
 | fallback_url       | string   | 否   | 应用唤醒失败后的打开地址，允许使用[宏](supported_macros.md)，例http://www.zplay.cn/ad/{AUCTION_BID_ID}                                                                          |
-| fallback_action    | int      | 否   | fallback_url的动作类型，1：在app内webview打开目标链接，2：在系统浏览器打开目标链接，3：打开地图，4：拨打电话，5：播放视频，6：App下载，7：应用唤醒                                                                          |
+| fallback_action    | int      | 否   | fallback_url的动作类型，1：在app内webview打开目标链接，2：在系统浏览器打开目标链接，3：打开地图，4：拨打电话，5：播放视频，6：App下载，7：应用唤醒，8：打开应用市场，请确保在应用内打开 APP Store 或者 Google Play |
 
 ### 上报地址宏替换信息
 

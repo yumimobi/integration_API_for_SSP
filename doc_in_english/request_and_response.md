@@ -292,7 +292,9 @@ The Ad Request is a request sent by the SSP to the YUMI Ads ADX to call for an a
 | video              | object   | no        | video object                                                                                                                                                                          |
 | native             | object   | no        | native object                                                                                                                                                                         |
 | logo_url           | string   | no        | Buyer’s logo url                                                                                                                                                                      |
-| zplay              | object   | no        | is only used for YUMI internal platform                                                                                                                                               |
+| zplay              | object   | no        | is only used for YUMI internal platform         |
+| fallback_url       | string   |  no       | jumping url that when arousing app failed, allows to use macros [macro](supported_macros.md), for example, http://www.zplay.cn/ad/{AUCTION_BID_ID}                                        |
+| fallback_action    | int      |  no       | action type of fallback_url, 1: open the clkurl within webview in-app, 2: open the clkurl within system browser, 3: open map, 4: open dial, 5: play video, 6: download App, 7: arouse App, 8：open application market, make sure to open App Store or Google Play in the app |
 
 ###### Video information
 
@@ -363,9 +365,9 @@ The Ad Request is a request sent by the SSP to the YUMI Ads ADX to call for an a
 | ------------ | ------ | --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | url          | string | yes       | Target link                                                                                                                                                             |
 | clicktracker | array  | no        | Click tracker link                                                                                                                                                      |
-| type         | int    | no        | types of action, 1: open the url within webview in-app, 2: open the url within system browser, 3: open map, 4: open dial, 5: play video, 6: download App, 7: arouse App |
+| type         | int    | no        | types of action, 1: open the url within webview in-app, 2: open the url within system browser, 3: open map, 4: open dial, 5: play video, 6: download App, 7: arouse App, 8：open application market, make sure to open App Store or Google Play in the app  |
 | fallback_url       | string   |  no        | jumping url that when arousing app failed, allows to use macros [macro](supported_macros.md), for example, http://www.zplay.cn/ad/{AUCTION_BID_ID}                                        |
-| fallback_action    | int      |  no        | action type of fallback_url, 1: open the clkurl within webview in-app, 2: open the clkurl within system browser, 3: open map, 4: open dial, 5: play video, 6: download App, 7: arouse App |
+| fallback_action    | int      |  no        | action type of fallback_url, 1: open the clkurl within webview in-app, 2: open the clkurl within system browser, 3: open map, 4: open dial, 5: play video, 6: download App, 7: arouse App, 8：open application market, make sure to open App Store or Google Play in the app  |
 
 ### Report click-macro information
 
