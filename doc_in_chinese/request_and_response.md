@@ -280,7 +280,7 @@ Request 请求是广告位请求广告的入口，由 SSP 按本文档中规定 
 | click_trackers     | array    | 否   | 当点击广告时被上报的监控 URL 列表，应在后台访问                                                                                                      |
 | imp_trackers       | array    | 否   | 当广告被展示时被上报的监控 URL 列表，应在后台访问                                                                                                    |
 | close_trackers     | array    | 否   | 当广告被关闭时被上报的监控 URL 列表，应在后台访问                                                                                                    |
-| refresh_interv     | int      | 是   | 广告应该在这个间隔后刷新，若为 0 则不刷 新                                                                                                     |
+| refresh_interval     | int      | 是   | 广告应该在这个间隔后刷新，若为 0 则不刷 新                                                                                                     |
 | inventory_type     | int      | 是   | 广告资源类型，1：图片，2：图文，3：视频，4：html5，5：文本，6：原生，7：html5 url，即一个指向 html5 素材页面的 url，10：可玩广告                        |
 | title              | string   | 否   | 广告标题，图文广告时需要                                                                                                                       |
 | desc               | string   | 否   | 广告描述，图文广告时需要                                                                                                                       |
