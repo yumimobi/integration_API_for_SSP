@@ -280,7 +280,7 @@ Request 请求是广告位请求广告的入口，由 SSP 按本文档中规定 
 | click_trackers     | array    | 否   | 当点击广告时被上报的监控 URL 列表，应在后台访问                                                                                                      |
 | imp_trackers       | array    | 否   | 当广告被展示时被上报的监控 URL 列表，应在后台访问                                                                                                    |
 | close_trackers     | array    | 否   | 当广告被关闭时被上报的监控 URL 列表，应在后台访问                                                                                                    |
-| refresh_interv     | int      | 是   | 广告应该在这个间隔后刷新，若为 0 则不刷 新                                                                                                     |
+| refresh_interval     | int      | 是   | 广告应该在这个间隔后刷新，若为 0 则不刷 新                                                                                                     |
 | inventory_type     | int      | 是   | 广告资源类型，1：图片，2：图文，3：视频，4：html5，5：文本，6：原生，7：html5 url，即一个指向 html5 素材页面的 url，10：可玩广告                        |
 | title              | string   | 否   | 广告标题，图文广告时需要                                                                                                                       |
 | desc               | string   | 否   | 广告描述，图文广告时需要                                                                                                                       |
@@ -290,11 +290,12 @@ Request 请求是广告位请求广告的入口，由 SSP 按本文档中规定 
 | price              | float    | 否   | 广告价格                                                                                                        |
 | ex_param           | []string | 否   | 扩展参数                                                                                                                                       |
 | ssp_ad_id          | string   | 否   | 自主 api 返回的 sspAdId，该字段为玉米交易平台（ADX）保留字段，开发者（SSP）可忽略                                                              |
-| video              | 对象     | 否   | 视频对象                                                                                                                                       |
-| native             | 对象     | 否   | 原生广告对象                                                                                                                                   |
-| logo_url           | string   | 否   | 角标资源地址                                                                                                                                   |
+| video              | 对象     | 否   | 视频对象 |
+| native             | 对象     | 否   | 原生广告对象 |
+| zplay              | 对象     | 否   | 该字段为玉米交易平台内部保留字段，开发者（SSP）可忽略 |
+| logo_url           | string   | 否   | 角标资源地址  |
 | fallback_url       | string   | 否   | 应用唤醒失败后的打开地址，允许使用[宏](supported_macros.md)，例http://www.zplay.cn/ad/{AUCTION_BID_ID}                                                                          |
-| fallback_action    | int      | 否   | fallback_url的动作类型，1：在app内webview打开目标链接，2：在系统浏览器打开目标链接，3：打开地图，4：拨打电话，5：播放视频，6：App下载，7：应用唤醒                                                                          |
+| fallback_action    | int      | 否   | fallback_url的动作类型，1：在app内webview打开目标链接，2：在系统浏览器打开目标链接，3：打开地图，4：拨打电话，5：播放视频，6：App下载，7：应用唤醒，8：打开应用市场，请确保在应用内打开 APP Store 或者 Google Play  |
 
 ###### Video 对象信息
 
@@ -364,9 +365,9 @@ Request 请求是广告位请求广告的入口，由 SSP 按本文档中规定 
 | ------------ | ------ | ---- | -------------------------------------------------------------------------------------------------------------------------------- |
 | url          | string | 是   | 目标链接                                                                                                                         |
 | clicktracker | 数组   | 否   | 点击追踪链接                                                                                                                     |
-| type         | int    | 否   | 点击动作类型，1：在 app 内 webview 打开目标链接，2：在系统浏览器打开目标链接，3：打开地图，4：拨打电话，5：播放视频，6：App 下载，7：应用唤醒  |
+| type         | int    | 否   | 点击动作类型，1：在 app 内 webview 打开目标链接，2：在系统浏览器打开目标链接，3：打开地图，4：拨打电话，5：播放视频，6：App 下载，7：应用唤醒，8：打开应用市场，请确保在应用内打开 APP Store 或者 Google Play   |
 | fallback_url       | string   | 否   | 应用唤醒失败后的打开地址，允许使用[宏](supported_macros.md)，例http://www.zplay.cn/ad/{AUCTION_BID_ID}                                                                          |
-| fallback_action    | int      | 否   | fallback_url的动作类型，1：在app内webview打开目标链接，2：在系统浏览器打开目标链接，3：打开地图，4：拨打电话，5：播放视频，6：App下载，7：应用唤醒                                                                          |
+| fallback_action    | int      | 否   | fallback_url的动作类型，1：在app内webview打开目标链接，2：在系统浏览器打开目标链接，3：打开地图，4：拨打电话，5：播放视频，6：App下载，7：应用唤醒，8：打开应用市场，请确保在应用内打开 APP Store 或者 Google Play |
 
 ### 上报地址宏替换信息
 
