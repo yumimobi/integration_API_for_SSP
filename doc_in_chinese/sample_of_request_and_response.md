@@ -625,7 +625,7 @@
 ```json
 
 	{
-	    "Ad_Responses": [
+	    "ads": [
 	        {
 	            "id": "611",
 	            "place_id": "",
@@ -761,7 +761,7 @@
 ```json
 
 	{
-	    "Ad_Responses": [
+	    "ads": [
 	        {
 	            "id": "19046454",
 	            "place_id": "",
@@ -805,7 +805,7 @@
 ```json
 
 	{
-	    "Ad_Responses": [
+	    "ads": [
 	        {
 	            "id": "19046454",
 	            "place_id": "",
