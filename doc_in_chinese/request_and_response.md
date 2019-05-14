@@ -145,7 +145,7 @@ Request 请求是广告位请求广告的入口，由 SSP 按本文档中规定 
 | imsi            | string  | 否   | imsi                                                                  |
 | android_id      | string  | 否   | Android ID 。Android 手机不传会影响填充                               |
 | android_adid    | string  | 否   | Android AD ID                                                         |
-| ios_adid        | string  | 是   | ios 系统的 idfa。                                                     |
+| ios_adid        | string  | 是   | iOS 系统的 idfa。                                                     |
 | idfv            | string  | 否   | idfv                                                                  |
 | openudid        | string  | 否   | openudid                                                              |
 | local           | string  | 否   | 设备上的本地首选项设置                                                |
@@ -182,17 +182,17 @@ Request 请求是广告位请求广告的入口，由 SSP 按本文档中规定 
 
 ##### Ad 对象信息
 
-| 字段名称        | 类别   | 必须 | 描述                                                                                                                                                     |
-| --------------- | ------ | ---- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| type            | int    | 是   | 广告类型，0：横幅，1：插屏，2：开屏，3：原生，4：视频                                                                                                    |
-| place_id        | string | 是   | 广告位 id，请提前将您的广告位注册到玉米广告平台[https://www.yumimobi.com](https://www.yumimobi.com)，该 ID 为注册后玉米广告平台生成的 Slot ID                 |
-| floor_price     | float  | 否   | 底价，单位为分                                                                                                                                           |
-| currency        | string | 否   | 货币单位，值为“CNY”，“USD”。当填写了 floor_price 后，该值为必填。底价币种请保持与结算币种一致，否则将无法获取广告。                                                                                          |
-| w               | int    | 是   | 广告位宽度                                                                                                                                               |
-| h               | int    | 是   | 广告位高度                                                                                                                                               |
-| pos             | int    | 否   | 广告位位置，0：未知，4：头部，5：底部,6：侧边栏，7：全屏                                                                                                 |
-| inventory_types | 数组   | 否   |<br> banner&开屏广告类型支持的广告资源类型，1：图片，2：图文，4：html5，5：文本，7：html5 url，即一个指向 html5 素材页面的 url；<br> 插屏广告类型支持的广告资源类型，1：图片，2：图文，3：视频，4：html5，5：文本，7：html5 url，即一个指向 html5 素材页面的 url, 10：可玩广告；<br>视频广告类型支持的广告资源类型，3：视频, 10：可玩广告；<br>原生广告类型支持的广告资源类型，6：原生；<br>如果为空，则默认只支持 1：图片 <br><font color="#dd0000">注：不同type支持inventory_types不同；</font><br /> |
-| native          | 对象   | 否   | 原生广告信息                                                                                                                                             |
+| 字段名称        | 类别   | 必须 | 描述                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| --------------- | ------ | ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| type            | int    | 是   | 广告类型，0：横幅，1：插屏，2：开屏，3：原生，4：视频                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| place_id        | string | 是   | 广告位 id，请提前将您的广告位注册到玉米广告平台[https://www.yumimobi.com](https://www.yumimobi.com)，该 ID 为注册后玉米广告平台生成的 Slot ID                                                                                                                                                                                                                                                                                                                                       |
+| floor_price     | float  | 否   | 底价，单位为分                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| currency        | string | 否   | 货币单位，值为“CNY”，“USD”。当填写了 floor_price 后，该值为必填。底价币种请保持与结算币种一致，否则将无法获取广告。                                                                                                                                                                                                                                                                                                                                                                 |
+| w               | int    | 是   | 广告位宽度                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| h               | int    | 是   | 广告位高度                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| pos             | int    | 否   | 广告位位置，0：未知，4：头部，5：底部，6：侧边栏，7：全屏                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| inventory_types | 数组   | 否   | 创意类型。<br>banner&开屏广告类型支持的广告资源类型，1：图片，2：图文，4：html5，5：文本，7：html5 url，即一个指向 html5 素材页面的 url；<br> 插屏广告类型支持的广告资源类型，1：图片，2：图文，3：视频，4：html5，5：文本，7：html5 url，即一个指向 html5 素材页面的 url，10：可玩广告；<br>视频广告类型支持的广告资源类型，3：视频，10：可玩广告；<br>原生广告类型支持的广告资源类型，6：原生；<br>如果为空，则默认只支持 1：图片 <br>注：不同 type 支持的 inventory_types 不同； |
+| native          | 对象   | 否   | 原生广告信息                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 
 ###### Native 对象信息
 
@@ -247,7 +247,7 @@ Request 请求是广告位请求广告的入口，由 SSP 按本文档中规定 
 | splash_interval    | int    | 否   | 开屏轮播时间，单位秒                      |
 | is_close           | int    | 否   | 是否可关闭， 0：不可关闭， 1：可关闭      |
 | ad_loc_id          | string | 否   | 广告位 id                                 |
-| ios_idfv           | string | 否   | ios idfv                                  |
+| ios_idfv           | string | 否   | iOS idfv                                  |
 | open_uuid          | string | 否   | open_uuid， 设备号                        |
 
 ### ADX 返回信息
@@ -264,50 +264,50 @@ Request 请求是广告位请求广告的入口，由 SSP 按本文档中规定 
 
 ##### Ad 对象信息
 
-| 字段名称           | 类型     | 必须 | 描述                                                                                                                                           |
-| ------------------ | -------- | ---- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| id                 | string   | 是   | 广告 id                                                                                                                                        |
-| place_id           | string   | 是   | 广告位 id，与 request 中的 place_id 对应                                                                                                       |
-| action             | int      | 是   | 广告动作类型，1：在 app 内 webview 打开目标链接，2：在系统浏览器打开目标链接，3：打开地图，4：拨打电话，5：播放视频，6：App 下载， 7：应用唤醒， 8：打开应用市场，请确保在应用内打开 APP Store 或者 Google Play |
-| html_snippet       | string   | 否   | html 广告代码                                                                                                                                  |
-| image_url          | string   | 否   | 图片地址                                                                                                                                       |
-| w                  | int      | 是   | 广告宽度                                                                                                                                       |
-| h                  | int      | 是   | 广告高度                                                                                                                                       |
-| app_bundle         | string   | 否   | 对于 Android，是应用的 packageName；对于 iOS，是 Bundle identifier                                                                             |
-| store_bundle       | string   | 否   | 应用市场包名(只针对安卓应用)                                                                             |
-| app_ver            | string   | 否   | 应用版本号                                                                                                                                     |
-| target_url         | string   | 否   | 目标地址                                                                                                                                       |
-| click_trackers     | array    | 否   | 当点击广告时被上报的监控 URL 列表，应在后台访问                                                                                                      |
-| imp_trackers       | array    | 否   | 当广告被展示时被上报的监控 URL 列表，应在后台访问                                                                                                    |
-| close_trackers     | array    | 否   | 当广告被关闭时被上报的监控 URL 列表，应在后台访问                                                                                                    |
-| refresh_interval     | int      | 是   | 广告应该在这个间隔后刷新，若为 0 则不刷 新                                                                                                     |
-| inventory_type     | int      | 是   | 广告资源类型，1：图片，2：图文，3：视频，4：html5，5：文本，6：原生，7：html5 url，即一个指向 html5 素材页面的 url，10：可玩广告                        |
-| title              | string   | 否   | 广告标题，图文广告时需要                                                                                                                       |
-| desc               | string   | 否   | 广告描述，图文广告时需要                                                                                                                       |
-| ssp_id             | string   | 是   | ssp id，该字段为玉米交易平台（ADX）保留字段，开发者（SSP）可忽略                                                                               |
-| download_file_name | string   | 否   | 下载文件名，动作类型为下载类型时需要                                                                                                           |
-| file_size          | int      | 否   | 当广告为下载广告时，这是下载文件大小                                                                                                           |
-| price              | float    | 否   | 广告价格                                                                                                        |
-| ex_param           | []string | 否   | 扩展参数                                                                                                                                       |
-| ssp_ad_id          | string   | 否   | 自主 api 返回的 sspAdId，该字段为玉米交易平台（ADX）保留字段，开发者（SSP）可忽略                                                              |
-| video              | 对象     | 否   | 视频对象 |
-| native             | 对象     | 否   | 原生广告对象 |
-| zplay              | 对象     | 否   | 该字段为玉米交易平台内部保留字段，开发者（SSP）可忽略 |
-| logo_url           | string   | 否   | 角标资源地址  |
-| fallback_url       | string   | 否   | 应用唤醒失败后的打开地址，允许使用[宏](supported_macros.md)，例http://www.zplay.cn/ad/{AUCTION_BID_ID}                                                                          |
-| fallback_action    | int      | 否   | fallback_url的动作类型，1：在app内webview打开目标链接，2：在系统浏览器打开目标链接，3：打开地图，4：拨打电话，5：播放视频，6：App下载，7：应用唤醒，8：打开应用市场，请确保在应用内打开 APP Store 或者 Google Play  |
+| 字段名称           | 类型     | 必须 | 描述                                                                                                                                                                                                                     |
+| ------------------ | -------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| id                 | string   | 是   | 广告 id                                                                                                                                                                                                                  |
+| place_id           | string   | 是   | 广告位 id，与 request 中的 place_id 对应                                                                                                                                                                                 |
+| action             | int      | 是   | 广告动作类型，1：在 app 内 WebView 打开目标链接，2：在系统浏览器打开目标链接，3：打开地图，4：拨打电话，5：播放视频，6：App 下载， 7：应用唤醒， 8：打开应用市场，请确保在应用内打开 APP Store 或者 Google Play          |
+| html_snippet       | string   | 否   | html 广告代码                                                                                                                                                                                                            |
+| image_url          | string   | 否   | 图片地址                                                                                                                                                                                                                 |
+| w                  | int      | 是   | 广告宽度                                                                                                                                                                                                                 |
+| h                  | int      | 是   | 广告高度                                                                                                                                                                                                                 |
+| app_bundle         | string   | 否   | 对于 Android，是应用的 packageName；对于 iOS，是 Bundle identifier                                                                                                                                                       |
+| store_bundle       | string   | 否   | 应用市场包名(只针对安卓应用)                                                                                                                                                                                             |
+| app_ver            | string   | 否   | 应用版本号                                                                                                                                                                                                               |
+| target_url         | string   | 否   | 目标地址                                                                                                                                                                                                                 |
+| click_trackers     | array    | 否   | 当点击广告时被上报的监控 URL 列表                                                                                                                                                                                        |
+| imp_trackers       | array    | 否   | 当广告被展示时被上报的监控 URL 列表                                                                                                                                                                                      |
+| close_trackers     | array    | 否   | 当广告被关闭时被上报的监控 URL 列表                                                                                                                                                                                      |
+| refresh_interval   | int      | 是   | 广告应该在这个间隔后刷新，若为 0 则不刷新                                                                                                                                                                                |
+| inventory_type     | int      | 是   | 广告资源类型，1：图片，2：图文，3：视频，4：html5，5：文本，6：原生，7：html5 url，即一个指向 html5 素材页面的 url，10：可玩广告                                                                                         |
+| title              | string   | 否   | 广告标题，图文广告时需要                                                                                                                                                                                                 |
+| desc               | string   | 否   | 广告描述，图文广告时需要                                                                                                                                                                                                 |
+| ssp_id             | string   | 是   | ssp id，该字段为玉米交易平台（ADX）保留字段，开发者（SSP）可忽略                                                                                                                                                         |
+| download_file_name | string   | 否   | 下载文件名，动作类型为下载类型时需要                                                                                                                                                                                     |
+| file_size          | int      | 否   | 当广告为下载广告时，这是下载文件大小                                                                                                                                                                                     |
+| price              | float    | 否   | 广告价格                                                                                                                                                                                                                 |
+| ex_param           | []string | 否   | 扩展参数                                                                                                                                                                                                                 |
+| ssp_ad_id          | string   | 否   | 自主 api 返回的 sspAdId，该字段为玉米交易平台（ADX）保留字段，开发者（SSP）可忽略                                                                                                                                        |
+| video              | 对象     | 否   | 视频对象                                                                                                                                                                                                                 |
+| native             | 对象     | 否   | 原生广告对象                                                                                                                                                                                                             |
+| zplay              | 对象     | 否   | 该字段为玉米交易平台内部保留字段，开发者（SSP）可忽略                                                                                                                                                                    |
+| logo_url           | string   | 否   | 角标资源地址                                                                                                                                                                                                             |
+| fallback_url       | string   | 否   | 应用唤醒失败后的打开地址                                                                                                               |
+| fallback_action    | int      | 否   | fallback_url 的动作类型，1：在 app 内 WebView 打开目标链接，2：在系统浏览器打开目标链接，3：打开地图，4：拨打电话，5：播放视频，6：App 下载，7：应用唤醒，8：打开应用市场，请确保在应用内打开 APP Store 或者 Google Play |
 
 ###### Video 对象信息
 
-| 字段名称                   | 类型   | 必须 | 描述                                           |
-| -------------------------- | ------ | ---- | ---------------------------------------------- |
-| url                        | string | 是   | 视频播放 url                                   |
-| play_duration              | int    | 否   | 视频播放时长， 单位为秒                        |
-| player_start_trackers      | array  | 否   | 播放时上报 url                                 |
-| player_end_trackers        | array  | 否   | 播放完成时上报 url                             |
-| target_page_show_trackers  | array  | 否   | 落地页展示上报 url，当落地页被展示时上报的监控 URL 列表，应在后台访问   |
-| target_page_click_trackers | array  | 否   | 落地页点击上报 url，当落地页被点击时上报的监控 URL 列表，应在后台访问，点击时的跳转地址为ad.target_url。 |
-| target_page_close_trackers | array  | 否   | 广告关闭 url，当广告被关闭时上报的监控 URL 列表，应在后台访问。注意：当填写此数组时，请勿再次填写ad.click_trackers数组。
+| 字段名称                   | 类型   | 必须 | 描述                                                                                                                       |
+| -------------------------- | ------ | ---- | -------------------------------------------------------------------------------------------------------------------------- |
+| url                        | string | 是   | 视频播放 url                                                                                                               |
+| play_duration              | int    | 否   | 视频播放时长， 单位为秒                                                                                                    |
+| player_start_trackers      | array  | 否   | 播放时上报 url                                                                                                             |
+| player_end_trackers        | array  | 否   | 播放完成时上报 url                                                                                                         |
+| target_page_show_trackers  | array  | 否   | 落地页展示上报 url，当落地页被展示时上报的监控 URL 列表，应在后台访问                                                      |
+| target_page_click_trackers | array  | 否   | 落地页点击上报 url，当落地页被点击时上报的监控 URL 列表，应在后台访问，点击时的跳转地址为 ad.target_url。                  |
+| target_page_close_trackers | array  | 否   | 广告关闭 url，当广告被关闭时上报的监控 URL 列表，应在后台访问。注意：当填写此数组时，请勿再次填写 ad.click_trackers 数组。 |
 
 ##### Zplay 对象信息
 
@@ -361,27 +361,27 @@ Request 请求是广告位请求广告的入口，由 SSP 按本文档中规定 
 
 **Link 对象信息**
 
-| 字段名称     | 类型   | 必须 | 描述                                                                                                                             |
-| ------------ | ------ | ---- | -------------------------------------------------------------------------------------------------------------------------------- |
-| url          | string | 是   | 目标链接                                                                                                                         |
-| clicktracker | 数组   | 否   | 点击追踪链接                                                                                                                     |
-| type         | int    | 否   | 点击动作类型，1：在 app 内 webview 打开目标链接，2：在系统浏览器打开目标链接，3：打开地图，4：拨打电话，5：播放视频，6：App 下载，7：应用唤醒，8：打开应用市场，请确保在应用内打开 APP Store 或者 Google Play   |
-| fallback_url       | string   | 否   | 应用唤醒失败后的打开地址，允许使用[宏](supported_macros.md)，例http://www.zplay.cn/ad/{AUCTION_BID_ID}                                                                          |
-| fallback_action    | int      | 否   | fallback_url的动作类型，1：在app内webview打开目标链接，2：在系统浏览器打开目标链接，3：打开地图，4：拨打电话，5：播放视频，6：App下载，7：应用唤醒，8：打开应用市场，请确保在应用内打开 APP Store 或者 Google Play |
+| 字段名称        | 类型   | 必须 | 描述                                                                                                                                                                                                                     |
+| --------------- | ------ | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| url             | string | 是   | 目标链接                                                                                                                                                                                                                 |
+| clicktracker    | 数组   | 否   | 点击追踪链接                                                                                                                                                                                                             |
+| type            | int    | 否   | 点击动作类型，1：在 app 内 WebView 打开目标链接，2：在系统浏览器打开目标链接，3：打开地图，4：拨打电话，5：播放视频，6：App 下载，7：应用唤醒，8：打开应用市场，请确保在应用内打开 APP Store 或者 Google Play            |
+| fallback_url    | string | 否   | 应用唤醒失败后的打开地址                                                                                                               |
+| fallback_action | int    | 否   | fallback_url 的动作类型，1：在 app 内 WebView 打开目标链接，2：在系统浏览器打开目标链接，3：打开地图，4：拨打电话，5：播放视频，6：App 下载，7：应用唤醒，8：打开应用市场，请确保在应用内打开 APP Store 或者 Google Play |
 
 ### 上报地址宏替换信息
 
 > 客户端在触发上报信息时，必须将点击追踪链接、点击跳转地址、点击关闭、播放开始、播放完成，展示中的宏变量替换上报（如有），单位为像素。需要替换的宏坐标如下：
 
-| 宏变量                      | 类型  | 说明            |
-| --------------------------- | ----- | --------------- |
-| YUMI_ADSERVICE_CLICK_DOWN_X | int32 | 点击追踪链接、点击跳转地址中的点击落下X坐标 |
-| YUMI_ADSERVICE_CLICK_DOWN_Y | int32 | 点击追踪链接、点击跳转地址中的点击落下Y坐标 |
-| YUMI_ADSERVICE_CLICK_UP_X   | int32 | 点击追踪链接、点击跳转地址中的点击离开X坐标 |
-| YUMI_ADSERVICE_CLICK_UP_Y   | int32 | 点击追踪链接、点击跳转地址中的点击离开Y坐标 |
-| YUMI_ADSERVICE_UNIX_ORIGIN_TIME   | int32 | 播放开始、播放完成、展示、点击、关闭广告中的事件发生 unix 时间戳(毫秒) |
-| YUMI_ADSERVICE_CUR_TIME    | int32 | 关闭激励视频时当前播放的进度（秒）|
-| YUMI_ADSERVICE_START_TIME  | int32 | 关闭激励视频后再次开始播放时的进度（秒）|
+| 宏变量                          | 类型  | 说明                                                                   |
+| ------------------------------- | ----- | ---------------------------------------------------------------------- |
+| YUMI_ADSERVICE_CLICK_DOWN_X     | int32 | 点击追踪链接、点击跳转地址中的点击落下 X 坐标                          |
+| YUMI_ADSERVICE_CLICK_DOWN_Y     | int32 | 点击追踪链接、点击跳转地址中的点击落下 Y 坐标                          |
+| YUMI_ADSERVICE_CLICK_UP_X       | int32 | 点击追踪链接、点击跳转地址中的点击离开 X 坐标                          |
+| YUMI_ADSERVICE_CLICK_UP_Y       | int32 | 点击追踪链接、点击跳转地址中的点击离开 Y 坐标                          |
+| YUMI_ADSERVICE_UNIX_ORIGIN_TIME | int32 | 播放开始、播放完成、展示、点击、关闭广告中的事件发生 unix 时间戳(毫秒) |
+| YUMI_ADSERVICE_CUR_TIME         | int32 | 关闭激励视频时当前播放的进度（秒）                                     |
+| YUMI_ADSERVICE_START_TIME       | int32 | 关闭激励视频后再次开始播放时的进度（秒）                               |
 
 > 广告展示内容方向与屏幕方向一致时，广告位左上角为坐标（0，0）点，见下方示例。如果无法获取上述字段，需要将值替换为-999。
 
