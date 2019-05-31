@@ -279,6 +279,10 @@ The Ad Request is a request sent by the SSP to the YUMI Ads ADX to call for an a
 | click_trackers     | array    | no        | reporting URLs when users click ads                                                                                                                                                                                                                                                      |
 | imp_trackers       | array    | no        | reporting URLs when ads are shown                                                                                                                                                                                                                                                        |
 | close_trackers     | array    | no        | reporting URLs when users close ads                                                                                                                                                                                                                                                      |
+| app_download_trackers | array | no        | track the the URL list when downloading the advertisement APP，should be visited at backstage (only for Android app)|
+| app_download_finish_trackers  | array| no | track the the URL list when the advertisement APP download is completed，should be visited at backstage (only for Android app)|
+| app_activate_trackers | array | no        | track the the URL list when the advertisement APP is activated，should be visited at backstage (only for Android app)|
+
 | refresh_interval   | int      | yes       | Refresh the ad after the interval, do not refresh if it is 0                                                                                                                                                                                                                             |
 | inventory_type     | int      | yes       | types of material, 1: image, 2: image and text, 3: video, 4: html5 snippet, 5: text, 6: native, 7: html5 URL, 10: playable                                                                                                                                                               |
 | title              | string   | no        | title of ads of image and text                                                                                                                                                                                                                                                           |
@@ -298,15 +302,18 @@ The Ad Request is a request sent by the SSP to the YUMI Ads ADX to call for an a
 
 ###### Video information
 
-| parameter                  | type   | mandatory | description                                                                                                                                                                                                                                                 |
-| -------------------------- | ------ | --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| url                        | string | yes       | video url                                                                                                                                                                                                                                                   |
-| play_duration              | int    | no        | Video play duration, unit: second                                                                                                                                                                                                                           |
-| player_start_trackers      | array  | no        | Reporting url while video playing                                                                                                                                                                                                                           |
-| player_end_trackers        | array  | no        | Reporting url while video end playing                                                                                                                                                                                                                       |
-| target_page_show_trackers  | array  | no        | Reporting url while presenting the target page(also can be called landing page), should be visited at backstage                                                                                                                                             |
-| target_page_click_trackers | array  | no        | Reporting url while clicking the target page(also can be called landing page), should be visited at backstage.                                                                                                                                              |
+| parameter                  | type   | mandatory | description |
+| -------------------------- | ------ | --------- | ----------- |
+| url                        | string | yes       | video url |
+| play_duration              | int    | no        | Video play duration, unit: second |
+| player_start_trackers      | array  | no        | Reporting url while video playing |
+| player_end_trackers        | array  | no        | Reporting url while video end playing |
+| target_page_show_trackers  | array  | no        | Reporting url while presenting the target page(also can be called landing page), should be visited at backstage |
+| target_page_click_trackers | array  | no        | Reporting url while clicking the target page(also can be called landing page), should be visited at backstage. |
 | target_page_close_trackers | array  | no        | Reporting url while ads closed ,should be visited at backstage. note: the jumping URL when user taps the click button is ad.target_url, this array is just tracking url when clicking. please don't fill in ad.click_trackers when this array is filled in. |
+| player_close_trackers      | array  | no        | Reporting url while video close playing                          |
+| player_continue_trackers   | array  | no        | Reporting url while video continue playing                       |
+| player_restart_trackers    | array  | no        | Reporting url while video restart playing                        |
 
 ##### Zplay information
 

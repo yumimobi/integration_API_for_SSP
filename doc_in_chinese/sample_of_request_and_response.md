@@ -118,40 +118,89 @@
 
 > 如果请求参数 `inventory_types:[]` 中包含 `1(物料类型为图片)`，则玉米广告可以返回图片广告，返回参数中 `inventory_type` 也会标为 `1`，代表此广告为图片类型的广告。
 
-```json
+跳转类：
 
-	{
-	    "ads": [
-	        {
-	            "id": "464",
-	            "place_id": "",
-	            "action": 2,
-	            "image_url": "http://pgdt.gtimg.cn/gdt/0/DAACinJAJYAH0ABJBWoebKBuOgTF8e.jpg/0?ck=13afb5e35954c59df6d0027ac679eb91",
-	            "w": 720,
-	            "h": 1038,
-	            "target_url": "http://c.gdt.qq.com/gdt_mclick.fcg?viewid=t6o7__bYZoWql51I7krTHXw7wX3HwUO9FjIJt6rPb8mySO4Cu!!XqJrUNtcEUqqnhweRJ4LLS2m49e8HowA62q!9A3lx4Doz_9tzhiFUUlCMXWdN2EKozjMRBb1KLFPtzKPDguyL1XXhtJIXEQlUJVWUlBGubb1_!csNQ1sjv6cL2Bv2x6hgcGzZKiqUH1N1juj87SFLvPyB2QAPdV57Lg&jtype=0&i=1&os=2",
-	            "click_trackers": [
-	                "http://stat.adx.yumimobi.com/api/s?r=1dfd3ecd691b73d7&t=1&bid_id=0bts0K1CObXU1MkqKd28U76h45LrcY&ad_id=464&type=2&dsp_id=20&plmn=46000&ssp_id=449&app_id=1007877&app_bundle_id=cn.eclicks.drivingtest&price_enc=Xm7JWFA9pOhXsloDA1CMNw&cur=CNY&u=http%3A%2F%2Fc.gdt.qq.com%2Fgdt_mclick.fcg%3Fviewid%3Dt6o7__bYZoWql51I7krTHXw7wX3HwUO9FjIJt6rPb8mySO4Cu%21%21XqJrUNtcEUqqnhweRJ4LLS2m49e8HowA62q%219A3lx4Doz_9tzhiFUUlCMXWdN2EKozjMRBb1KLFPtzKPDguyL1XXhtJIXEQlUJVWUlBGubb1_%21csNQ1sjv6cL2Bv2x6hgcGzZKiqUH1N1juj87SFLvPyB2QAPdV57Lg%26jtype%3D0%26i%3D1%26os%3D2%3Fviewid%3Dt6o7__bYZoWql51I7krTHXw7wX3HwUO9FjIJt6rPb8mySO4Cu%21%21XqJrUNtcEUqqnhweRJ4LLS2m49e8HowA62q%219A3lx4Doz_9tzhiFUUlCMXWdN2EKozjMRBb1KLFPtzKPDguyL1XXhtJIXEQlUJVWUlBGubb1_%21csNQ1sjv6cL2Bv2x6hgcGzZKiqUH1N1juj87SFLvPyB2QAPdV57Lg%26acttype%3D1%26s%3D%257B%2522down_x%2522%253A0%252C%2522down_y%2522%253A0%257D&adid_sha1=&aid_sha1=67d3bc8ba4a697f34c7165779438873896665f3e&pid=zap937e286143f6d462185316171ff574a7b10077f6"
-	            ],
-	            "imp_trackers": [
-	                "http://stat.adx.yumimobi.com/api/s?r=607f65d9268021d3&t=0&bid_id=0bts0K1CObXU1MkqKd28U76h45LrcY&ad_id=464&type=2&dsp_id=20&plmn=46000&ssp_id=449&app_id=1007877&app_bundle_id=cn.eclicks.drivingtest&price_enc=Xm7JWFA9pOhXsloDA1CMNw&cur=CNY&u=http%3A%2F%2Fv.gdt.qq.com%2Fgdt_stats.fcg%3Fcount%3D1%26viewid0%3Dt6o7__bYZoWql51I7krTHXw7wX3HwUO9FjIJt6rPb8mySO4Cu%21%21XqJrUNtcEUqqnhweRJ4LLS2m49e8HowA62q%219A3lx4Doz_9tzhiFUUlCMXWdN2EKozjMRBb1KLFPtzKPDguyL1XXhtJIXEQlUJVWUlBGubb1_%21csNQ1sjv6cL2Bv2x6hgcGzZKiqUH1N1juj87SFLvPyB2QAPdV57Lg&adid_sha1=&aid_sha1=67d3bc8ba4a697f34c7165779438873896665f3e&pid=zap937e286143f6d462185316171ff574a7b10077f6"
-	            ],
-	            "refresh_interval": 90,
-	            "inventory_type": 1,
-	            "ssp_id": "9",
-	            "ex_param": [
-	                "",
-	                "",
-	                "",
-	                "",
-	                ""
-	            ],
-	            "price": 0
-	        }
-	    ],
-	    "msg": "",
-	    "result": 0
-	}
+```json
+{
+    "ads": [
+        {
+            "id": "464",
+            "place_id": "",
+            "action": 2,
+            "image_url": "http://pgdt.gtimg.cn/gdt/0/DAACinJAJYAH0ABJBWoebKBuOgTF8e.jpg/0?ck=13afb5e35954c59df6d0027ac679eb91",
+            "w": 720,
+            "h": 1038,
+            "target_url": "http://c.gdt.qq.com/gdt_mclick.fcg?viewid=t6o7__bYZoWql51I7krTHXw7wX3HwUO9FjIJt6rPb8mySO4Cu!!XqJrUNtcEUqqnhweRJ4LLS2m49e8HowA62q!9A3lx4Doz_9tzhiFUUlCMXWdN2EKozjMRBb1KLFPtzKPDguyL1XXhtJIXEQlUJVWUlBGubb1_!csNQ1sjv6cL2Bv2x6hgcGzZKiqUH1N1juj87SFLvPyB2QAPdV57Lg&jtype=0&i=1&os=2",
+            "click_trackers": [
+                "http://stat.adx.yumimobi.com/api/s?r=1dfd3ecd691b73d7&t=1&bid_id=0bts0K1CObXU1MkqKd28U76h45LrcY&ad_id=464&type=2&dsp_id=20&plmn=46000&ssp_id=449&app_id=1007877&app_bundle_id=cn.eclicks.drivingtest&price_enc=Xm7JWFA9pOhXsloDA1CMNw&cur=CNY&u=http%3A%2F%2Fc.gdt.qq.com%2Fgdt_mclick.fcg%3Fviewid%3Dt6o7__bYZoWql51I7krTHXw7wX3HwUO9FjIJt6rPb8mySO4Cu%21%21XqJrUNtcEUqqnhweRJ4LLS2m49e8HowA62q%219A3lx4Doz_9tzhiFUUlCMXWdN2EKozjMRBb1KLFPtzKPDguyL1XXhtJIXEQlUJVWUlBGubb1_%21csNQ1sjv6cL2Bv2x6hgcGzZKiqUH1N1juj87SFLvPyB2QAPdV57Lg%26jtype%3D0%26i%3D1%26os%3D2%3Fviewid%3Dt6o7__bYZoWql51I7krTHXw7wX3HwUO9FjIJt6rPb8mySO4Cu%21%21XqJrUNtcEUqqnhweRJ4LLS2m49e8HowA62q%219A3lx4Doz_9tzhiFUUlCMXWdN2EKozjMRBb1KLFPtzKPDguyL1XXhtJIXEQlUJVWUlBGubb1_%21csNQ1sjv6cL2Bv2x6hgcGzZKiqUH1N1juj87SFLvPyB2QAPdV57Lg%26acttype%3D1%26s%3D%257B%2522down_x%2522%253A0%252C%2522down_y%2522%253A0%257D&adid_sha1=&aid_sha1=67d3bc8ba4a697f34c7165779438873896665f3e&pid=zap937e286143f6d462185316171ff574a7b10077f6"
+            ],
+            "imp_trackers": [
+                "http://stat.adx.yumimobi.com/api/s?r=607f65d9268021d3&t=0&bid_id=0bts0K1CObXU1MkqKd28U76h45LrcY&ad_id=464&type=2&dsp_id=20&plmn=46000&ssp_id=449&app_id=1007877&app_bundle_id=cn.eclicks.drivingtest&price_enc=Xm7JWFA9pOhXsloDA1CMNw&cur=CNY&u=http%3A%2F%2Fv.gdt.qq.com%2Fgdt_stats.fcg%3Fcount%3D1%26viewid0%3Dt6o7__bYZoWql51I7krTHXw7wX3HwUO9FjIJt6rPb8mySO4Cu%21%21XqJrUNtcEUqqnhweRJ4LLS2m49e8HowA62q%219A3lx4Doz_9tzhiFUUlCMXWdN2EKozjMRBb1KLFPtzKPDguyL1XXhtJIXEQlUJVWUlBGubb1_%21csNQ1sjv6cL2Bv2x6hgcGzZKiqUH1N1juj87SFLvPyB2QAPdV57Lg&adid_sha1=&aid_sha1=67d3bc8ba4a697f34c7165779438873896665f3e&pid=zap937e286143f6d462185316171ff574a7b10077f6"
+            ],
+            "refresh_interval": 90,
+            "inventory_type": 1,
+            "ssp_id": "9",
+            "ex_param": [
+                "",
+                "",
+                "",
+                "",
+                ""
+            ],
+            "price": 0
+        }
+    ],
+    "msg": "",
+    "result": 0
+}
+```
+
+安卓下载类：
+
+```json
+{
+    "ads": [
+        {
+            "id": "464",
+            "place_id": "",
+            "action": 6,
+            "image_url": "http://pgdt.gtimg.cn/gdt/0/DAACinJAJYAH0ABJBWoebKBuOgTF8e.jpg/0?ck=13afb5e35954c59df6d0027ac679eb91",
+            "w": 720,
+            "h": 1038,
+            "target_url": "http://c.gdt.qq.com/gdt_mclick.fcg?viewid=t6o7__bYZoWql51I7krTHXw7wX3HwUO9FjIJt6rPb8mySO4Cu!!XqJrUNtcEUqqnhweRJ4LLS2m49e8HowA62q!9A3lx4Doz_9tzhiFUUlCMXWdN2EKozjMRBb1KLFPtzKPDguyL1XXhtJIXEQlUJVWUlBGubb1_!csNQ1sjv6cL2Bv2x6hgcGzZKiqUH1N1juj87SFLvPyB2QAPdV57Lg&jtype=0&i=1&os=2",
+            "click_trackers": [
+                "http://stat.adx.yumimobi.com/api/s?r=1dfd3ecd691b73d7&t=1&bid_id=0bts0K1CObXU1MkqKd28U76h45LrcY&ad_id=464&type=2&dsp_id=20&plmn=46000&ssp_id=449&app_id=1007877&app_bundle_id=cn.eclicks.drivingtest&price_enc=Xm7JWFA9pOhXsloDA1CMNw&cur=CNY&u=http%3A%2F%2Fc.gdt.qq.com%2Fgdt_mclick.fcg%3Fviewid%3Dt6o7__bYZoWql51I7krTHXw7wX3HwUO9FjIJt6rPb8mySO4Cu%21%21XqJrUNtcEUqqnhweRJ4LLS2m49e8HowA62q%219A3lx4Doz_9tzhiFUUlCMXWdN2EKozjMRBb1KLFPtzKPDguyL1XXhtJIXEQlUJVWUlBGubb1_%21csNQ1sjv6cL2Bv2x6hgcGzZKiqUH1N1juj87SFLvPyB2QAPdV57Lg%26jtype%3D0%26i%3D1%26os%3D2%3Fviewid%3Dt6o7__bYZoWql51I7krTHXw7wX3HwUO9FjIJt6rPb8mySO4Cu%21%21XqJrUNtcEUqqnhweRJ4LLS2m49e8HowA62q%219A3lx4Doz_9tzhiFUUlCMXWdN2EKozjMRBb1KLFPtzKPDguyL1XXhtJIXEQlUJVWUlBGubb1_%21csNQ1sjv6cL2Bv2x6hgcGzZKiqUH1N1juj87SFLvPyB2QAPdV57Lg%26acttype%3D1%26s%3D%257B%2522down_x%2522%253A0%252C%2522down_y%2522%253A0%257D&adid_sha1=&aid_sha1=67d3bc8ba4a697f34c7165779438873896665f3e&pid=zap937e286143f6d462185316171ff574a7b10077f6"
+            ],
+            "imp_trackers": [
+                "http://stat.adx.yumimobi.com/api/s?r=607f65d9268021d3&t=0&bid_id=0bts0K1CObXU1MkqKd28U76h45LrcY&ad_id=464&type=2&dsp_id=20&plmn=46000&ssp_id=449&app_id=1007877&app_bundle_id=cn.eclicks.drivingtest&price_enc=Xm7JWFA9pOhXsloDA1CMNw&cur=CNY&u=http%3A%2F%2Fv.gdt.qq.com%2Fgdt_stats.fcg%3Fcount%3D1%26viewid0%3Dt6o7__bYZoWql51I7krTHXw7wX3HwUO9FjIJt6rPb8mySO4Cu%21%21XqJrUNtcEUqqnhweRJ4LLS2m49e8HowA62q%219A3lx4Doz_9tzhiFUUlCMXWdN2EKozjMRBb1KLFPtzKPDguyL1XXhtJIXEQlUJVWUlBGubb1_%21csNQ1sjv6cL2Bv2x6hgcGzZKiqUH1N1juj87SFLvPyB2QAPdV57Lg&adid_sha1=&aid_sha1=67d3bc8ba4a697f34c7165779438873896665f3e&pid=zap937e286143f6d462185316171ff574a7b10077f6"
+            ],
+            "app_download_trackers": [
+                "http://stat.adx.yumimobi.com/api/s?r=607f65d9268021d3&t=2&bid_id=0bts0K1CObXU1MkqKd28U76h45LrcY&ad_id=464&type=2&dsp_id=20&plmn=46000&ssp_id=449&app_id=1007877&app_bundle_id=cn.eclicks.drivingtest&price_enc=Xm7JWFA9pOhXsloDA1CMNw&cur=CNY&u=http%3A%2F%2Fv.gdt.qq.com%2Fgdt_stats.fcg%3Fcount%3D1%26viewid0%3Dt6o7__bYZoWql51I7krTHXw7wX3HwUO9FjIJt6rPb8mySO4Cu%21%21XqJrUNtcEUqqnhweRJ4LLS2m49e8HowA62q%219A3lx4Doz_9tzhiFUUlCMXWdN2EKozjMRBb1KLFPtzKPDguyL1XXhtJIXEQlUJVWUlBGubb1_%21csNQ1sjv6cL2Bv2x6hgcGzZKiqUH1N1juj87SFLvPyB2QAPdV57Lg&adid_sha1=&aid_sha1=67d3bc8ba4a697f34c7165779438873896665f3e&pid=zap937e286143f6d462185316171ff574a7b10077f6"
+            ],
+            "app_download_finish_trackers": [
+                "http://stat.adx.yumimobi.com/api/s?r=607f65d9268021d3&t=3&bid_id=0bts0K1CObXU1MkqKd28U76h45LrcY&ad_id=464&type=2&dsp_id=20&plmn=46000&ssp_id=449&app_id=1007877&app_bundle_id=cn.eclicks.drivingtest&price_enc=Xm7JWFA9pOhXsloDA1CMNw&cur=CNY&u=http%3A%2F%2Fv.gdt.qq.com%2Fgdt_stats.fcg%3Fcount%3D1%26viewid0%3Dt6o7__bYZoWql51I7krTHXw7wX3HwUO9FjIJt6rPb8mySO4Cu%21%21XqJrUNtcEUqqnhweRJ4LLS2m49e8HowA62q%219A3lx4Doz_9tzhiFUUlCMXWdN2EKozjMRBb1KLFPtzKPDguyL1XXhtJIXEQlUJVWUlBGubb1_%21csNQ1sjv6cL2Bv2x6hgcGzZKiqUH1N1juj87SFLvPyB2QAPdV57Lg&adid_sha1=&aid_sha1=67d3bc8ba4a697f34c7165779438873896665f3e&pid=zap937e286143f6d462185316171ff574a7b10077f6"
+            ],
+            "app_activate_trackers": [
+                "http://stat.adx.yumimobi.com/api/s?r=607f65d9268021d3&t=4&bid_id=0bts0K1CObXU1MkqKd28U76h45LrcY&ad_id=464&type=2&dsp_id=20&plmn=46000&ssp_id=449&app_id=1007877&app_bundle_id=cn.eclicks.drivingtest&price_enc=Xm7JWFA9pOhXsloDA1CMNw&cur=CNY&u=http%3A%2F%2Fv.gdt.qq.com%2Fgdt_stats.fcg%3Fcount%3D1%26viewid0%3Dt6o7__bYZoWql51I7krTHXw7wX3HwUO9FjIJt6rPb8mySO4Cu%21%21XqJrUNtcEUqqnhweRJ4LLS2m49e8HowA62q%219A3lx4Doz_9tzhiFUUlCMXWdN2EKozjMRBb1KLFPtzKPDguyL1XXhtJIXEQlUJVWUlBGubb1_%21csNQ1sjv6cL2Bv2x6hgcGzZKiqUH1N1juj87SFLvPyB2QAPdV57Lg&adid_sha1=&aid_sha1=67d3bc8ba4a697f34c7165779438873896665f3e&pid=zap937e286143f6d462185316171ff574a7b10077f6"
+            ],
+            "refresh_interval": 90,
+            "inventory_type": 1,
+            "ssp_id": "9",
+            "download_file_name": "test_download_appname",
+            "file_size": 1024,
+            "ex_param": [
+                "",
+                "",
+                "",
+                "",
+                ""
+            ],
+            "price": 0
+        }
+    ],
+    "msg": "",
+    "result": 0
+}
 ```
 
 #### banner广告展示示例
@@ -759,42 +808,50 @@
 ### 视频广告返回示例
 
 ```json
-
-	{
-	    "ads": [
-	        {
-	            "id": "19046454",
-	            "place_id": "",
-	            "action": 6,
-	            "image_url": "http://oimageb1.ydstatic.com/image?id=-3419818951519079008&product=adpublish",
-	            "w": 640,
-	            "h": 960,
-	            "target_url": "http://dl.hdslb.com/mobile/latest/iBiliPlayer-youdao010.apk",
-	            "click_trackers": [
-	                "http://stat.adx.yumimobi.com/api/s?r=6dc86f24a6f5c527&t=1&bid_id=0bts0K1COxbZ25BVLJ4aKOsy3lZJ9U&ad_id=19046454&type=4&dsp_id=602&plmn=46000&ssp_id=1&app_id=1000481&app_bundle_id=&price_enc=G63KWEiAWBhhBc34J0nXRw&cur=CNY&u=http%3A%2F%2Fp.clkservice.youdao.com%2Fclk%2Frequest.s%3Fk%3D4nx6iXFBcrUkfq9Pk%252BQJmS9cBWcnVn%252FvkeOOR6zbRfHXxo%252BoRxcJpjjAgKuViCqv52rawaCcQI2R6UiK1fhynWLAHXSMp8aBaL0cKcYl8mtcrJiEXwf%252FhYZwCCBIYpYkWLSHlAnWvRC13XK2RLk2jd4D4lkCrc2ittfTajZlNcoefJW0XPAIqdeMIrNGkCZe%252FIFW0I4LteiV%252FrsRj%252F2xlLTp7UV9cZRJUk2Sey94ryegaXlA2SmQ3dJfV6xO2oCdMS8f%252B01OZiTuuiQtlRc%252BWkrC%252B5WXQRtCToR922rjacEjo3fGWc4cm6wN1jOsjZSEH%252F0qWLM832XuHVN3JUQ9DTIdG%252Bczoz1jkVv%252BJLo0%252FZwEOrMBmh5izfkJarUODPOoSGB0t8xtHvnNANy3ZHFPxJCTW0wUjwoO7K%252B9UkSbSq%252FkjTG%252BKdoF6%252BhjZrJzw2TteqAopSl%252FYsVWeCn9yHMoUR8j1x3%252F9Hr3%252BIHmehpO3ELBqJMgONppinYjWbikMXTzWqtaMUWFLz9almr9ZUdRE97S5kFykRuSF4oJ2i6ksee7MphQ06%252BNvts2J95dRFtV3YUlk9fgA%252BpfBEtQqOc2X8sfmQxG3vA7UWSzhtHd8BIh%252FdSdWeVZvjrWauuguVd4JOR5t8aXQKklWTtBewgdWvBWbyhZFXFWzCkoig9r3VLN8ayV3syYFo%252FG5P6LpNmQ%252FCu1PDzVlTvQ2FsbzgKBELr5rXlh5BMbIp282bQgB6nphmiWxo0B0FCOyQybgIsX6mleh6fw0t8WAp34OCu1vpCvw5E%252FS15%252BHM8wThy7PuzXxo%252BoRxcJpjjAgKuViCqv18aPqEcXCaY4wICrlYgqrx7cJrWwEnlELPOipPDadCLw6dP9Tw26XG5BNsUzi2UI%26isrd%3D0%26youdao_bid%3D0bts0K1COxbZ25BVLJ4aKOsy3lZJ9U%26youdao_deviceId%3Db064bbe4e5749412f7770bc1c0d8663999c8bd1f&adid_sha1=&aid_sha1=b064bbe4e5749412f7770bc1c0d8663999c8bd1f&pid=FPA52248"
-	            ],
-	            "imp_trackers": [
-	                "http://stat.adx.yumimobi.com/api/s?r=7f95f85bc960d054&t=0&bid_id=0bts0K1COxbZ25BVLJ4aKOsy3lZJ9U&ad_id=19046454&type=4&dsp_id=602&plmn=46000&ssp_id=1&app_id=1000481&app_bundle_id=&price_enc=G63KWEiAWBhhBc34J0nXRw&cur=CNY&u=http%3A%2F%2Fdsp-impr2.youdao.com%2Fz.gif%3Fyd_ewp%3DG63KWEiAWBhhBc34J0nXRw%26yd_ext%3DEnQKATESIDQxY2NjNmJmMjExMDhjZGRiZjZmYjJjNmU5ZmIzOTZiIksItsCKCRDM-q8CGPTjKSDU1BEo8k4wDjgOZQCQXUVwAHgAgAEAmAEBogELVHJhZGl0aW9uYWy6ARJ7Ik9SREVSRURfSUQiOiIxIn0wAyIeMGJ0czBLMUNPeGJaMjVCVkxKNGFLT3N5M2xaSjlVKHQwADoAQgBSDjExOS4xMzEuMjIyLjgxag0xNDg5Njc3NTk1MjE5eACCAQCIAdkbkAHT5NC9rSuoAQGwAQG4AQHCAQQyNDI00AEB2gEoYjA2NGJiZTRlNTc0OTQxMmY3NzcwYmMxYzBkODY2Mzk5OWM4YmQxZuIBGRoAMhBiZGQ2NmI2ZDM4YzY5MzM1OgM2LjD6AQU1LjAuMA&adid_sha1=&aid_sha1=b064bbe4e5749412f7770bc1c0d8663999c8bd1f&pid=FPA52248"
-	            ],
-	            "refresh_interval": 0,
-	            "inventory_type": 3,
-	            "ssp_id": "10",
-	            "video": {
-	                "url": "http://download.ydstatic.com/sdk/mp4/my%20wife%20is%20student%20union%20president.mp4",
-	                "play_duration": 15,
-	                "player_start_trackers": [
-	                    "http://dsp-impr2.youdao.com/impplay.s?ext=Ch4wYnRzMEsxQ094YloyNUJWTEo0YUtPc3kzbFpKOVUQ1NQRGPTjKSDM%2Bq8CKLbAigkwdDoOMTE5LjEzMS4yMjIuODFA0%2BTQva0rSAFSBDI0MjRaIDQxY2NjNmJmMjExMDhjZGRiZjZmYjJjNmU5ZmIzOTZiYihiMDY0YmJlNGU1NzQ5NDEyZjc3NzBiYzFjMGQ4NjYzOTk5YzhiZDFmeACCARBiZGQ2NmI2ZDM4YzY5MzM1igEAkAELmAGNAaIBBFdJRknCASQ0ZTYyNzIxYi03ZWM1LTRhMTYtOWNlYi1kMDVhNzkyYjUyNWTSAQU1LjAuMNoBAzYuMA%3D%3D&event_type=205&play_percent=0.0"
-	                ],
-	                "player_end_trackers": [
-	                    "http://dsp-impr2.youdao.com/impplay.s?ext=Ch4wYnRzMEsxQ094YloyNUJWTEo0YUtPc3kzbFpKOVUQ1NQRGPTjKSDM%2Bq8CKLbAigkwdDoOMTE5LjEzMS4yMjIuODFA0%2BTQva0rSAFSBDI0MjRaIDQxY2NjNmJmMjExMDhjZGRiZjZmYjJjNmU5ZmIzOTZiYihiMDY0YmJlNGU1NzQ5NDEyZjc3NzBiYzFjMGQ4NjYzOTk5YzhiZDFmeACCARBiZGQ2NmI2ZDM4YzY5MzM1igEAkAELmAGNAaIBBFdJRknCASQ0ZTYyNzIxYi03ZWM1LTRhMTYtOWNlYi1kMDVhNzkyYjUyNWTSAQU1LjAuMNoBAzYuMA%3D%3D&event_type=205&play_percent=1.0"
-	                ]
-	            },
-	            "price": 0
-	        }
-	    ],
-	    "msg": "",
-	    "result": 0
-	}
+{
+    "ads": [
+        {
+            "id": "19046454",
+            "place_id": "",
+            "action": 6,
+            "image_url": "http://oimageb1.ydstatic.com/image?id=-3419818951519079008&product=adpublish",
+            "w": 640,
+            "h": 960,
+            "target_url": "http://dl.hdslb.com/mobile/latest/iBiliPlayer-youdao010.apk",
+            "click_trackers": [
+                "http://stat.adx.yumimobi.com/api/s?r=6dc86f24a6f5c527&t=1&bid_id=0bts0K1COxbZ25BVLJ4aKOsy3lZJ9U&ad_id=19046454&type=4&dsp_id=602&plmn=46000&ssp_id=1&app_id=1000481&app_bundle_id=&price_enc=G63KWEiAWBhhBc34J0nXRw&cur=CNY&u=http%3A%2F%2Fp.clkservice.youdao.com%2Fclk%2Frequest.s%3Fk%3D4nx6iXFBcrUkfq9Pk%252BQJmS9cBWcnVn%252FvkeOOR6zbRfHXxo%252BoRxcJpjjAgKuViCqv52rawaCcQI2R6UiK1fhynWLAHXSMp8aBaL0cKcYl8mtcrJiEXwf%252FhYZwCCBIYpYkWLSHlAnWvRC13XK2RLk2jd4D4lkCrc2ittfTajZlNcoefJW0XPAIqdeMIrNGkCZe%252FIFW0I4LteiV%252FrsRj%252F2xlLTp7UV9cZRJUk2Sey94ryegaXlA2SmQ3dJfV6xO2oCdMS8f%252B01OZiTuuiQtlRc%252BWkrC%252B5WXQRtCToR922rjacEjo3fGWc4cm6wN1jOsjZSEH%252F0qWLM832XuHVN3JUQ9DTIdG%252Bczoz1jkVv%252BJLo0%252FZwEOrMBmh5izfkJarUODPOoSGB0t8xtHvnNANy3ZHFPxJCTW0wUjwoO7K%252B9UkSbSq%252FkjTG%252BKdoF6%252BhjZrJzw2TteqAopSl%252FYsVWeCn9yHMoUR8j1x3%252F9Hr3%252BIHmehpO3ELBqJMgONppinYjWbikMXTzWqtaMUWFLz9almr9ZUdRE97S5kFykRuSF4oJ2i6ksee7MphQ06%252BNvts2J95dRFtV3YUlk9fgA%252BpfBEtQqOc2X8sfmQxG3vA7UWSzhtHd8BIh%252FdSdWeVZvjrWauuguVd4JOR5t8aXQKklWTtBewgdWvBWbyhZFXFWzCkoig9r3VLN8ayV3syYFo%252FG5P6LpNmQ%252FCu1PDzVlTvQ2FsbzgKBELr5rXlh5BMbIp282bQgB6nphmiWxo0B0FCOyQybgIsX6mleh6fw0t8WAp34OCu1vpCvw5E%252FS15%252BHM8wThy7PuzXxo%252BoRxcJpjjAgKuViCqv18aPqEcXCaY4wICrlYgqrx7cJrWwEnlELPOipPDadCLw6dP9Tw26XG5BNsUzi2UI%26isrd%3D0%26youdao_bid%3D0bts0K1COxbZ25BVLJ4aKOsy3lZJ9U%26youdao_deviceId%3Db064bbe4e5749412f7770bc1c0d8663999c8bd1f&adid_sha1=&aid_sha1=b064bbe4e5749412f7770bc1c0d8663999c8bd1f&pid=FPA52248"
+            ],
+            "imp_trackers": [
+                "http://stat.adx.yumimobi.com/api/s?r=7f95f85bc960d054&t=0&bid_id=0bts0K1COxbZ25BVLJ4aKOsy3lZJ9U&ad_id=19046454&type=4&dsp_id=602&plmn=46000&ssp_id=1&app_id=1000481&app_bundle_id=&price_enc=G63KWEiAWBhhBc34J0nXRw&cur=CNY&u=http%3A%2F%2Fdsp-impr2.youdao.com%2Fz.gif%3Fyd_ewp%3DG63KWEiAWBhhBc34J0nXRw%26yd_ext%3DEnQKATESIDQxY2NjNmJmMjExMDhjZGRiZjZmYjJjNmU5ZmIzOTZiIksItsCKCRDM-q8CGPTjKSDU1BEo8k4wDjgOZQCQXUVwAHgAgAEAmAEBogELVHJhZGl0aW9uYWy6ARJ7Ik9SREVSRURfSUQiOiIxIn0wAyIeMGJ0czBLMUNPeGJaMjVCVkxKNGFLT3N5M2xaSjlVKHQwADoAQgBSDjExOS4xMzEuMjIyLjgxag0xNDg5Njc3NTk1MjE5eACCAQCIAdkbkAHT5NC9rSuoAQGwAQG4AQHCAQQyNDI00AEB2gEoYjA2NGJiZTRlNTc0OTQxMmY3NzcwYmMxYzBkODY2Mzk5OWM4YmQxZuIBGRoAMhBiZGQ2NmI2ZDM4YzY5MzM1OgM2LjD6AQU1LjAuMA&adid_sha1=&aid_sha1=b064bbe4e5749412f7770bc1c0d8663999c8bd1f&pid=FPA52248"
+            ],
+            "refresh_interval": 0,
+            "inventory_type": 3,
+            "ssp_id": "10",
+            "video": {
+                "url": "http://download.ydstatic.com/sdk/mp4/my%20wife%20is%20student%20union%20president.mp4",
+                "play_duration": 15,
+                "player_start_trackers": [
+                    "http://dsp-impr2.youdao.com/impplay.s?ext=Ch4wYnRzMEsxQ094YloyNUJWTEo0YUtPc3kzbFpKOVUQ1NQRGPTjKSDM%2Bq8CKLbAigkwdDoOMTE5LjEzMS4yMjIuODFA0%2BTQva0rSAFSBDI0MjRaIDQxY2NjNmJmMjExMDhjZGRiZjZmYjJjNmU5ZmIzOTZiYihiMDY0YmJlNGU1NzQ5NDEyZjc3NzBiYzFjMGQ4NjYzOTk5YzhiZDFmeACCARBiZGQ2NmI2ZDM4YzY5MzM1igEAkAELmAGNAaIBBFdJRknCASQ0ZTYyNzIxYi03ZWM1LTRhMTYtOWNlYi1kMDVhNzkyYjUyNWTSAQU1LjAuMNoBAzYuMA%3D%3D&event_type=205&play_percent=0.0"
+                ],
+                "player_end_trackers": [
+                    "http://dsp-impr2.youdao.com/impplay.s?ext=Ch4wYnRzMEsxQ094YloyNUJWTEo0YUtPc3kzbFpKOVUQ1NQRGPTjKSDM%2Bq8CKLbAigkwdDoOMTE5LjEzMS4yMjIuODFA0%2BTQva0rSAFSBDI0MjRaIDQxY2NjNmJmMjExMDhjZGRiZjZmYjJjNmU5ZmIzOTZiYihiMDY0YmJlNGU1NzQ5NDEyZjc3NzBiYzFjMGQ4NjYzOTk5YzhiZDFmeACCARBiZGQ2NmI2ZDM4YzY5MzM1igEAkAELmAGNAaIBBFdJRknCASQ0ZTYyNzIxYi03ZWM1LTRhMTYtOWNlYi1kMDVhNzkyYjUyNWTSAQU1LjAuMNoBAzYuMA%3D%3D&event_type=205&play_percent=1.0"
+                ],
+                "player_close_trackers": [
+                    "http://dsp-impr2.youdao.com/impplay.s?ext=Ch4wYnRzMEsxQ094YloyNUJWTEo0YUtPc3kzbFpKOVUQ1NQRGPTjKSDM%2Bq8CKLbAigkwdDoOMTE5LjEzMS4yMjIuODFA0%2BTQva0rSAFSBDI0MjRaIDQxY2NjNmJmMjExMDhjZGRiZjZmYjJjNmU5ZmIzOTZiYihiMDY0YmJlNGU1NzQ5NDEyZjc3NzBiYzFjMGQ4NjYzOTk5YzhiZDFmeACCARBiZGQ2NmI2ZDM4YzY5MzM1igEAkAELmAGNAaIBBFdJRknCASQ0ZTYyNzIxYi03ZWM1LTRhMTYtOWNlYi1kMDVhNzkyYjUyNWTSAQU1LjAuMNoBAzYuMA%3D%3D&event_type=206"
+                ],
+                "player_continue_trackers": [
+                    "http://dsp-impr2.youdao.com/impplay.s?ext=Ch4wYnRzMEsxQ094YloyNUJWTEo0YUtPc3kzbFpKOVUQ1NQRGPTjKSDM%2Bq8CKLbAigkwdDoOMTE5LjEzMS4yMjIuODFA0%2BTQva0rSAFSBDI0MjRaIDQxY2NjNmJmMjExMDhjZGRiZjZmYjJjNmU5ZmIzOTZiYihiMDY0YmJlNGU1NzQ5NDEyZjc3NzBiYzFjMGQ4NjYzOTk5YzhiZDFmeACCARBiZGQ2NmI2ZDM4YzY5MzM1igEAkAELmAGNAaIBBFdJRknCASQ0ZTYyNzIxYi03ZWM1LTRhMTYtOWNlYi1kMDVhNzkyYjUyNWTSAQU1LjAuMNoBAzYuMA%3D%3D&event_type=207"
+                ],
+                "player_restart_trackers": [
+                    "http://dsp-impr2.youdao.com/impplay.s?ext=Ch4wYnRzMEsxQ094YloyNUJWTEo0YUtPc3kzbFpKOVUQ1NQRGPTjKSDM%2Bq8CKLbAigkwdDoOMTE5LjEzMS4yMjIuODFA0%2BTQva0rSAFSBDI0MjRaIDQxY2NjNmJmMjExMDhjZGRiZjZmYjJjNmU5ZmIzOTZiYihiMDY0YmJlNGU1NzQ5NDEyZjc3NzBiYzFjMGQ4NjYzOTk5YzhiZDFmeACCARBiZGQ2NmI2ZDM4YzY5MzM1igEAkAELmAGNAaIBBFdJRknCASQ0ZTYyNzIxYi03ZWM1LTRhMTYtOWNlYi1kMDVhNzkyYjUyNWTSAQU1LjAuMNoBAzYuMA%3D%3D&event_type=208&play_percent=0.0"
+                ]
+            },
+            "price": 0
+        }
+    ],
+    "msg": "",
+    "result": 0
+}
 ```
 
 
