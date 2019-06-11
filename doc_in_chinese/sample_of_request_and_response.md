@@ -59,59 +59,69 @@
 ### banner请求示例
 
 ``` json
-
-	{
-	    "ver": "1.1",
-	    "ssp_token": "zplay提供的ssp_token",
-	    "need_https": 0,
-	    "app": {
-	        "id": "zplay提供的app_id",
-	        "name": "DrivingTest",
-	        "app_key": "zplay提供的app_key",
-	        "bundle": "cn.eclicks.drivingtest",
-	        "ver": "",
-	        "cat": []
-	    },
-	    "device": {
-	        "model": "MHA-AL00",
-	        "brand": "HUAWEI",
-	        "adt": 1,
-	        "connection_type": "wifi",
-	        "carrier": 0,
-	        "orientation": 1,
-	        "mac": "84:be:52:7a:24:67",
-	        "imei": "862552036260906",
-	        "android_id": "5588e0a238461ee8",
-	        "openudid": "5e8061c7-1079-35d2-a218-c4aa739f7870",
-	        "os_type": "android",
-	        "os_version": "7.0",
-	        "screen": {
-	            "w": 1080,
-	            "h": 1812,
-	            "dpi": 480
-	        },
-	        "geo": {
-	            "lat": 29.22145,
-	            "lon": 119.84023
-	        }
-	    },
-	    "ads": [
-	        {
-	            "type": 0,
-	            "place_id": "an6o1ngv",
-	            "floor_price": 100,
-	            "currency": "CNY",
-	            "w": 640,
-	            "h": 100,
-	            "inventory_types": [
-	                1,
-	                2,
-	                4,
-	                5
-	            ]
-	        }
-	    ]
-	}
+{
+    "ver": "1.1",
+    "ssp_token": "zplay提供的ssp_token",
+    "need_https": 0,
+    "app": {
+        "id": "zplay提供的app_id",
+        "name": "DrivingTest",
+        "app_key": "zplay提供的app_key",
+        "bundle": "cn.eclicks.drivingtest",
+        "ver": "",
+        "cat": []
+    },
+    "device": {
+        "model": "MHA-AL00",
+        "brand": "HUAWEI",
+        "adt": 1,
+        "connection_type": "wifi",
+        "carrier": 0,
+        "orientation": 1,
+        "mac": "84:be:52:7a:24:67",
+        "imei": "862552036260906",
+        "android_id": "5588e0a238461ee8",
+        "openudid": "5e8061c7-1079-35d2-a218-c4aa739f7870",
+        "os_type": "android",
+        "os_version": "7.0",
+        "screen": {
+            "w": 1080,
+            "h": 1812,
+            "dpi": 480
+        },
+        "geo": {
+            "lat": 29.22145,
+            "lon": 119.84023
+        }
+    },
+    "user": {
+        "ext": {
+            "consent": "no"
+        }
+    },
+    "regs": {
+        "coppa": 1,
+        "ext": {
+            "gdpr": 0
+        }
+    },
+    "ads": [
+        {
+            "type": 0,
+            "place_id": "an6o1ngv",
+            "floor_price": 100,
+            "currency": "CNY",
+            "w": 640,
+            "h": 100,
+            "inventory_types": [
+                1,
+                2,
+                4,
+                5
+            ]
+        }
+    ]
+}
 ```
 
 ### banner图片广告返回示例
@@ -302,59 +312,69 @@
 > 同banner广告一样，插屏广告在请求的时候也需要通过 `inventory_types` 标明支持的物料类型
 
 ```json
-
-	{
-	    "ver": "1.1",
-	    "ssp_token": "zplay提供的ssp_token",
-	    "need_https": 0,
-	    "app": {
-	        "id": "zplay提供的app_id",
-	        "name": "DrivingTest",
-	        "app_key": "zplay提供的app_key",
-	        "bundle": "cn.eclicks.drivingtest",
-	        "ver": "",
-	        "cat": []
-	    },
-	    "device": {
-	        "model": "vivoX7",
-	        "brand": "vivo",
-	        "adt": 1,
-	        "connection_type": "wifi",
-	        "carrier": 0,
-	        "orientation": 1,
-	        "mac": "20:5d:47:0b:33:38",
-	        "imei": "862505031462331",
-	        "android_id": "840be0b0d00e6169",
-	        "openudid": "e4791d89-dda9-36c0-b9df-edacc24b01c8",
-	        "os_type": "android",
-	        "os_version": "5.1.1",
-	        "screen": {
-	            "w": 1080,
-	            "h": 1920,
-	            "dpi": 480
-	        },
-	        "geo": {
-	            "lat": 31.151308,
-	            "lon": 108.36747
-	        }
-	    },
-	    "ads": [
-	        {
-	            "type": 1,
-	            "place_id": "13ohe4ze",
-	            "floor_price": 100,
-	            "currency": "CNY",
-	            "w": 720,
-	            "h": 1038,
-	            "inventory_types": [
-	                1,
-	                2,
-	                4,
-	                5
-	            ]
-	        }
-	    ]
-	}
+{
+    "ver": "1.1",
+    "ssp_token": "zplay提供的ssp_token",
+    "need_https": 0,
+    "app": {
+        "id": "zplay提供的app_id",
+        "name": "DrivingTest",
+        "app_key": "zplay提供的app_key",
+        "bundle": "cn.eclicks.drivingtest",
+        "ver": "",
+        "cat": []
+    },
+    "device": {
+        "model": "vivoX7",
+        "brand": "vivo",
+        "adt": 1,
+        "connection_type": "wifi",
+        "carrier": 0,
+        "orientation": 1,
+        "mac": "20:5d:47:0b:33:38",
+        "imei": "862505031462331",
+        "android_id": "840be0b0d00e6169",
+        "openudid": "e4791d89-dda9-36c0-b9df-edacc24b01c8",
+        "os_type": "android",
+        "os_version": "5.1.1",
+        "screen": {
+            "w": 1080,
+            "h": 1920,
+            "dpi": 480
+        },
+        "geo": {
+            "lat": 31.151308,
+            "lon": 108.36747
+        }
+    },
+    "user": {
+        "ext": {
+            "consent": "no"
+        }
+    },
+    "regs": {
+        "coppa": 1,
+        "ext": {
+            "gdpr": 0
+        }
+    },
+    "ads": [
+        {
+            "type": 1,
+            "place_id": "13ohe4ze",
+            "floor_price": 100,
+            "currency": "CNY",
+            "w": 720,
+            "h": 1038,
+            "inventory_types": [
+                1,
+                2,
+                4,
+                5
+            ]
+        }
+    ]
+}
 ```
 
 ### 插屏图片广告返回示例
@@ -537,59 +557,69 @@
 > 同banner、插屏广告一样，开屏广告在请求的时候也需要通过 `inventory_types` 标明支持的物料类型，通常也包含图片，图文，html三种类型的广告，与插屏广告不同的是，请求参数中ad_type为2，是在应用刚开始启动的时候展示，具体展示示例可参考插屏的三种广告返回和展示示例。
 
 ```json
-
-	{
-	    "ver": "1.1",
-	    "ssp_token": "zplay提供的ssp_token",
-	    "need_https": 0,
-	    "app": {
-	        "id": "zplay提供的app_id",
-	        "name": "DrivingTest",
-	        "app_key": "zplay提供的app_key",
-	        "bundle": "cn.eclicks.drivingtest",
-	        "ver": "",
-	        "cat": []
-	    },
-	    "device": {
-	        "model": "vivoX7",
-	        "brand": "vivo",
-	        "adt": 1,
-	        "connection_type": "wifi",
-	        "carrier": 0,
-	        "orientation": 1,
-	        "mac": "20:5d:47:0b:33:38",
-	        "imei": "862505031462331",
-	        "android_id": "840be0b0d00e6169",
-	        "openudid": "e4791d89-dda9-36c0-b9df-edacc24b01c8",
-	        "os_type": "android",
-	        "os_version": "5.1.1",
-	        "screen": {
-	            "w": 1080,
-	            "h": 1920,
-	            "dpi": 480
-	        },
-	        "geo": {
-	            "lat": 31.151308,
-	            "lon": 108.36747
-	        }
-	    },
-	    "ads": [
-	        {
-	            "type": 2,
-	            "place_id": "50otuc9h",
-	            "floor_price": 100,
-	            "currency": "CNY",
-	            "w": 720,
-	            "h": 1038,
-	            "inventory_types": [
-	                1,
-	                2,
-	                4,
-	                5
-	            ]
-	        }
-	    ]
-	}
+{
+    "ver": "1.1",
+    "ssp_token": "zplay提供的ssp_token",
+    "need_https": 0,
+    "app": {
+        "id": "zplay提供的app_id",
+        "name": "DrivingTest",
+        "app_key": "zplay提供的app_key",
+        "bundle": "cn.eclicks.drivingtest",
+        "ver": "",
+        "cat": []
+    },
+    "device": {
+        "model": "vivoX7",
+        "brand": "vivo",
+        "adt": 1,
+        "connection_type": "wifi",
+        "carrier": 0,
+        "orientation": 1,
+        "mac": "20:5d:47:0b:33:38",
+        "imei": "862505031462331",
+        "android_id": "840be0b0d00e6169",
+        "openudid": "e4791d89-dda9-36c0-b9df-edacc24b01c8",
+        "os_type": "android",
+        "os_version": "5.1.1",
+        "screen": {
+            "w": 1080,
+            "h": 1920,
+            "dpi": 480
+        },
+        "geo": {
+            "lat": 31.151308,
+            "lon": 108.36747
+        }
+    },
+    "user": {
+        "ext": {
+            "consent": "no"
+        }
+    },
+    "regs": {
+        "coppa": 1,
+        "ext": {
+            "gdpr": 0
+        }
+    },
+    "ads": [
+        {
+            "type": 2,
+            "place_id": "50otuc9h",
+            "floor_price": 100,
+            "currency": "CNY",
+            "w": 720,
+            "h": 1038,
+            "inventory_types": [
+                1,
+                2,
+                4,
+                5
+            ]
+        }
+    ]
+}
 ```
 
 ### 开屏图片广告返回示例
@@ -612,61 +642,60 @@
 > `ad_type` 为 `3` ，`invenroty_types` 为 `[6]` 请求的元素为媒体根据自己展示需要定义的元素块
 
 ```json
-
-	{
-	    "ver": "1.1",
-	    "ssp_token": "zplay提供的ssp_token",
-	    "app": {
-	        "id": "zplay提供的app_id",
-	        "name": "app name",
-	        "app_key": "zplay提供的app_key",
-	        "bundle": "bundle.com"
-	    },
-	    "device": {
-	        "model": "iPhone 5 (A1429/A1442)",
-	        "make": "Apple",
-	        "brand": "Apple",
-	        "ip": "223.74.73.17",
-	        "connection_type": "wifi",
-	        "carrier": 0,
-	        "os_version": "10.2.1",
-	        "os_type": "ios",
-	        "mac": null,
-	        "openudid": "983ADE10-20E6-441E-9078-2FA932787E67",
-	        "ios_adid": "983ADE10-20E6-441E-9078-2FA932787E67"
-	    },
-	    "ads": [
-	        {
-	            "inventory_types": [
-	                6
-	            ],
-	            "type": 3,
-	            "place_id": "gk8cmfh8",
-	            "floor_price": 0,
-	            "native": {
-	                "layout": 3,
-	                "assets": [
-	                    {
-	                        "id": 0,
-	                        "title": {
-	                            "len": 30
-	                        }
-	                    },
-	                    {
-	                        "id": 2,
-	                        "img": {
-	                            "type": 3,
-	                            "w": 640,
-	                            "h": 320
-	                        }
-	                    }
-	                ]
-	            },
-	            "w": 640,
-	            "h": 320
-	        }
-	    ]
-	}
+{
+    "ver": "1.1",
+    "ssp_token": "zplay提供的ssp_token",
+    "app": {
+        "id": "zplay提供的app_id",
+        "name": "app name",
+        "app_key": "zplay提供的app_key",
+        "bundle": "bundle.com"
+    },
+    "device": {
+        "model": "iPhone 5 (A1429/A1442)",
+        "make": "Apple",
+        "brand": "Apple",
+        "ip": "223.74.73.17",
+        "connection_type": "wifi",
+        "carrier": 0,
+        "os_version": "10.2.1",
+        "os_type": "ios",
+        "mac": null,
+        "openudid": "983ADE10-20E6-441E-9078-2FA932787E67",
+        "ios_adid": "983ADE10-20E6-441E-9078-2FA932787E67"
+    },
+    "ads": [
+        {
+            "inventory_types": [
+                6
+            ],
+            "type": 3,
+            "place_id": "gk8cmfh8",
+            "floor_price": 0,
+            "native": {
+                "layout": 3,
+                "assets": [
+                    {
+                        "id": 0,
+                        "title": {
+                            "len": 30
+                        }
+                    },
+                    {
+                        "id": 2,
+                        "img": {
+                            "type": 3,
+                            "w": 640,
+                            "h": 320
+                        }
+                    }
+                ]
+            },
+            "w": 640,
+            "h": 320
+        }
+    ]
+}	
 ```
 
 ### 原生广告返回示例
@@ -742,67 +771,77 @@
 > 视频请求的ad_type为4，inventory_types 为 [3]
 
 ```json
-
-	{
-	    "ads": [
-	        {
-	            "place_id": "sdbds23sd",
-	            "floor_price": 100,
-	            "currency": "CNY",
-	            "h": 960,
-	            "inventory_types": [
-	                3
-	            ],
-	            "place_id": "FPA52248",
-	            "pos": 0,
-	            "type": 4,
-	            "w": 640
-	        }
-	    ],
-	    "ad": {},
-	    "app": {
-	        "app_key": "zplay提供的app_key",
-	        "bundle": "",
-	        "id": "zplay提供的app_id",
-	        "name": "app name",
-	        "ver": "5.0.0"
-	    },
-	    "device": {
-	        "adt": 1,
-	        "android_id": "bdd66b6d38c69335",
-	        "carrier": 0,
-	        "connection_type": "wifi",
-	        "geo": {
-	            "accu": 0,
-	            "lat": 0,
-	            "lon": 0
-	        },
-	        "imei": "861619032588944",
-	        "ios_adid": "",
-	        "local": "",
-	        "mac": "26:28:46:09:1d:4f",
-	        "make": "samsung",
-	        "model": "SM-T810",
-	        "orientation": 1,
-	        "os_type": "android",
-	        "os_version": "6.0",
-	        "plmn": "",
-	        "screen": {
-	            "dpi": 240,
-	            "h": 1536,
-	            "w": 1152
-	        }
-	    },
-	    "is_tail": 0,
-	    "is_test": 0,
-	    "sdk_ver": "androidmedia1.2.1.2",
-	    "ssp_token": "10000",
-	    "user": {
-	        "age": 0,
-	        "gender": 0
-	    },
-	    "ver": "1.1"
-	}
+{
+    "ads": [
+        {
+            "place_id": "sdbds23sd",
+            "floor_price": 100,
+            "currency": "CNY",
+            "h": 960,
+            "inventory_types": [
+                3
+            ],
+            "place_id": "FPA52248",
+            "pos": 0,
+            "type": 4,
+            "w": 640
+        }
+    ],
+    "user": {
+        "ext": {
+            "consent": "no"
+        }
+    },
+    "regs": {
+        "coppa": 1,
+        "ext": {
+            "gdpr": 0
+        }
+    },
+    "ad": {},
+    "app": {
+        "app_key": "zplay提供的app_key",
+        "bundle": "",
+        "id": "zplay提供的app_id",
+        "name": "app name",
+        "ver": "5.0.0"
+    },
+    "device": {
+        "adt": 1,
+        "android_id": "bdd66b6d38c69335",
+        "carrier": 0,
+        "connection_type": "wifi",
+        "geo": {
+            "accu": 0,
+            "lat": 0,
+            "lon": 0
+        },
+        "imei": "861619032588944",
+        "ios_adid": "",
+        "local": "",
+        "mac": "26:28:46:09:1d:4f",
+        "make": "samsung",
+        "model": "SM-T810",
+        "orientation": 1,
+        "os_type": "android",
+        "os_version": "6.0",
+        "plmn": "",
+        "screen": {
+            "dpi": 240,
+            "h": 1536,
+            "w": 1152
+        }
+    },
+    "is_tail": 0,
+    "is_test": 0,
+    "sdk_ver": "androidmedia1.2.1.2",
+    "ssp_token": "10000",
+    "user": {
+        "age": 0,
+        "gender": 0
+    },
+    "ver": "1.1"
+}
 ```
 
 ### 视频广告返回示例

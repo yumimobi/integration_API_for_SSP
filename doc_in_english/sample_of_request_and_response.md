@@ -58,51 +58,67 @@
 
 ```json
 {
-  "ver": "1.1",
-  "ssp_token": "EXVTAW2VYMKUY30TBGLUZ3XPC3H2YW6NQHPWBGF6LMNVBTA6LK9YNS6PMJAUNZG=",
-  "need_https": 0,
-  "app": {
-    "id": "bg76gil7",
-    "name": "DrivingTest",
-    "app_key": "app_key",
-    "bundle": "cn.eclicks.drivingtest",
-    "ver": "",
-    "cat": []
-  },
-  "device": {
-    "model": "MHA-AL00",
-    "brand": "HUAWEI",
-    "adt": 1,
-    "connection_type": "wifi",
-    "carrier": 0,
-    "orientation": 1,
-    "mac": "84:be:52:7a:24:67",
-    "imei": "862552036260906",
-    "android_id": "5588e0a238461ee8",
-    "openudid": "5e8061c7-1079-35d2-a218-c4aa739f7870",
-    "os_type": "android",
-    "os_version": "7.0",
-    "screen": {
-      "w": 1080,
-      "h": 1812,
-      "dpi": 480
+    "ver": "1.1",
+    "ssp_token": "EXVTAW2VYMKUY30TBGLUZ3XPC3H2YW6NQHPWBGF6LMNVBTA6LK9YNS6PMJAUNZG=",
+    "need_https": 0,
+    "app": {
+        "id": "bg76gil7",
+        "name": "DrivingTest",
+        "app_key": "app_key",
+        "bundle": "cn.eclicks.drivingtest",
+        "ver": "",
+        "cat": []
     },
-    "geo": {
-      "lat": 29.22145,
-      "lon": 119.84023
-    }
-  },
-  "ads": [
-    {
-      "type": 0,
-      "place_id": "an6o1ngv",
-      "floor_price": 100,
-      "currency": "CNY",
-      "w": 640,
-      "h": 100,
-      "inventory_types": [1, 2, 4, 5]
-    }
-  ]
+    "device": {
+        "model": "MHA-AL00",
+        "brand": "HUAWEI",
+        "adt": 1,
+        "connection_type": "wifi",
+        "carrier": 0,
+        "orientation": 1,
+        "mac": "84:be:52:7a:24:67",
+        "imei": "862552036260906",
+        "android_id": "5588e0a238461ee8",
+        "openudid": "5e8061c7-1079-35d2-a218-c4aa739f7870",
+        "os_type": "android",
+        "os_version": "7.0",
+        "screen": {
+            "w": 1080,
+            "h": 1812,
+            "dpi": 480
+        },
+        "geo": {
+            "lat": 29.22145,
+            "lon": 119.84023
+        }
+    },
+    "user": {
+        "ext": {
+            "consent": "no"
+        }
+    },
+    "regs": {
+        "coppa": 1,
+        "ext": {
+            "gdpr": 0
+        }
+    },
+    "ads": [
+        {
+            "type": 0,
+            "place_id": "an6o1ngv",
+            "floor_price": 100,
+            "currency": "CNY",
+            "w": 640,
+            "h": 100,
+            "inventory_types": [
+                1,
+                2,
+                4,
+                5
+            ]
+        }
+    ]
 }
 ```
 
@@ -286,51 +302,67 @@ android download：
 
 ```json
 {
-  "ver": "1.1",
-  "ssp_token": "EXVTAW2VYMKUY30TBGLUZ3XPC3H2YW6NQHPWBGF6LMNVBTA6LK9YNS6PMJAUNZG=",
-  "need_https": 0,
-  "app": {
-    "id": "bg76gil7",
-    "name": "DrivingTest",
-    "app_key": "app_key",
-    "bundle": "cn.eclicks.drivingtest",
-    "ver": "",
-    "cat": []
-  },
-  "device": {
-    "model": "vivoX7",
-    "brand": "vivo",
-    "adt": 1,
-    "connection_type": "wifi",
-    "carrier": 0,
-    "orientation": 1,
-    "mac": "20:5d:47:0b:33:38",
-    "imei": "862505031462331",
-    "android_id": "840be0b0d00e6169",
-    "openudid": "e4791d89-dda9-36c0-b9df-edacc24b01c8",
-    "os_type": "android",
-    "os_version": "5.1.1",
-    "screen": {
-      "w": 1080,
-      "h": 1920,
-      "dpi": 480
+    "ver": "1.1",
+    "ssp_token": "EXVTAW2VYMKUY30TBGLUZ3XPC3H2YW6NQHPWBGF6LMNVBTA6LK9YNS6PMJAUNZG=",
+    "need_https": 0,
+    "app": {
+        "id": "bg76gil7",
+        "name": "DrivingTest",
+        "app_key": "app_key",
+        "bundle": "cn.eclicks.drivingtest",
+        "ver": "",
+        "cat": []
     },
-    "geo": {
-      "lat": 31.151308,
-      "lon": 108.36747
-    }
-  },
-  "ads": [
-    {
-      "type": 1,
-      "place_id": "13ohe4ze",
-      "floor_price": 100,
-      "currency": "CNY",
-      "w": 720,
-      "h": 1038,
-      "inventory_types": [1, 2, 4, 5]
-    }
-  ]
+    "device": {
+        "model": "vivoX7",
+        "brand": "vivo",
+        "adt": 1,
+        "connection_type": "wifi",
+        "carrier": 0,
+        "orientation": 1,
+        "mac": "20:5d:47:0b:33:38",
+        "imei": "862505031462331",
+        "android_id": "840be0b0d00e6169",
+        "openudid": "e4791d89-dda9-36c0-b9df-edacc24b01c8",
+        "os_type": "android",
+        "os_version": "5.1.1",
+        "screen": {
+            "w": 1080,
+            "h": 1920,
+            "dpi": 480
+        },
+        "geo": {
+            "lat": 31.151308,
+            "lon": 108.36747
+        }
+    },
+    "user": {
+        "ext": {
+            "consent": "no"
+        }
+    },
+    "regs": {
+        "coppa": 1,
+        "ext": {
+            "gdpr": 0
+        }
+    },
+    "ads": [
+        {
+            "type": 1,
+            "place_id": "13ohe4ze",
+            "floor_price": 100,
+            "currency": "CNY",
+            "w": 720,
+            "h": 1038,
+            "inventory_types": [
+                1,
+                2,
+                4,
+                5
+            ]
+        }
+    ]
 }
 ```
 
@@ -510,51 +542,67 @@ android download：
 
 ```json
 {
-  "ver": "1.1",
-  "ssp_token": "EXVTAW2VYMKUY30TBGLUZ3XPC3H2YW6NQHPWBGF6LMNVBTA6LK9YNS6PMJAUNZG=",
-  "need_https": 0,
-  "app": {
-    "id": "bg76gil7",
-    "name": "DrivingTest",
-    "app_key": "app_key",
-    "bundle": "cn.eclicks.drivingtest",
-    "ver": "",
-    "cat": []
-  },
-  "device": {
-    "model": "vivoX7",
-    "brand": "vivo",
-    "adt": 1,
-    "connection_type": "wifi",
-    "carrier": 0,
-    "orientation": 1,
-    "mac": "20:5d:47:0b:33:38",
-    "imei": "862505031462331",
-    "android_id": "840be0b0d00e6169",
-    "openudid": "e4791d89-dda9-36c0-b9df-edacc24b01c8",
-    "os_type": "android",
-    "os_version": "5.1.1",
-    "screen": {
-      "w": 1080,
-      "h": 1920,
-      "dpi": 480
+    "ver": "1.1",
+    "ssp_token": "EXVTAW2VYMKUY30TBGLUZ3XPC3H2YW6NQHPWBGF6LMNVBTA6LK9YNS6PMJAUNZG=",
+    "need_https": 0,
+    "app": {
+        "id": "bg76gil7",
+        "name": "DrivingTest",
+        "app_key": "app_key",
+        "bundle": "cn.eclicks.drivingtest",
+        "ver": "",
+        "cat": []
     },
-    "geo": {
-      "lat": 31.151308,
-      "lon": 108.36747
-    }
-  },
-  "ads": [
-    {
-      "type": 2,
-      "place_id": "50otuc9h",
-      "floor_price": 100,
-      "currency": "CNY",
-      "w": 720,
-      "h": 1038,
-      "inventory_types": [1, 2, 4, 5]
-    }
-  ]
+    "device": {
+        "model": "vivoX7",
+        "brand": "vivo",
+        "adt": 1,
+        "connection_type": "wifi",
+        "carrier": 0,
+        "orientation": 1,
+        "mac": "20:5d:47:0b:33:38",
+        "imei": "862505031462331",
+        "android_id": "840be0b0d00e6169",
+        "openudid": "e4791d89-dda9-36c0-b9df-edacc24b01c8",
+        "os_type": "android",
+        "os_version": "5.1.1",
+        "screen": {
+            "w": 1080,
+            "h": 1920,
+            "dpi": 480
+        },
+        "geo": {
+            "lat": 31.151308,
+            "lon": 108.36747
+        }
+    },
+    "user": {
+        "ext": {
+            "consent": "no"
+        }
+    },
+    "regs": {
+        "coppa": 1,
+        "ext": {
+            "gdpr": 0
+        }
+    },
+    "ads": [
+        {
+            "type": 2,
+            "place_id": "50otuc9h",
+            "floor_price": 100,
+            "currency": "CNY",
+            "w": 720,
+            "h": 1038,
+            "inventory_types": [
+                1,
+                2,
+                4,
+                5
+            ]
+        }
+    ]
 }
 ```
 
@@ -578,56 +626,69 @@ android download：
 
 ```json
 {
-  "ver": "1.1",
-  "ssp_token": "EXVTAW2VYMKUY30TBGLUZ3XPC3H2YW6NQHPWBGF6LMNVBTA6LK9YNS6PMJAUNZG=",
-  "app": {
-    "id": "yywtptfq",
-    "name": "app name",
-    "app_key": "app_key",
-    "bundle": "bundle.com"
-  },
-  "device": {
-    "model": "iPhone 5 (A1429/A1442)",
-    "make": "Apple",
-    "brand": "Apple",
-    "ip": "223.74.73.17",
-    "connection_type": "wifi",
-    "carrier": 0,
-    "os_version": "10.2.1",
-    "os_type": "ios",
-    "mac": null,
-    "openudid": "983ADE10-20E6-441E-9078-2FA932787E67",
-    "ios_adid": "983ADE10-20E6-441E-9078-2FA932787E67"
-  },
-  "ads": [
-    {
-      "place_id": "gk8cmfh8",
-      "inventory_types": [6],
-      "type": 3,
-      "floor_price": 0,
-      "native": {
-        "layout": 3,
-        "assets": [
-          {
-            "id": 0,
-            "title": {
-              "len": 30
-            }
-          },
-          {
-            "id": 2,
-            "img": {
-              "type": 3,
-              "w": 640,
-              "h": 320
-            }
-          }
-        ]
-      },
-      "w": 640,
-      "h": 320
-    }
-  ]
+    "ver": "1.1",
+    "ssp_token": "EXVTAW2VYMKUY30TBGLUZ3XPC3H2YW6NQHPWBGF6LMNVBTA6LK9YNS6PMJAUNZG=",
+    "app": {
+        "id": "yywtptfq",
+        "name": "app name",
+        "app_key": "app_key",
+        "bundle": "bundle.com"
+    },
+    "device": {
+        "model": "iPhone 5 (A1429/A1442)",
+        "make": "Apple",
+        "brand": "Apple",
+        "ip": "223.74.73.17",
+        "connection_type": "wifi",
+        "carrier": 0,
+        "os_version": "10.2.1",
+        "os_type": "ios",
+        "mac": null,
+        "openudid": "983ADE10-20E6-441E-9078-2FA932787E67",
+        "ios_adid": "983ADE10-20E6-441E-9078-2FA932787E67"
+    },
+    "user": {
+        "ext": {
+            "consent": "no"
+        }
+    },
+    "regs": {
+        "coppa": 1,
+        "ext": {
+            "gdpr": 0
+        }
+    },
+    "ads": [
+        {
+            "place_id": "gk8cmfh8",
+            "inventory_types": [
+                6
+            ],
+            "type": 3,
+            "floor_price": 0,
+            "native": {
+                "layout": 3,
+                "assets": [
+                    {
+                        "id": 0,
+                        "title": {
+                            "len": 30
+                        }
+                    },
+                    {
+                        "id": 2,
+                        "img": {
+                            "type": 3,
+                            "w": 640,
+                            "h": 320
+                        }
+                    }
+                ]
+            },
+            "w": 640,
+            "h": 320
+        }
+    ]
 }
 ```
 
@@ -698,62 +759,75 @@ android download：
 
 ```json
 {
-  "ads": [
-    {
-      "place_id": "dsdibu5j",
-      "floor_price": 100,
-      "currency": "CNY",
-      "h": 960,
-      "inventory_types": [3],
-      "place_id": "FPA52248",
-      "pos": 0,
-      "type": 4,
-      "w": 640
-    }
-  ],
-  "ad": {},
-  "app": {
-    "app_key": "app_key",
-    "bundle": "",
-    "id": "bg76gil7",
-    "name": "app name",
-    "ver": "5.0.0"
-  },
-  "device": {
-    "adt": 1,
-    "android_id": "bdd66b6d38c69335",
-    "carrier": 0,
-    "connection_type": "wifi",
-    "geo": {
-      "accu": 0,
-      "lat": 0,
-      "lon": 0
+    "ads": [
+        {
+            "place_id": "dsdibu5j",
+            "floor_price": 100,
+            "currency": "CNY",
+            "h": 960,
+            "inventory_types": [
+                3
+            ],
+            "place_id": "FPA52248",
+            "pos": 0,
+            "type": 4,
+            "w": 640
+        }
+    ],
+    "user": {
+        "ext": {
+            "consent": "no"
+        }
     },
-    "imei": "861619032588944",
-    "ios_adid": "",
-    "local": "",
-    "mac": "26:28:46:09:1d:4f",
-    "make": "samsung",
-    "model": "SM-T810",
-    "orientation": 1,
-    "os_type": "android",
-    "os_version": "6.0",
-    "plmn": "",
-    "screen": {
-      "dpi": 240,
-      "h": 1536,
-      "w": 1152
-    }
-  },
-  "is_tail": 0,
-  "is_test": 0,
-  "sdk_ver": "androidmedia1.2.1.2",
-  "ssp_token": "EXVTAW2VYMKUY30TBGLUZ3XPC3H2YW6NQHPWBGF6LMNVBTA6LK9YNS6PMJAUNZG=",
-  "user": {
-    "age": 0,
-    "gender": 0
-  },
-  "ver": "1.1"
+    "regs": {
+        "coppa": 1,
+        "ext": {
+            "gdpr": 0
+        }
+    },
+    "ad": {},
+    "app": {
+        "app_key": "app_key",
+        "bundle": "",
+        "id": "bg76gil7",
+        "name": "app name",
+        "ver": "5.0.0"
+    },
+    "device": {
+        "adt": 1,
+        "android_id": "bdd66b6d38c69335",
+        "carrier": 0,
+        "connection_type": "wifi",
+        "geo": {
+            "accu": 0,
+            "lat": 0,
+            "lon": 0
+        },
+        "imei": "861619032588944",
+        "ios_adid": "",
+        "local": "",
+        "mac": "26:28:46:09:1d:4f",
+        "make": "samsung",
+        "model": "SM-T810",
+        "orientation": 1,
+        "os_type": "android",
+        "os_version": "6.0",
+        "plmn": "",
+        "screen": {
+            "dpi": 240,
+            "h": 1536,
+            "w": 1152
+        }
+    },
+    "is_tail": 0,
+    "is_test": 0,
+    "sdk_ver": "androidmedia1.2.1.2",
+    "ssp_token": "EXVTAW2VYMKUY30TBGLUZ3XPC3H2YW6NQHPWBGF6LMNVBTA6LK9YNS6PMJAUNZG=",
+    "user": {
+        "age": 0,
+        "gender": 0
+    },
+    "ver": "1.1"
 }
 ```
 
