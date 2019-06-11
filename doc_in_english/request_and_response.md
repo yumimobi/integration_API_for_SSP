@@ -178,6 +178,26 @@ The Ad Request is a request sent by the SSP to the YUMI Ads ADX to call for an a
 | gender    | int    | no        | Gender, 0:female, 1:male, 2:other, 3:unknown |
 | age       | int    | no        | age                                          |
 | keywords  | array  | no        | keywords of user interest                    |
+| ext       | UserExt object   |  no  | extended object |
+
+#### UserExt information
+
+| parameter | type | mandatory | description |
+| ------- | ---- | ----| ----|
+| consent | string | no | Whether or not to agree with the restriction of GDP R rule, this parameter value is not strictly in accordance with the IAB specification, `yes: agree, no: disagree`, not set, the default value is `yes` |
+
+#### Regs information
+
+| parameter | type | mandatory | description |
+| ------- | ---- | ---- | ----|
+| coppa   | int  | no   | Whether or not subject to COPPA rules, `0:no, 1:yes`, if not set, the default value is `1` |
+| ext     | RegsExt object |  no  | extended object |
+
+#### RegsExt information
+
+| parameter | type | mandatory | description |
+| ------- | ---- | ----| -----|
+| gdpr    | int  | no  | Whether it conforms to the GDPR rule, `0: No, 1: Yes`, the default value is `0` |
 
 ##### Ad information
 
