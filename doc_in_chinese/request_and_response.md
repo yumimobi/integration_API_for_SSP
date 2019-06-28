@@ -90,6 +90,7 @@ Request 请求是广告位请求广告的入口，由 SSP 按本文档中规定 
 | ad         | 对象        | 否   | 广告信息，只存在于协议版本 1.0 及之前。从 1.1(包括)以后不再使用，改为使用 ads 对象                                                 |
 | ads        | ad 对象数组 | 是   | 广告信息数组                                                                                                                       |
 | zplay      | 对象        | 否   | 该对象仅供 zplay 广告内部使用，开发者（SSP）可忽略                                                                                 |
+| regs       | 对象        | 否   | regs 对象信息                                                                                |
 
 ##### app 对象信息
 
@@ -173,12 +174,32 @@ Request 请求是广告位请求广告的入口，由 SSP 按本文档中规定 
 
 ##### User 对象信息
 
-| 字段名称 | 类别   | 必须 | 描述                                 |
-| -------- | ------ | ---- | ------------------------------------ |
-| id       | string | 否   | 用户 id                              |
+| 字段名称 | 类别   | 必须 | 描述 |
+| ------- | ------ | ---- | ----- |
+| id       | string | 否   | 用户 id |
 | gender   | int    | 否   | 性别，0：女，1：男，2：其他，3：未知 |
-| age      | int    | 否   | 年龄                                 |
-| keywords | array  | 否   | 用户感兴趣的关键词                   |
+| age      | int    | 否   | 年龄 |
+| keywords | array  | 否   | 用户感兴趣的关键词 |
+| ext      | UserExt对象   |  否  | 扩展对象 |
+
+#### UserExt 对象信息
+
+| 字段名称 | 类别 | 必须 | 描述 |
+| ------- | ---- | ----| ----|
+| consent | string | 否 | 是否同意GDPR规则约束, 该参数值没有严格按照iab规范，yes: 同意, no: 不同意, 不设置则默认值为yes |
+
+#### Regs 对象信息
+
+| 字段名称 | 类别 | 必须 | 描述 |
+| ------- | ---- | ---- | ----|
+| coppa   | int  | 否   | 是否受COPPA规则约束，0: 否, 1: 是, 不设置则默认值为1 |
+| ext     | RegsExt对象 |  否  | 扩展对象 |
+
+#### RegsExt 对象信息
+
+| 字段名称 | 类别 | 必须 | 描述 |
+| ------- | ---- | ----| -----|
+| gdpr    | int  | 否  | 是否符合GDPR规则, 0: 不是, 1: 是, 默认值为0 |
 
 ##### Ad 对象信息
 
@@ -264,50 +285,57 @@ Request 请求是广告位请求广告的入口，由 SSP 按本文档中规定 
 
 ##### Ad 对象信息
 
-| 字段名称           | 类型     | 必须 | 描述                                                                                                                                                                                                                     |
-| ------------------ | -------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| id                 | string   | 是   | 广告 id                                                                                                                                                                                                                  |
-| place_id           | string   | 是   | 广告位 id，与 request 中的 place_id 对应                                                                                                                                                                                 |
-| action             | int      | 是   | 广告动作类型，1：在 app 内 WebView 打开目标链接，2：在系统浏览器打开目标链接，3：打开地图，4：拨打电话，5：播放视频，6：App 下载， 7：应用唤醒， 8：打开应用市场，请确保在应用内打开 APP Store 或者 Google Play          |
-| html_snippet       | string   | 否   | html 广告代码                                                                                                                                                                                                            |
-| image_url          | string   | 否   | 图片地址                                                                                                                                                                                                                 |
-| w                  | int      | 是   | 广告宽度                                                                                                                                                                                                                 |
-| h                  | int      | 是   | 广告高度                                                                                                                                                                                                                 |
-| app_bundle         | string   | 否   | 对于 Android，是应用的 packageName；对于 iOS，是 Bundle identifier                                                                                                                                                       |
-| store_bundle       | string   | 否   | 应用市场包名(只针对安卓应用)                                                                                                                                                                                             |
-| app_ver            | string   | 否   | 应用版本号                                                                                                                                                                                                               |
-| target_url         | string   | 否   | 目标地址                                                                                                                                                                                                                 |
-| click_trackers     | array    | 否   | 当点击广告时被上报的监控 URL 列表                                                                                                                                                                                        |
-| imp_trackers       | array    | 否   | 当广告被展示时被上报的监控 URL 列表                                                                                                                                                                                      |
-| close_trackers     | array    | 否   | 当广告被关闭时被上报的监控 URL 列表                                                                                                                                                                                      |
-| refresh_interval   | int      | 是   | 广告应该在这个间隔后刷新，若为 0 则不刷新                                                                                                                                                                                |
-| inventory_type     | int      | 是   | 广告资源类型，1：图片，2：图文，3：视频，4：html5，5：文本，6：原生，7：html5 url，即一个指向 html5 素材页面的 url，10：可玩广告                                                                                         |
-| title              | string   | 否   | 广告标题，图文广告时需要                                                                                                                                                                                                 |
-| desc               | string   | 否   | 广告描述，图文广告时需要                                                                                                                                                                                                 |
-| ssp_id             | string   | 是   | ssp id，该字段为玉米交易平台（ADX）保留字段，开发者（SSP）可忽略                                                                                                                                                         |
-| download_file_name | string   | 否   | 下载文件名，动作类型为下载类型时需要                                                                                                                                                                                     |
-| file_size          | int      | 否   | 当广告为下载广告时，这是下载文件大小                                                                                                                                                                                     |
-| price              | float    | 否   | 广告价格                                                                                                                                                                                                                 |
-| ex_param           | []string | 否   | 扩展参数                                                                                                                                                                                                                 |
-| ssp_ad_id          | string   | 否   | 自主 api 返回的 sspAdId，该字段为玉米交易平台（ADX）保留字段，开发者（SSP）可忽略                                                                                                                                        |
-| video              | 对象     | 否   | 视频对象                                                                                                                                                                                                                 |
-| native             | 对象     | 否   | 原生广告对象                                                                                                                                                                                                             |
-| zplay              | 对象     | 否   | 该字段为玉米交易平台内部保留字段，开发者（SSP）可忽略                                                                                                                                                                    |
-| logo_url           | string   | 否   | 角标资源地址                                                                                                                                                                                                             |
-| fallback_url       | string   | 否   | 应用唤醒失败后的打开地址                                                                                                               |
+| 字段名称            | 类型     | 必须 | 描述 |
+| ------------------ | -------- | ----| ---- |
+| id                 | string   | 是   | 广告 id |
+| place_id           | string   | 是   | 广告位 id，与 request 中的 place_id 对应 |
+| action             | int      | 是   | 广告动作类型，1：在 app 内 WebView 打开目标链接，2：在系统浏览器打开目标链接，3：打开地图，4：拨打电话，5：播放视频，6：App 下载， 7：应用唤醒， 8：打开应用市场，请确保在应用内打开 APP Store 或者 Google Play |
+| html_snippet       | string   | 否   | html 广告代码 |
+| image_url          | string   | 否   | 图片地址 |
+| w                  | int      | 是   | 广告宽度 |
+| h                  | int      | 是   | 广告高度 |
+| app_bundle         | string   | 否   | 对于 Android，是应用的 packageName；对于 iOS，是 Bundle identifier |
+| store_bundle       | string   | 否   | 应用市场包名(只针对安卓应用) |
+| app_ver            | string   | 否   | 应用版本号 |
+| target_url         | string   | 否   | 目标地址 |
+| click_trackers     | array    | 否   | 当点击广告时被上报的监控 URL 列表 |
+| imp_trackers       | array    | 否   | 当广告被展示时被上报的监控 URL 列表 |
+| close_trackers     | array    | 否   | 当广告被关闭时被上报的监控 URL 列表 |
+| app_download_trackers | array | 否   | 当安卓下载类广告点击应用下载时上报的监控 URL 列表，应在后台访问 |
+| app_download_finish_trackers | array | 否   | 当安卓下载类广告应用下载完成时上报的监控 URL 列表，应在后台访问 |
+| app_activate_trackers | array | 否   | 当安卓应用激活时上报的监控 URL 列表，应在后台访问 |
+| refresh_interval   | int      | 是   | 广告应该在这个间隔后刷新，若为 0 则不刷新 |
+| inventory_type     | int      | 是   | 广告资源类型，1：图片，2：图文，3：视频，4：html5，5：文本，6：原生，7：html5 url，即一个指向 html5 素材页面的 url，10：可玩广告 |
+| title              | string   | 否   | 广告标题，图文广告时需要 |
+| desc               | string   | 否   | 广告描述，图文广告时需要 |
+| ssp_id             | string   | 是   | ssp id，该字段为玉米交易平台（ADX）保留字段，开发者（SSP）可忽略 |
+| download_file_name | string   | 否   | 下载文件名，动作类型为下载类型时需要 |
+| file_size          | int      | 否   | 当广告为下载广告时，这是下载文件大小 |
+| price              | float    | 否   | 广告价格 |
+| ex_param           | []string | 否   | 扩展参数 |
+| ssp_ad_id          | string   | 否   | 自主 api 返回的 sspAdId，该字段为玉米交易平台（ADX）保留字段，开发者（SSP）可忽略 |
+| video              | 对象     | 否   | 视频对象 |
+| native             | 对象     | 否   | 原生广告对象 |
+| zplay              | 对象     | 否   | 该字段为玉米交易平台内部保留字段，开发者（SSP）可忽略 |
+| logo_url           | string   | 否   | 角标资源地址 |
+| fallback_url       | string   | 否   | 应用唤醒失败后的打开地址 |
 | fallback_action    | int      | 否   | fallback_url 的动作类型，1：在 app 内 WebView 打开目标链接，2：在系统浏览器打开目标链接，3：打开地图，4：拨打电话，5：播放视频，6：App 下载，7：应用唤醒，8：打开应用市场，请确保在应用内打开 APP Store 或者 Google Play |
 
 ###### Video 对象信息
 
-| 字段名称                   | 类型   | 必须 | 描述                                                                                                                       |
-| -------------------------- | ------ | ---- | -------------------------------------------------------------------------------------------------------------------------- |
-| url                        | string | 是   | 视频播放 url                                                                                                               |
-| play_duration              | int    | 否   | 视频播放时长， 单位为秒                                                                                                    |
-| player_start_trackers      | array  | 否   | 播放时上报 url                                                                                                             |
-| player_end_trackers        | array  | 否   | 播放完成时上报 url                                                                                                         |
-| target_page_show_trackers  | array  | 否   | 落地页展示上报 url，当落地页被展示时上报的监控 URL 列表，应在后台访问                                                      |
-| target_page_click_trackers | array  | 否   | 落地页点击上报 url，当落地页被点击时上报的监控 URL 列表，应在后台访问，点击时的跳转地址为 ad.target_url。                  |
+| 字段名称                   | 类型   | 必须 | 描述 |
+| ------------------------- | ------ | ---- |---- |
+| url                        | string | 是   | 视频播放 url |
+| play_duration              | int    | 否   | 视频播放时长， 单位为秒 |
+| player_start_trackers      | array  | 否   | 播放时上报 url |
+| player_end_trackers        | array  | 否   | 播放完成时上报 url |
+| target_page_show_trackers  | array  | 否   | 落地页展示上报 url，当落地页被展示时上报的监控 URL 列表，应在后台访问。 |
+| target_page_click_trackers | array  | 否   | 落地页点击上报 url，当落地页被点击时上报的监控 URL 列表，应在后台访问，点击时的跳转地址为 ad.target_url。 |
 | target_page_close_trackers | array  | 否   | 广告关闭 url，当广告被关闭时上报的监控 URL 列表，应在后台访问。注意：当填写此数组时，请勿再次填写 ad.click_trackers 数组。 |
+| player_close_trackers      | array  | 否   | 视频播放中关闭上报 url，当视频被关闭时上报的监控 url 列表，应在后台访问。|
+| player_continue_trackers   | array  | 否   | 视频继续播放上报 url，当视频由暂停/HOME键退出到继续播放时上报的监控 url 列表，应在后台访问。|
+| player_restart_trackers    | array  | 否   | 视频重新播放上报 url，当视频重新开始播放时上报的监控 url 列表，应在后台访问。|
+
 
 ##### Zplay 对象信息
 
