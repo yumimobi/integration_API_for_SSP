@@ -331,7 +331,7 @@ Request 请求是广告位请求广告的入口，由 SSP 按本文档中规定 
 | player_end_trackers        | array  | 否   | 播放完成时上报 url |
 | target_page_show_trackers  | array  | 否   | 落地页展示上报 url，当落地页被展示时上报的监控 URL 列表，应在后台访问。 |
 | target_page_click_trackers | array  | 否   | 落地页点击上报 url，当落地页被点击时上报的监控 URL 列表，应在后台访问，点击时的跳转地址为 ad.target_url。 |
-| target_page_close_trackers | array  | 否   | 广告关闭 url，当广告被关闭时上报的监控 URL 列表，应在后台访问。注意：当填写此数组时，请勿再次填写 ad.click_trackers 数组。 |
+| target_page_close_trackers | array  | 否   | 广告关闭 url，当广告被关闭时上报的监控 URL 列表，应在后台访问。注意：当填写此数组时，请勿再次填写 ad.close_trackers 数组。 |
 | player_close_trackers      | array  | 否   | 视频播放中关闭上报 url，当视频被关闭时上报的监控 url 列表，应在后台访问。|
 | player_continue_trackers   | array  | 否   | 视频继续播放上报 url，当视频由暂停/HOME键退出到继续播放时上报的监控 url 列表，应在后台访问。|
 | player_restart_trackers    | array  | 否   | 视频重新播放上报 url，当视频重新开始播放时上报的监控 url 列表，应在后台访问。|

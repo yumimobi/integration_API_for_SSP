@@ -330,7 +330,7 @@ The Ad Request is a request sent by the SSP to the YUMI Ads ADX to call for an a
 | player_end_trackers        | array  | no        | Reporting url while video end playing |
 | target_page_show_trackers  | array  | no        | Reporting url while presenting the target page(also can be called landing page), should be visited at backstage |
 | target_page_click_trackers | array  | no        | Reporting url while clicking the target page(also can be called landing page), should be visited at backstage. |
-| target_page_close_trackers | array  | no        | Reporting url while ads closed ,should be visited at backstage. note: the jumping URL when user taps the click button is ad.target_url, this array is just tracking url when clicking. please don't fill in ad.click_trackers when this array is filled in. |
+| target_page_close_trackers | array  | no        | Reporting url while ads closed ,should be visited at backstage. note: the jumping URL when user taps the click button is ad.target_url, this array is just tracking url when clicking. please don't fill in ad.close_trackers when this array is filled in. |
 | player_close_trackers      | array  | no        | Reporting url while video close playing                          |
 | player_continue_trackers   | array  | no        | Reporting url while video continue playing                       |
 | player_restart_trackers    | array  | no        | Reporting url while video restart playing                        |
