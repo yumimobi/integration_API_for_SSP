@@ -137,7 +137,7 @@ Request 请求是广告位请求广告的入口，由 SSP 按本文档中规定 
 | make            | string  | 是   | 生产厂商，例如：“Samsung”                                             |
 | brand           | string  | 否   | 手机品牌，例如：“MI4”                                                 |
 | plmn            | string  | 否   | 国家运营商编号                                                        |
-| adt             | boolean | 否   | 是否允许通过追踪用户行为进行定向投放，0：不允许，1：允许，默认为 1    |
+| adt             | int | 否   | 是否允许通过追踪用户行为进行定向投放，0：不允许，1：允许，默认为 1    |
 | connection_type | string  | 是   | 网络类型，空串表示未知，值为 wifi，2g，3g，4g，ethernet，cell_unknown |
 | carrier         | int     | 是   | 运营商，0：移动，1：电信，3：联通，4：unknown                         |
 | orientation     | int     | 是   | 设备方向，1：纵向，3：横向                                            |
