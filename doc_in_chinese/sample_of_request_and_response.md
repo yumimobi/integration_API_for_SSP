@@ -664,6 +664,17 @@
         "openudid": "983ADE10-20E6-441E-9078-2FA932787E67",
         "ios_adid": "983ADE10-20E6-441E-9078-2FA932787E67"
     },
+    "user": {
+        "ext": {
+            "consent": "no"
+        }
+    },
+    "regs": {
+        "coppa": 1,
+        "ext": {
+            "gdpr": 0
+        }
+    },
     "ads": [
         {
             "inventory_types": [
@@ -788,6 +799,8 @@
         }
     ],
     "user": {
+        "age": 0,
+        "gender": 0,
         "ext": {
             "consent": "no"
         }
@@ -836,10 +849,6 @@
     "is_test": 0,
     "sdk_ver": "androidmedia1.2.1.2",
     "ssp_token": "10000",
-    "user": {
-        "age": 0,
-        "gender": 0
-    },
     "ver": "1.1"
 }
 ```
