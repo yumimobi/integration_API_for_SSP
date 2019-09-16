@@ -28,12 +28,12 @@
 | ----- | ----- | ----- | ----- |
 | Android | bg76gil7 | banner | an6o1ngv |
 | Android | bg76gil7 | Interstitial | 13ohe4ze |
-| Android | bg76gil7 | Reawrd Video | dsdibu5j |
+| Android | bg76gil7 | Rewarded Video | dsdibu5j |
 | Android | bg76gil7 | Native | 13ur17b0 |
 | Android | bg76gil7 | Splash | 50otuc9h |
 | iOS | yywtptfq | banner | 5jr45zcy |
 | iOS | yywtptfq | Interstitial | n0w2zkex |
-| iOS | yywtptfq | Reawrd Video | hmtdjpt4 |
+| iOS | yywtptfq | Rewarded Video | hmtdjpt4 |
 | iOS | yywtptfq | Native | gk8cmfh8 |
 | iOS | yywtptfq | Splash | ss03ye17 |
 
