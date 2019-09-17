@@ -37,7 +37,7 @@ this document shows how developer(SSP, supply-side platform) integrate with YUMI
 
 ## Preparation before integration
 
-please get the developer account info and token through asking for YUMI Adx account manager.
+The [Self-service System](Https://ssp.yumimobi.com/?&oauth=dev_oauth) gets the Token
 
 ## steps of request/response
 
