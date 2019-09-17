@@ -34,7 +34,7 @@
 
 ## 接入准备
 
- 在[开发者自助系统](Https://ssp.yumimobi.com/?&oauth=dev_oauth)可直接获取开发者token
+ 在[开发者自助系统](https://ssp.yumimobi.com/?&oauth=dev_oauth#/personalInfo/)可直接获取开发者token
 
 ## 实时竞价流程
 
