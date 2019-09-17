@@ -34,7 +34,7 @@
 
 ## 接入准备
 
-在 开发者（SSP）和 玉米交易平台（ADX） 商务人员沟通后，由玉米交易平台（ADX）商务人员提供 开发者（SSP） 账号和相应的 Token 信息。
+ 在[开发者自助系统](Https://ssp.yumimobi.com/?&oauth=dev_oauth)可直接获取开发者token
 
 ## 实时竞价流程
 
