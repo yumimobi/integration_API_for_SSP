@@ -37,7 +37,7 @@ this document shows how developer(SSP, supply-side platform) integrate with YUMI
 
 ## Preparation before integration
 
-The [Self-service System](Https://ssp.yumimobi.com/?&oauth=dev_oauth) gets the Token
+You can get the Token in the [Self-service System](https://ssp.yumimobi.com/?&oauth=dev_oauth#/personalInfo/)
 
 ## steps of request/response
 
