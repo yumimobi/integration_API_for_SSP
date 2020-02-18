@@ -154,6 +154,7 @@ Request 请求是广告位请求广告的入口，由 SSP 按本文档中规定 
 | os_version      | string  | 是   | 操作系统版本                                                          |
 | screen          | 对象    | 是   | 设备的屏幕信息                                                        |
 | geo             | 对象    | 否   | 设备的位置信息                                                        |
+| oaid            | string  | 否   | 中国安全联盟定义的国内安卓设备唯一ID标识，iOS无需填写                    |
 
 ###### Screen 对象信息
 

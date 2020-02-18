@@ -80,6 +80,7 @@
         "imei": "862552036260906",
         "android_id": "5588e0a238461ee8",
         "openudid": "5e8061c7-1079-35d2-a218-c4aa739f7870",
+        "oaid": "fe8061aa-1079-35d2-a218-c4aa739f7845",
         "os_type": "android",
         "os_version": "7.0",
         "screen": {
@@ -324,6 +325,7 @@ android download：
         "imei": "862505031462331",
         "android_id": "840be0b0d00e6169",
         "openudid": "e4791d89-dda9-36c0-b9df-edacc24b01c8",
+        "oaid": "fe8061aa-1079-35d2-a218-c4aa739f7845",
         "os_type": "android",
         "os_version": "5.1.1",
         "screen": {
@@ -564,6 +566,7 @@ android download：
         "imei": "862505031462331",
         "android_id": "840be0b0d00e6169",
         "openudid": "e4791d89-dda9-36c0-b9df-edacc24b01c8",
+        "oaid": "fe8061aa-1079-35d2-a218-c4aa739f7845",
         "os_type": "android",
         "os_version": "5.1.1",
         "screen": {
@@ -645,6 +648,7 @@ android download：
         "os_type": "ios",
         "mac": null,
         "openudid": "983ADE10-20E6-441E-9078-2FA932787E67",
+        "oaid": "",
         "ios_adid": "983ADE10-20E6-441E-9078-2FA932787E67"
     },
     "user": {
