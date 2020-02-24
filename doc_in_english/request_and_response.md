@@ -155,7 +155,7 @@ The Ad Request is a request sent by the SSP to the YUMI Ads ADX to call for an a
 | os_version      | string  | yes       | Operation system version                                                                                                                                                                                                                                                                                                                                                        |
 | screen          | object  | yes       | Screen info                                                                                                                                                                                                                                                                                                                                                                     |
 | geo             | object  | no        | Geo info                                                                                                                                                                                                                                                                                                                                                                        |
-| oaid            | string  | no   | Unique ID identification of domestic Android devices defined by China security alliance, IOS does not need to be filled in                    |
+| oaid            | string  | no   | Unique ID identification of domestic Android devices defined by China security alliance, iOS does not need to be filled in                    |
 
 ###### Screen information
 
